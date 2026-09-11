@@ -1,9 +1,8 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-const isProd = process.env.NODE_ENV === 'production';
-const base = isProd ? '/github' : '/';
-const site = 'https://hrproduction.id/github';
+const base = process.env.ASTRO_BASE ?? '/';
+const site = process.env.ASTRO_SITE ?? 'https://hrproduction.id';
 
 // https://astro.build/config
 export default defineConfig({
