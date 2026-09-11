@@ -2,589 +2,981 @@
   {
     "name": "Sofa Single Putih",
     "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: 90 cm Tinggi : 90 cm Lebar : 80 cm",
-    "price": "Rp 175.000",
+    "price": 150000,
     "category": "Sofa",
-    "image": "/images/products/sofa-single-putih.png"
+    "image": "/images/products/sofa-single-putih.png",
+    "tags": [
+      "Wedding",
+      "Gala Dinner"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Sofa Double Putih",
     "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: 150 cm Tinggi : 90 cm Lebar : 82 cm",
-    "price": "Rp 350.000",
+    "price": 275000,
     "category": "Sofa",
-    "image": "/images/products/sofa-double-putih.png"
+    "image": "/images/products/sofa-double-putih.png",
+    "tags": [
+      "Wedding",
+      "Gala Dinner"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Sofa Triple Putih",
     "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: 205 cm Tinggi : 90 cm Lebar : 82 cm",
-    "price": "Rp 525.000",
+    "price": 400000,
     "category": "Sofa",
-    "image": "/images/products/sofa-triple-putih.png"
+    "image": "/images/products/sofa-triple-putih.png",
+    "tags": [
+      "Wedding",
+      "Gala Dinner"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Sofa Oval Putih",
     "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: 58 cm Tinggi : 66 cm Lebar : 65 cm",
-    "price": "Rp 200.000",
+    "price": 350000,
     "category": "Sofa",
-    "image": "/images/products/sofa-oval-putih.png"
+    "image": "/images/products/sofa-oval-putih.png",
+    "tags": [
+      "VIP",
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Sofa scandiv Putih",
     "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: 77 cm Tinggi : 80 cm Lebar : 78 cm",
-    "price": "Rp 225.000",
+    "price": 275000,
     "category": "Sofa",
-    "image": "/images/products/sofa-scandiv-putih.png"
+    "image": "/images/products/sofa-scandiv-putih.png",
+    "tags": [
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Sofa Oval VIP",
     "description": "Tinggi: 50 cm Lebar : 70 cm Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis",
-    "price": "Rp 175.000",
+    "price": 350000,
     "category": "Sofa",
-    "image": "/images/products/sofa-oval-vip.png"
+    "image": "/images/products/sofa-oval-vip.png",
+    "tags": [
+      "VIP",
+      "BUMN"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Sofa Queen Putih",
     "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: - cm Tinggi Sandaran : 55 cm Lebar Diameter : 40 cm",
-    "price": "Rp 150.000",
+    "price": 200000,
     "category": "Sofa",
-    "image": "/images/products/sofa-queen-putih.png"
+    "image": "/images/products/sofa-queen-putih.png",
+    "tags": [
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Sofa Oval Hitam",
     "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: 58 cm Tinggi : 66 cm Lebar : 65 cm",
-    "price": "Rp 175000",
+    "price": 350000,
     "category": "Sofa",
-    "image": "/images/products/sofa-oval-hitam.png"
+    "image": "/images/products/sofa-oval-hitam.png",
+    "tags": [
+      "VIP",
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Sofa Single Hitam",
     "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: 90 cm Tinggi : 90 cm Lebar : 80 cm",
-    "price": "Rp 175.000",
+    "price": 150000,
     "category": "Sofa",
-    "image": "/images/products/sofa-single-hitam.png"
+    "image": "/images/products/sofa-single-hitam.png",
+    "tags": [
+      "Wedding",
+      "Gala Dinner"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Sofa Lesehan Arab",
     "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: 70 cm Tinggi : 60 cm Lebar : 55 cm",
-    "price": "Rp 150.000",
+    "price": 200000,
     "category": "Sofa",
-    "image": "/images/products/sofa-lesehan-arab.png"
+    "image": "/images/products/sofa-lesehan-arab.png",
+    "tags": [
+      "Wedding",
+      "Outdoor"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Bench panjang",
     "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: 90 cm Tinggi : 52 cm Lebar : – cm",
-    "price": "Rp 150.000",
+    "price": 175000,
     "category": "Sofa",
-    "image": "/images/products/bench-panjang.png"
+    "image": "/images/products/bench-panjang.png",
+    "tags": [
+      "Outdoor",
+      "Konferensi"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Puff Bulat dan kotak",
     "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: 50 cm Tinggi : 50 cm Lebar : 50 cm",
-    "price": "Rp 95.000",
+    "price": 100000,
     "category": "Sofa",
-    "image": "/images/products/puff-bulat-dan-kotak.png"
+    "image": "/images/products/puff-bulat-dan-kotak.png",
+    "tags": [
+      "Outdoor",
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja IBM Cover Stretcht",
     "description": "Warna : Putih Bahan : – Panjang: 180 cm Tinggi : 75 cm Lebar : 60 cm",
-    "price": "Rp 150.000",
+    "price": 150000,
     "category": "Meja",
-    "image": "/images/products/meja-ibm-cover-stretcht.png"
+    "image": "/images/products/meja-ibm-cover-stretcht.png",
+    "tags": [
+      "Konferensi",
+      "BUMN"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja IBM cover",
     "description": "Warna : Hitam, Putih Bahan : Panjang: 180 cm Tinggi : 75 cm Lebar : 60 cm",
-    "price": "Rp 150.000",
+    "price": 150000,
     "category": "Meja",
-    "image": "/images/products/meja-ibm-cover.png"
+    "image": "/images/products/meja-ibm-cover.png",
+    "tags": [
+      "Konferensi",
+      "BUMN"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja IBM cover runner",
     "description": "Warna : Coklat Bahan : Kayu Panjang: 180 cm Tinggi : 75 cm Lebar : 60 cm",
-    "price": "Rp 150.000",
+    "price": 175000,
     "category": "Meja",
-    "image": "/images/products/meja-ibm-cover-runner.png"
+    "image": "/images/products/meja-ibm-cover-runner.png",
+    "tags": [
+      "Konferensi",
+      "BUMN"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja skirting cover",
     "description": "Warna : Hitam, Putih Bahan : Kayu Panjang: 120 cm Tinggi : 75 cm Lebar : 80 cm",
-    "price": "Rp 95.000",
+    "price": 125000,
     "category": "Meja",
-    "image": "/images/products/meja-skirting-cover.png"
+    "image": "/images/products/meja-skirting-cover.png",
+    "tags": [
+      "Konferensi"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja cover Stretcht",
     "description": "Warna : Hitam, Putih Bahan : – Panjang: 120 cm Tinggi : 75 cm Lebar : 80 cm",
-    "price": "Rp 95.000",
+    "price": 125000,
     "category": "Meja",
-    "image": "/images/products/meja-cover-stretcht.png"
+    "image": "/images/products/meja-cover-stretcht.png",
+    "tags": [
+      "Konferensi"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja dealing kaca cover",
     "description": "Warna : Putih Bahan : Kaki Stainlis Panjang: – cm Tinggi : 75 cm Lebar Diameter : 80 cm",
-    "price": "Rp 150.000",
+    "price": 175000,
     "category": "Meja",
-    "image": "/images/products/meja-dealing-kaca-cover.png"
+    "image": "/images/products/meja-dealing-kaca-cover.png",
+    "tags": [
+      "VIP",
+      "BUMN"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja round table 160cm cover",
     "description": "Warna : Putih Bahan : Plastik Panjang: 160 cm Tinggi : 75 cm Lebar Diameter: 160 cm",
-    "price": "Rp 150.000",
+    "price": 200000,
     "category": "Meja",
-    "image": "/images/products/meja-round-table-160cm-cover.png"
+    "image": "/images/products/meja-round-table-160cm-cover.png",
+    "tags": [
+      "Wedding",
+      "Gala Dinner"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "round table 160cm cover rumbai",
     "description": "Warna : Putih Bahan : Plastik Panjang: 160cm Tinggi : 75cm Lebar Diameter: 160 cm",
-    "price": "Rp 175.000",
+    "price": 225000,
     "category": "Meja",
-    "image": "/images/products/round-table-160cm-cover-rumbai.png"
+    "image": "/images/products/round-table-160cm-cover-rumbai.png",
+    "tags": [
+      "Wedding",
+      "Gala Dinner"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "round table 160cm cover Runner",
     "description": "Warna : Putih Bahan : Plastik Panjang: 160 cm Tinggi : 75 cm Lebar Diameter: 160 cm",
-    "price": "Rp 175.000",
+    "price": 225000,
     "category": "Meja",
-    "image": "/images/products/round-table-160cm-cover-runner.png"
+    "image": "/images/products/round-table-160cm-cover-runner.png",
+    "tags": [
+      "Wedding",
+      "Gala Dinner"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja konsul",
     "description": "Warna : Coklat Bahan : Kayu Jati Panjang: 120 cm Tinggi : 75 cm Lebar : 50 cm",
-    "price": "Rp 300.000",
+    "price": 300000,
     "category": "Meja",
-    "image": "/images/products/meja-konsul.png"
+    "image": "/images/products/meja-konsul.png",
+    "tags": [
+      "VIP"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja VIP jati",
     "description": "Warna : Coklat Bahan : Kayu Jati Panjang: 80 cm Tinggi : 45 cm Lebar : 50 cm",
-    "price": "Rp 150.000",
+    "price": 175000,
     "category": "Meja",
-    "image": "/images/products/meja-vip-jati.png"
+    "image": "/images/products/meja-vip-jati.png",
+    "tags": [
+      "VIP",
+      "BUMN"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja lesehan",
     "description": "Warna : Coklat Bahan : Kayu Panjang: 100 cm Tinggi : 35 cm Lebar : 50 cm",
-    "price": "Rp 125.000",
+    "price": 125000,
     "category": "Meja",
-    "image": "/images/products/meja-lesehan.png"
+    "image": "/images/products/meja-lesehan.png",
+    "tags": [
+      "Outdoor",
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja Scremble tinggi",
     "description": "Warna : Putih Bahan : Plastik Panjang: – cm Tinggi : 75 cm Lebar Diameter: 60 cm",
-    "price": "Rp 125.000",
+    "price": 125000,
     "category": "Meja",
-    "image": "/images/products/meja-scremble-tinggi.png"
+    "image": "/images/products/meja-scremble-tinggi.png",
+    "tags": [
+      "Gala Dinner"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja Scremble pendek",
     "description": "Warna : Putih Bahan : Plastik Panjang: – cm Tinggi : 45 cm Lebar Diameter: 60 cm",
-    "price": "Rp 125.000",
+    "price": 125000,
     "category": "Meja",
-    "image": "/images/products/meja-scremble-pendek.png"
+    "image": "/images/products/meja-scremble-pendek.png",
+    "tags": [
+      "Gala Dinner"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja Dealing Alumunium",
     "description": "Warna : Putih Bahan : Alumunium Panjang: – cm Tinggi : 75 cm Lebar Diameter: 60 cm",
-    "price": "Rp 125.000",
+    "price": 150000,
     "category": "Meja",
-    "image": "/images/products/meja-dealing-alumunium.png"
+    "image": "/images/products/meja-dealing-alumunium.png",
+    "tags": [
+      "BUMN"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja bar Round putih",
     "description": "Warna : Putih Bahan : khaki stainlis Panjang: – cm Tinggi : 100 cm Lebar Diameter : 60 cm",
-    "price": "Rp 150.000",
+    "price": 175000,
     "category": "Meja",
-    "image": "/images/products/meja-bar-round-putih.png"
+    "image": "/images/products/meja-bar-round-putih.png",
+    "tags": [
+      "Gala Dinner"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja bar cover Stretcht",
     "description": "Warna : Putih Bahan : kaki stainlis Panjang: – cm Tinggi : 100 cm Lebar Diameter : 60 cm",
-    "price": "Rp 150000",
+    "price": 175000,
     "category": "Meja",
-    "image": "/images/products/meja-bar-cover-stretcht.png"
+    "image": "/images/products/meja-bar-cover-stretcht.png",
+    "tags": [
+      "Gala Dinner"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja bar cover Stretcht",
     "description": "Warna : putih, hitam Bahan : khaki stainlis Panjang: – cm Tinggi : 100 cm Lebar Diameter : 60 cm",
-    "price": "Rp 150.000",
+    "price": 175000,
     "category": "Meja",
-    "image": "/images/products/meja-bar-cover-stretcht-2.png"
+    "image": "/images/products/meja-bar-cover-stretcht-2.png",
+    "tags": [
+      "Gala Dinner"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja Sofa putih",
     "description": "Warna : Putih Bahan : – Panjang: 90 cm Tinggi : 45 cm Lebar : 50 cm",
-    "price": "Rp 150.000",
+    "price": 150000,
     "category": "Meja",
-    "image": "/images/products/meja-sofa-putih.png"
+    "image": "/images/products/meja-sofa-putih.png",
+    "tags": [
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja dealing kaca",
     "description": "Warna : Putih Bahan : alumunium Panjang: 80 cm Tinggi : 75 cm Lebar : 80 cm",
-    "price": "Rp 150.000",
+    "price": 175000,
     "category": "Meja",
-    "image": "/images/products/meja-dealing-kaca.png"
+    "image": "/images/products/meja-dealing-kaca.png",
+    "tags": [
+      "BUMN",
+      "VIP"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja dealing kotak",
     "description": "Warna : Coklat Model : kotak, bulat Panjang: 60 cm Tinggi : 75 cm Lebar : 60 cm",
-    "price": "Rp 150.000",
+    "price": 175000,
     "category": "Meja",
-    "image": "/images/products/meja-dealing-kotak.png"
+    "image": "/images/products/meja-dealing-kotak.png",
+    "tags": [
+      "BUMN"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja Betawi",
     "description": "Warna : Coklat Bahan : Kayu Panjang: – cm Tinggi : 75 cm Lebar Diameter : 70 cm",
-    "price": "Rp 150.000",
+    "price": 175000,
     "category": "Meja",
-    "image": "/images/products/meja-betawi.png"
+    "image": "/images/products/meja-betawi.png",
+    "tags": [
+      "Outdoor",
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja sudut jati",
     "description": "Warna : Coklat Bahan : Kayu Panjang: 40 cm Tinggi : 45 cm Lebar : 30 cm",
-    "price": "Rp 150.000",
+    "price": 150000,
     "category": "Meja",
-    "image": "/images/products/meja-sudut-jati.png"
+    "image": "/images/products/meja-sudut-jati.png",
+    "tags": [
+      "VIP"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja sudut kotak",
     "description": "Warna : Hitam , Putih Bahan : Kayu Panjang: 50 cm Tinggi : 45 cm Lebar : 50 cm",
-    "price": "Rp 150.000",
+    "price": 150000,
     "category": "Meja",
-    "image": "/images/products/meja-sudut-kotak.png"
+    "image": "/images/products/meja-sudut-kotak.png",
+    "tags": [
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja Taman Set",
     "description": "Warna : Coklat Bahan : Kayu Panjang: 160 cm Tinggi : 75 cm Lebar : 70 cm",
-    "price": "Rp 600.000",
+    "price": 750000,
     "category": "Meja",
-    "image": "/images/products/meja-taman-set.png"
+    "image": "/images/products/meja-taman-set.png",
+    "tags": [
+      "Outdoor",
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Meja Taman Set",
     "description": "Warna : Kayu Bahan : -cm Panjang: -cm Lebar : -cm Parasol Set memiliki fungsi utama",
-    "price": "Rp 600.000",
+    "price": 750000,
     "category": "Meja",
-    "image": "/images/products/meja-taman-set-2.png"
+    "image": "/images/products/meja-taman-set-2.png",
+    "tags": [
+      "Outdoor",
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Bean bag",
     "description": "Warna : merah,putih,hitam,biru,kuning ect Bahan : Oscar / Kulit Sintetis Panjang: 100 cm Diameter : 50 cm tertutup berisi kacang kering, diperluas, atau polypropylene",
-    "price": "Rp 90.000",
+    "price": 100000,
     "category": "Meja",
-    "image": "/images/products/bean-bag.png"
+    "image": "/images/products/bean-bag.png",
+    "tags": [
+      "Outdoor"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Kursi Futura",
     "description": "Warna : Merah Bahan : – Panjang: 48 cm Tinggi : 97 cm Lebar : 46 cm",
-    "price": "Rp 10.000",
+    "price": 15000,
     "category": "Kursi",
-    "image": "/images/products/kursi-futura.png"
+    "image": "/images/products/kursi-futura.png",
+    "tags": [
+      "Konferensi",
+      "Outdoor"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Kursi Futura Cover",
     "description": "Warna : Merah Cover Putih Bahan : – Panjang: 48 cm Tinggi : 97 cm Lebar : 46 cm",
-    "price": "Rp 15.000",
+    "price": 20000,
     "category": "Kursi",
-    "image": "/images/products/kursi-futura-cover.png"
+    "image": "/images/products/kursi-futura-cover.png",
+    "tags": [
+      "Konferensi",
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "kursi futura cover Pita",
     "description": "Warna : Merah Bahan : – Panjang: 48 cm Tinggi : 97 cm Lebar : 46 cm",
-    "price": "Rp 18.000",
+    "price": 22000,
     "category": "Kursi",
-    "image": "/images/products/kursi-futura-cover-pita.png"
+    "image": "/images/products/kursi-futura-cover-pita.png",
+    "tags": [
+      "Konferensi",
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Kursi Futura Cover",
     "description": "Warna : Gold Bahan : – Panjang: 48 cm Tinggi : 97 cm Lebar : 46 cm Lebar : 46 cm",
-    "price": "Rp 18.000",
+    "price": 22000,
     "category": "Kursi",
-    "image": "/images/products/kursi-futura-cover-2.png"
+    "image": "/images/products/kursi-futura-cover-2.png",
+    "tags": [
+      "Wedding",
+      "Gala Dinner"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "kursi futura cover Pita",
     "description": "Warna : Biru Bahan : – Panjang: 48 cm Tinggi : 97 cm Lebar : 46 cm",
-    "price": "Rp 18.000",
+    "price": 22000,
     "category": "Kursi",
-    "image": "/images/products/kursi-futura-cover-pita-2.png"
+    "image": "/images/products/kursi-futura-cover-pita-2.png",
+    "tags": [
+      "Konferensi",
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Kursi Kuliah",
     "description": "Warna : Hitam, Bahan : Stainlis Panjang: 90 cm Tinggi : 82 cm Lebar : 80 cm",
-    "price": "Rp 23.000",
+    "price": 25000,
     "category": "Kursi",
-    "image": "/images/products/kursi-kuliah.png"
+    "image": "/images/products/kursi-kuliah.png",
+    "tags": [
+      "Konferensi"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Dealing chair",
     "description": "Warna : Hitam, Bahan : Plastik Panjang: 55 cm Tinggi : 82 cm Lebar : 46 cm",
-    "price": "Rp 55.000",
+    "price": 60000,
     "category": "Kursi",
-    "image": "/images/products/dealing-chair.png"
+    "image": "/images/products/dealing-chair.png",
+    "tags": [
+      "Konferensi",
+      "BUMN"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "kursi Dealing VIP",
     "description": "Warna : Hitam, putih Bahan : Fiber Panjang: 55 cm Tinggi : 82 cm Lebar : 46 cm",
-    "price": "Rp 75.000",
+    "price": 85000,
     "category": "Kursi",
-    "image": "/images/products/kursi-dealing-vip.png"
+    "image": "/images/products/kursi-dealing-vip.png",
+    "tags": [
+      "VIP",
+      "BUMN"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "kursi Olivia gold",
     "description": "Warna : Gold, Bahan : Kayu Panjang: – cm Tinggi : 44 cm (D) Lebar : 45 cm",
-    "price": "Rp 75.000",
+    "price": 85000,
     "category": "Kursi",
-    "image": "/images/products/kursi-olivia-gold.png"
+    "image": "/images/products/kursi-olivia-gold.png",
+    "tags": [
+      "VIP",
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Kursi Tiffany gold",
     "description": "Warna : Gold, Bahan : Kayu Panjang: – cm Tinggi : 44 cm Lebar : 45 cm",
-    "price": "Rp 30.000",
+    "price": 25000,
     "category": "Kursi",
-    "image": "/images/products/kursi-tiffany-gold.png"
+    "image": "/images/products/kursi-tiffany-gold.png",
+    "tags": [
+      "Wedding",
+      "Gala Dinner"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Kursi Tiffany putih",
     "description": "Warna : putih Bahan : Kayu Panjang: – cm Tinggi : 44 cm Lebar : 45 cm",
-    "price": "Rp 30.000",
+    "price": 25000,
     "category": "Kursi",
-    "image": "/images/products/kursi-tiffany-putih.png"
+    "image": "/images/products/kursi-tiffany-putih.png",
+    "tags": [
+      "Wedding",
+      "Gala Dinner"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Kursi Tiffany Acrylic",
     "description": "Warna : putih Bahan : Acrylic Panjang: – cm Tinggi : 44 cm Lebar : 45 cm",
-    "price": "Rp 45.000",
+    "price": 45000,
     "category": "Kursi",
-    "image": "/images/products/kursi-tiffany-acrylic.png"
+    "image": "/images/products/kursi-tiffany-acrylic.png",
+    "tags": [
+      "Wedding",
+      "VIP"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Kursi Armchair Jokowi",
     "description": "Warna : putih Bahan : Kayu Panjang: 53 cm Tinggi : 63cm Lebar : 90 cm",
-    "price": "Rp 200.000",
+    "price": 250000,
     "category": "Kursi",
-    "image": "/images/products/kursi-armchair-jokowi.png"
+    "image": "/images/products/kursi-armchair-jokowi.png",
+    "tags": [
+      "VIP",
+      "BUMN"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Kursi armchair oval",
     "description": "Warna : putih Bahan : Kayu Panjang: 60 cm Tinggi : 90 cm Lebar : 50 cm",
-    "price": "Rp 200.000",
+    "price": 250000,
     "category": "Kursi",
-    "image": "/images/products/kursi-armchair-oval.png"
+    "image": "/images/products/kursi-armchair-oval.png",
+    "tags": [
+      "VIP",
+      "BUMN"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "kursi betawi",
     "description": "Warna : Coklat Bahan : Kayu Panjang: 61 cm Tinggi : 78 cm Lebar : 50 cm",
-    "price": "Rp 125.000",
+    "price": 150000,
     "category": "Kursi",
-    "image": "/images/products/kursi-betawi.png"
+    "image": "/images/products/kursi-betawi.png",
+    "tags": [
+      "Wedding",
+      "Outdoor"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Kursi Direktur",
     "description": "Warna : Hitam Bahan : – Panjang: – cm Tinggi : 103,5 – 125,5cm. Lebar : 69,5cm",
-    "price": "Rp 250.000",
+    "price": 300000,
     "category": "Kursi",
-    "image": "/images/products/kursi-direktur.png"
+    "image": "/images/products/kursi-direktur.png",
+    "tags": [
+      "BUMN",
+      "Konferensi"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Kursi sebaguna",
     "description": "Warna : Hitam Bahan : – Panjang: – cm Tinggi : 44 cm Lebar : 38 cm",
-    "price": "Rp 150.000",
+    "price": 175000,
     "category": "Kursi",
-    "image": "/images/products/kursi-sebaguna.png"
+    "image": "/images/products/kursi-sebaguna.png",
+    "tags": [
+      "Konferensi"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Kursi Staff",
     "description": "Warna : Hitam Bahan : – Panjang: – cm Tinggi : - cm Lebar : - cm",
-    "price": "Rp 135.000",
+    "price": 150000,
     "category": "Kursi",
-    "image": "/images/products/kursi-staff.png"
+    "image": "/images/products/kursi-staff.png",
+    "tags": [
+      "Konferensi"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Kursi barstool kotak",
     "description": "Warna : putih Bahan : – Panjang: – cm Tinggi : 44 cm Lebar : 38 cm",
-    "price": "Rp 100.000",
+    "price": 110000,
     "category": "Kursi",
-    "image": "/images/products/kursi-barstool-kotak.png"
+    "image": "/images/products/kursi-barstool-kotak.png",
+    "tags": [
+      "Gala Dinner",
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Kursi barstool sandar vip",
     "description": "Warna : putih Bahan : – Panjang: – cm Tinggi : 44 cm Lebar : 38 cm",
-    "price": "Rp 135.000",
+    "price": 150000,
     "category": "Kursi",
-    "image": "/images/products/kursi-barstool-sandar-vip.png"
+    "image": "/images/products/kursi-barstool-sandar-vip.png",
+    "tags": [
+      "VIP",
+      "Gala Dinner"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Kursi barstool con",
     "description": "Warna : Hitam Bahan : – Panjang: – cm Tinggi : 44 cm Lebar : 38 cm",
-    "price": "Rp 100.000",
+    "price": 110000,
     "category": "Kursi",
-    "image": "/images/products/kursi-barstool-con.png"
+    "image": "/images/products/kursi-barstool-con.png",
+    "tags": [
+      "Gala Dinner"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "kursi oval Donat",
     "description": "Warna : putih Gold Bahan : besi Panjang: – cm Tinggi : – cm Lebar : 38 cm",
-    "price": "Rp 100.000",
+    "price": 110000,
     "category": "Kursi",
-    "image": "/images/products/kursi-oval-donat.png"
+    "image": "/images/products/kursi-oval-donat.png",
+    "tags": [
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Kursi Crossback",
     "description": "Warna : putih Bahan : Kayu Panjang: – cm Tinggi : – cm Lebar : 38 cm",
-    "price": "Rp 55.000",
+    "price": 60000,
     "category": "Kursi",
-    "image": "/images/products/kursi-crossback.png"
+    "image": "/images/products/kursi-crossback.png",
+    "tags": [
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Kursi bakso bulat",
     "description": "Warna : putih Bahan : – Panjang: – cm Tinggi : – cm Lebar : 38 cm",
-    "price": "Rp 20.000",
+    "price": 25000,
     "category": "Kursi",
-    "image": "/images/products/kursi-bakso-bulat.png"
+    "image": "/images/products/kursi-bakso-bulat.png",
+    "tags": [
+      "Outdoor"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "kursi Fiber Bulat",
     "description": "Warna : putih Gold Bahan : besi Panjang: – cm Tinggi : – cm Lebar : 38 cm",
-    "price": "Rp 175.000",
+    "price": 200000,
     "category": "Kursi",
-    "image": "/images/products/kursi-fiber-bulat.png"
+    "image": "/images/products/kursi-fiber-bulat.png",
+    "tags": [
+      "VIP",
+      "Gala Dinner"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Kursi Cobra",
     "description": "Warna : Hitam Bahan : – Panjang: – cm Tinggi : 44 cm Lebar : 38 cm",
-    "price": "Rp 130.000",
+    "price": 150000,
     "category": "Kursi",
-    "image": "/images/products/kursi-cobra.png"
+    "image": "/images/products/kursi-cobra.png",
+    "tags": [
+      "Konferensi"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Bantal Lesehan",
     "description": "Warna : Aneka Warna Bahan : – Panjang: 40 cm Tinggi : - cm Lebar : 40 cm bersantai di lantai, Bantal ini umumnya lebih besar dan lebih",
-    "price": "Rp 20.000",
+    "price": 25000,
     "category": "Kursi",
-    "image": "/images/products/bantal-lesehan.png"
+    "image": "/images/products/bantal-lesehan.png",
+    "tags": [
+      "Outdoor",
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Podium",
     "description": "Warna : Coklat Bahan : Jati, stainless steel Panjang: – cm Tinggi : – cm Lebar : – cm",
-    "price": "Rp 750.000",
+    "price": 350000,
     "category": "Perlengkapan",
-    "image": "/images/products/podium.png"
+    "image": "/images/products/podium.png",
+    "tags": [
+      "Konferensi",
+      "BUMN"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Podium",
     "description": "Warna : Coklat Bahan : Jati Panjang: – cm Tinggi : – cm Lebar : – cm",
-    "price": "Rp 750.000",
+    "price": 350000,
     "category": "Perlengkapan",
-    "image": "/images/products/podium-2.png"
+    "image": "/images/products/podium-2.png",
+    "tags": [
+      "Konferensi",
+      "BUMN"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Podium",
     "description": "Warna : Black Bahan : Jati Panjang: – cm Tinggi : – cm Lebar : – cm",
-    "price": "Rp 750.000",
+    "price": 350000,
     "category": "Perlengkapan",
-    "image": "/images/products/podium-3.png"
+    "image": "/images/products/podium-3.png",
+    "tags": [
+      "Konferensi",
+      "BUMN"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Podium lambang garuda",
     "description": "Warna : Coklat Bahan : Jati Panjang: – cm Tinggi : – cm Lebar : – cm",
-    "price": "Rp 750.000",
+    "price": 350000,
     "category": "Perlengkapan",
-    "image": "/images/products/podium-lambang-garuda.png"
+    "image": "/images/products/podium-lambang-garuda.png",
+    "tags": [
+      "VIP",
+      "BUMN"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Podium",
     "description": "Warna : Coklat Bahan : Jati Panjang: – cm Tinggi : – cm Lebar : – cm",
-    "price": "Rp 750.000",
+    "price": 350000,
     "category": "Perlengkapan",
-    "image": "/images/products/podium-4.png"
+    "image": "/images/products/podium-4.png",
+    "tags": [
+      "Konferensi",
+      "BUMN"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Podium Acrylic",
     "description": "Warna : transparan Bahan : Acrylic Panjang: 36.5 cm Tinggi : 115 cm Lebar : 60 cm acara formal seperti pada acara",
-    "price": "Rp 750.000",
+    "price": 400000,
     "category": "Perlengkapan",
-    "image": "/images/products/podium-acrylic.png"
+    "image": "/images/products/podium-acrylic.png",
+    "tags": [
+      "Konferensi",
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "podium-akrilik-sirine",
     "description": "Warna : Putih Bahan : akrilik Panjang: - Tinggi : -cm Lebar : - cm Podium akrilik sirine memiliki keanggunan kontemporer.cocok",
-    "price": "Rp 750.000",
+    "price": 400000,
     "category": "Perlengkapan",
-    "image": "/images/products/podium-akrilik-sirine.png"
+    "image": "/images/products/podium-akrilik-sirine.png",
+    "tags": [
+      "Konferensi",
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Rope Stand VIP (Beludru)",
     "description": "Warna : Merah,,Biru Bahan : Beludru (Tali) Tiang (Steinless) Panjang: 1.5 m Tinggi : 90 cm Lebar : - cm atau garis yg di inginkan di Area",
-    "price": "Rp 100.000",
+    "price": 125000,
     "category": "Perlengkapan",
-    "image": "/images/products/rope-stand-vip-beludru.png"
+    "image": "/images/products/rope-stand-vip-beludru.png",
+    "tags": [
+      "VIP",
+      "BUMN"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Rope Stand VIP Gold",
     "description": "Warna : Gold Bahan : Beludru(Tal Tiang (Steinless) Panjang: 1.5 m Tinggi : 90 cm Lebar : - cm atau garis yg di inginkan di Area",
-    "price": "Rp 135.000",
+    "price": 150000,
     "category": "Perlengkapan",
-    "image": "/images/products/rope-stand-vip-gold.png"
+    "image": "/images/products/rope-stand-vip-gold.png",
+    "tags": [
+      "VIP",
+      "BUMN"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Rak Brosur",
     "description": "Rak brosur Bahan : Stainless Ukuran: A4 dan A3 Tinggi : 155 cm stand pameran",
-    "price": "Rp 250.000",
+    "price": 275000,
     "category": "Perlengkapan",
-    "image": "/images/products/rak-brosur.png"
+    "image": "/images/products/rak-brosur.png",
+    "tags": [
+      "Konferensi"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Tiang Signed",
     "description": "Bahan : Stainless Ukuran: A4 dan A3 Model: Lanscape. Potrait Tinggi: 90 cm",
-    "price": "Rp 125.000",
+    "price": 150000,
     "category": "Perlengkapan",
-    "image": "/images/products/tiang-signed.png"
+    "image": "/images/products/tiang-signed.png",
+    "tags": [
+      "Konferensi"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Pembatas",
     "description": "Warna : Hitam, merah, Biru Bahan Tiang (Steinless) Panjang: 1.8 m Tinggi : 90 cm Lebar : – cm Lebar : cm atau garis yg di inginkan di Area",
-    "price": "Rp 100.000",
+    "price": 125000,
     "category": "Perlengkapan",
-    "image": "/images/products/pembatas.png"
+    "image": "/images/products/pembatas.png",
+    "tags": [
+      "Outdoor",
+      "Konferensi"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Gong",
     "description": "Warna : Gold Bahan : besi Panjang: – cm Tinggi : – cm Lebar : 38 cm",
-    "price": "Rp 750.000",
+    "price": 850000,
     "category": "Perlengkapan",
-    "image": "/images/products/gong.png"
+    "image": "/images/products/gong.png",
+    "tags": [
+      "VIP",
+      "BUMN"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Karpet Permadani",
     "description": "Warna : merah Bahan : Kualitas Premium Panjang: 3.1 meter Lebar : 2.1 meter Permadani memiliki fungsi utama",
-    "price": "Rp 200.000",
+    "price": 250000,
     "category": "Perlengkapan",
-    "image": "/images/products/karpet-permadani.png"
+    "image": "/images/products/karpet-permadani.png",
+    "tags": [
+      "VIP",
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "Misty Fan",
     "description": "Warna : BLACK Bahan : besi Tinggi: 175 cm Lebar : 26 inc disertai dengan embun, sehingga dapat memberikan kesejukan di",
-    "price": "Rp 350.000",
+    "price": 250000,
     "category": "Perlengkapan",
-    "image": "/images/products/misty-fan.png"
+    "image": "/images/products/misty-fan.png",
+    "tags": [
+      "Outdoor"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "STANDING AC -5PK",
     "description": "Tinggi: – Lebar : – Tersedia sewa AC standing portable kantor/apartemen dan acara lainnya. juga gaya.",
-    "price": "Rp 650.000",
+    "price": 750000,
     "category": "Perlengkapan",
-    "image": "/images/products/standing-ac-5pk.png"
+    "image": "/images/products/standing-ac-5pk.png",
+    "tags": [
+      "Konferensi",
+      "Outdoor"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "TENDA SARNAFIL",
     "description": "Warna : Putih Bahan : Kualitas Premium Ukuran: 3 x 3 , 5 x 5 Melayani jasa pemasangan tenda , karpet flooring, sebagai alas lantai pada pemasangan tenda dekorasi, kerucut/sarnafil, flooring tenda",
-    "price": "Rp 750.000",
+    "price": 750000,
     "category": "Perlengkapan",
-    "image": "/images/products/tenda-sarnafil.png"
+    "image": "/images/products/tenda-sarnafil.png",
+    "tags": [
+      "Outdoor",
+      "Wedding"
+    ],
+    "status": "Tersedia"
   },
   {
     "name": "TRAFFIC CONE",
     "description": "Warna : Orange Tinggi: 75 cm Diameter : 30 cm raya dan manajemen lalu lintas. menandai area, mengarahkan lalu lintas.",
-    "price": "Rp 75.000",
+    "price": 85000,
     "category": "Perlengkapan",
-    "image": "/images/products/traffic-cone.png"
+    "image": "/images/products/traffic-cone.png",
+    "tags": [
+      "Outdoor"
+    ],
+    "status": "Tersedia"
   }
 ]
