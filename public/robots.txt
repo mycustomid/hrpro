@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hrproduction.id/sitemap-index.xml
+Sitemap: https://www.hrproduction.id/sitemap.xml
+Sitemap: https://www.hrproduction.id/sitemap-index.xml
