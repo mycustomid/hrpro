@@ -1,0 +1,12 @@
+---
+interface PackageItem { id: string; qty: number; }
+interface EventPackage { id: string; name: string; description: string; estimated_pax: string; notes: string; resolvedItems: PackageItem[]; }
+interface Props { packages: EventPackage[]; }
+const { packages } = Astro.props;
+---
+<section class="catalog-packages section-paper" aria-labelledby="package-title">
+  <div class="page-shell">
+    <div class="package-heading"><div><p class="eyebrow">Starting points</p><h2 id="package-title">Rakit dari skenario.<br/><em>Bukan dari tebakan.</em></h2></div><p>Pilih starter set lalu sesuaikan jumlahnya di rencana event. Isi paket adalah referensi awal, bukan batasan.</p></div>
+    <div class="package-list">{packages.map((item, index) => <article class="package-item" data-reveal><span class="package-number">0{index + 1}</span><div><p class="package-pax">{item.estimated_pax === "-" ? "Fleksibel" : `${item.estimated_pax} pax`}</p><h3>{item.name}</h3><p>{item.description}</p><small>{item.notes}</small></div><button type="button" class="button package-add" data-package-items={JSON.stringify(item.resolvedItems)} data-package-name={item.name}>Tambahkan starter set <span aria-hidden="true">＋</span></button></article>)}</div>
+  </div>
+</section>
