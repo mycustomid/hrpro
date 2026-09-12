@@ -89,8 +89,19 @@ test("solution pages contain breadcrumbs and Service schema", async () => {
   }
 });
 
-test("favicon, manifest, robots, and sitemap assets exist", async () => {
-  const required = ["favicon.svg", "site.webmanifest", "robots.txt", "og-default.svg", "sitemap-index.xml"];
+test("brand, favicon, manifest, robots, and sitemap assets exist", async () => {
+  const required = [
+    "favicon.svg",
+    "favicon.ico",
+    "brand/hr-emblem.png",
+    "brand/hr-production-logo.svg",
+    "brand/hr-production-logo-inverse.svg",
+    "brand/hr-mark.svg",
+    "site.webmanifest",
+    "robots.txt",
+    "og-default.svg",
+    "sitemap-index.xml",
+  ];
   for (const path of required) {
     assert.equal(existsSync(new URL(path, dist)), true, `missing ${path}`);
   }

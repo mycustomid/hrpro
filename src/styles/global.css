@@ -145,7 +145,7 @@
   .header-grid { min-height: 76px; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 2rem; }
   .brand-link { width: clamp(180px, 22vw, 255px); text-decoration: none; }
   .brand-lockup img { width: 100%; height: auto; }
-  .brand-lockup.is-inverse img { filter: invert(1) grayscale(1) brightness(2); }
+  .brand-lockup.is-inverse img { filter: none; }
   .primary-nav { display: flex; align-items: center; justify-content: flex-end; gap: clamp(1.2rem, 2.6vw, 2.8rem); }
   .nav-links { display: flex; align-items: center; gap: clamp(1rem, 2vw, 2rem); }
   .nav-links a { color: var(--ink-soft); font-size: .82rem; font-weight: 600; text-decoration: none; }

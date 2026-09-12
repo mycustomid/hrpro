@@ -21,16 +21,18 @@
 .brand-monogram {
   width: 48px;
   height: 48px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 0 0 48px;
-  border: 1px solid currentColor;
-  background: var(--ink);
-  color: var(--signal);
-  font-family: "IBM Plex Sans", Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: -.04em;
+  border: none;
+  background: transparent;
+}
+.brand-monogram img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
 .brand-copy {
   display: flex;
@@ -52,9 +54,8 @@
 }
 .brand-lockup.is-compact .brand-monogram { width: 44px; height: 44px; flex-basis: 44px; }
 .brand-lockup.is-inverse .brand-monogram {
-  border-color: rgb(244 240 232 / 55%);
+  border: none;
   background: transparent;
-  color: var(--signal);
 }
 .brand-lockup.is-inverse .brand-copy strong { color: var(--bone); }
 .brand-lockup.is-inverse .brand-copy > span { color: #aeb6c1; }
