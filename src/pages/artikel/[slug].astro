@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { articles } from "../../data/articles.mjs";
+import { site } from "../../config/site.mjs";
+import "../../styles/articles.css";
+
+export function getStaticPaths() {
+  return articles.map((article) => ({ params: { slug: article.slug }, props: { article } }));
+}
+const { article } = Astro.props;
+const canonicalPath = `/artikel/${article.slug}`;
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: article.title,
+  description: article.description,
+  datePublished: article.date,
+  dateModified: article.date,
+  inLanguage: "id-ID",
+  mainEntityOfPage: new URL(canonicalPath, site.domain).toString(),
+  author: { "@type": "Organization", name: site.name },
+  publisher: { "@id": `${site.domain}/#organization` }
+};
+const quote = site.wa(`Halo HR Production, saya membaca artikel "${article.title}" dan ingin konsultasi kebutuhan event.`);
+---
+<BaseLayout title={`${article.title} | HR Production`} description={article.description} canonicalPath={canonicalPath} schema={schema} type="article">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><ol class="page-shell"><li><a href="/">Beranda</a></li><li><a href="/artikel/">Artikel</a></li><li aria-current="page">{article.title}</li></ol></nav>
+  <article>
+    <header class="article-hero article-shell">
+      <p class="eyebrow">{article.category}</p>
+      <h1>{article.title}</h1>
+      <p class="article-meta">{new Date(article.date).toLocaleDateString("id-ID", { day: "numeric", month: "long", year: "numeric" })} · {article.readTime}</p>
+      <p class="intro">{article.intro}</p>
+    </header>
+    <div class="article-body article-shell">
+      {article.sections.map(([heading, body]) => (
+        <section>
+          <h2>{heading}</h2>
+          <p>{body}</p>
+        </section>
+      ))}
+      <aside class="article-cta">
+        <p class="eyebrow">Butuh quotation?</p>
+        <h2>Kirim brief, bukan tebakan.</h2>
+        <p>Sertakan jenis acara, tanggal, venue, jumlah tamu, serta item yang sudah Anda tentukan.</p>
+        <a class="button button-signal" href={quote} target="_blank" rel="noopener noreferrer">Konsultasi via WhatsApp ↗</a>
+      </aside>
+    </div>
+  </article>
+</BaseLayout>
