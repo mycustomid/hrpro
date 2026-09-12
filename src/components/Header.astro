@@ -1,0 +1,30 @@
+---
+import Brand from "./Brand.astro";
+const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const path = (value: string) => `${base}${value.replace(/^\//, "")}`;
+const current = Astro.url.pathname;
+const links = [
+  { href: path("/event-corporate-pemerintah"), label: "Corporate & Pemerintah" },
+  { href: path("/exhibition-conference"), label: "Exhibition" },
+  { href: path("/wedding-gala"), label: "Wedding & Gala" },
+  { href: path("/katalog"), label: "Katalog" },
+];
+---
+<header class="site-header" data-site-header>
+  <div class="header-grid page-shell">
+    <a class="brand-link" href={path("/")} aria-label="HR Production — Beranda">
+      <Brand />
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle>
+      <span class="sr-only">Buka menu utama</span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primary-navigation" aria-label="Navigasi utama" data-menu>
+      <div class="nav-links">
+        {links.map((link) => <a href={link.href} aria-current={current === link.href ? "page" : undefined}>{link.label}</a>)}
+      </div>
+      <a class="button button-ink nav-quote" href={path("/katalog#rencana-event")}>
+        <span>Minta Penawaran</span><span class="plan-count" data-plan-count hidden>0</span>
+      </a>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,38 @@
+---
+import Brand from "./Brand.astro";
+import { site } from "../config/site.mjs";
+const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const path = (value: string) => `${base}${value.replace(/^\//, "")}`;
+const quote = site.wa("Halo HR Production, saya ingin membahas kebutuhan perlengkapan event. Jenis acara: — Tanggal: — Venue: —");
+---
+<footer class="site-footer" id="kontak">
+  <div class="page-shell footer-top">
+    <div class="footer-brand">
+      <Brand inverse />
+      <p>Infrastruktur di belakang event yang harus berjalan tepat.</p>
+    </div>
+    <div>
+      <p class="footer-label">Solusi event</p>
+      <a href={path("/event-corporate-pemerintah")}>Corporate & Pemerintah</a>
+      <a href={path("/exhibition-conference")}>Exhibition & Conference</a>
+      <a href={path("/wedding-gala")}>Wedding & Gala</a>
+      <a href={path("/katalog")}>Katalog inventaris</a>
+    </div>
+    <div>
+      <p class="footer-label">Kontak operasional</p>
+      <a href={`tel:+${site.phone}`}>{site.phoneDisplay}</a>
+      <a href={`mailto:${site.email}`}>{site.email}</a>
+      <p>{site.address}</p>
+    </div>
+    <div class="footer-action">
+      <p class="footer-label">Mulai dari brief</p>
+      <p>Kirim jenis acara, tanggal, venue, dan perkiraan jumlah tamu.</p>
+      <a class="button button-signal" href={quote} target="_blank" rel="noopener noreferrer">Buka WhatsApp <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+  <div class="page-shell footer-bottom">
+    <span>© {new Date().getFullYear()} HR Production</span>
+    <span>Jakarta · Tangerang Selatan · Jabodetabek</span>
+    <a href={path("/katalog.pdf")} target="_blank" rel="noopener noreferrer">Katalog PDF ↗</a>
+  </div>
+</footer>
