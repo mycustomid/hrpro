@@ -1,6 +1,6 @@
 ---
 import { site } from "../config/site.mjs";
-const { eyebrow = "Mulai dari kebutuhan", title = "Venue sudah ditentukan. Sekarang rapikan infrastrukturnya.", body = "Kirim jenis acara, tanggal, lokasi, dan perkiraan jumlah tamu. Tim HR Production akan membantu menyusun kebutuhan yang relevan.", message = "Halo HR Production, saya ingin menyusun kebutuhan perlengkapan event. Jenis acara: — Tanggal: — Venue: — Perkiraan tamu: —" } = Astro.props;
+const { eyebrow = "Mulai dari kebutuhan", title = "Venue sudah ditentukan. Sekarang rapikan kebutuhannya.", body = "Kirim jenis acara, tanggal, lokasi, dan perkiraan jumlah tamu. HR Production membantu menyusun pilihan item dan mengarahkan proses pemesanan.", message = "Halo HR Production, saya ingin menyusun kebutuhan perlengkapan event. Jenis acara: — Tanggal: — Venue: — Perkiraan tamu: —" } = Astro.props;
 const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 <section class="final-cta section"><div class="page-shell final-cta-grid" data-reveal><p class="eyebrow">{eyebrow}</p><div><h2>{title}</h2><p>{body}</p><div class="final-cta-actions"><a class="button button-signal" href={site.wa(message)} target="_blank" rel="noopener noreferrer">Bicarakan di WhatsApp <span aria-hidden="true">↗</span></a><a class="button button-outline-light" href={`${base}katalog`}>Susun Rencana Event <span aria-hidden="true">→</span></a></div></div></div></section>

@@ -1,4 +1,12 @@
 ---
-const steps = [["01", "Brief", "Jenis acara, tanggal, venue, dan jumlah tamu."], ["02", "Recommendation", "Pilihan unit disusun berdasarkan fungsi dan format venue."], ["03", "Availability", "Unit dikonfirmasi untuk tanggal pelaksanaan."], ["04", "Quotation", "Rincian kebutuhan dan estimasi biaya dirapikan."], ["05", "Preparation", "Unit dibersihkan, dicek, dan dikelompokkan."], ["06", "Delivery & Setup", "Pengiriman dan penempatan mengikuti kebutuhan lapangan."], ["07", "Pickup", "Pembongkaran dan penjemputan setelah acara selesai."]];
+const steps = [
+  ["01", "Brief", "Jenis acara, tanggal, venue, jumlah tamu, dan kebutuhan utama."],
+  ["02", "Recommendation", "Pilihan item disusun berdasarkan fungsi dan format venue."],
+  ["03", "Availability", "Ketersediaan item dikonfirmasi untuk tanggal pelaksanaan."],
+  ["04", "Quotation", "Rincian kebutuhan dan estimasi biaya dirapikan untuk persetujuan."],
+  ["05", "Confirmation", "Item, jumlah, jadwal, dan detail operasional dikunci sebelum pelaksanaan."],
+  ["06", "Delivery & Setup", "Pengiriman dan penempatan dikoordinasikan mengikuti kebutuhan venue."],
+  ["07", "Pickup", "Pembongkaran dan penjemputan dikoordinasikan setelah acara selesai."],
+];
 ---
-<section class="section section-signal process" aria-labelledby="process-title"><div class="page-shell"><div class="section-intro"><p class="eyebrow">How it works</p><div><h2 id="process-title">Tidak ada barang yang <em>sekadar dikirim.</em></h2><p class="section-intro-copy">Setiap unit masuk ke dalam urutan kerja yang sama—dari brief sampai kembali dari venue.</p></div></div><ol class="process-list">{steps.map(([number, title, body]) => <li data-reveal><span>{number}</span><h3>{title}</h3><p>{body}</p></li>)}</ol></div></section>
+<section class="section section-signal process" aria-labelledby="process-title"><div class="page-shell"><div class="section-intro"><p class="eyebrow">How it works</p><div><h2 id="process-title">Tidak berhenti di <em>pilih barang.</em></h2><p class="section-intro-copy">HR Production menjadi satu titik komunikasi dari brief, pemilihan item, konfirmasi ketersediaan, hingga koordinasi pelaksanaan.</p></div></div><ol class="process-list">{steps.map(([number, title, body]) => <li data-reveal><span>{number}</span><h3>{title}</h3><p>{body}</p></li>)}</ol></div></section>

@@ -68,6 +68,15 @@
 .primary-nav.is-open {
   background: var(--signal);
 }
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: .42rem;
+  margin-top: .9rem;
+}
+.footer-socials a {
+  width: fit-content;
+}
 
 @media (max-width: 640px) {
   .brand-copy > span { display: none; }

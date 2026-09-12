@@ -9,31 +9,35 @@ const quote = site.wa("Halo HR Production, saya ingin membahas kebutuhan perleng
   <div class="page-shell footer-top">
     <div class="footer-brand">
       <Brand inverse />
-      <p>Rental furniture dan perlengkapan operasional untuk event yang harus berjalan tepat.</p>
+      <p>Konsultasi, pemilihan item, dan pemesanan perlengkapan event melalui satu kontak marketing.</p>
     </div>
     <div>
       <p class="footer-label">Solusi event</p>
       <a href={path("/event-corporate-pemerintah")}>Corporate & Pemerintah</a>
       <a href={path("/exhibition-conference")}>Exhibition & Conference</a>
       <a href={path("/wedding-gala")}>Wedding & Gala</a>
-      <a href={path("/katalog")}>Katalog inventaris</a>
+      <a href={path("/katalog")}>Katalog produk</a>
       <a href={path("/artikel")}>Artikel & panduan</a>
     </div>
     <div>
-      <p class="footer-label">Kontak operasional</p>
+      <p class="footer-label">Kontak marketing</p>
       <a href={`tel:+${site.phone}`}>{site.phoneDisplay}</a>
-      <a href={`mailto:${site.email}`}>{site.email}</a>
-      <p>{site.address}</p>
+      <p>{site.serviceArea}</p>
+      <div class="footer-socials" aria-label="Media sosial HR Production">
+        <a href={site.socials.instagram} target="_blank" rel="noopener noreferrer">Instagram · HRproduction ↗</a>
+        <a href={site.socials.facebook} target="_blank" rel="noopener noreferrer">Facebook · haryanto ↗</a>
+        <a href={site.socials.tiktok} target="_blank" rel="noopener noreferrer">TikTok · HRproduction ↗</a>
+      </div>
     </div>
     <div class="footer-action">
       <p class="footer-label">Mulai dari brief</p>
-      <p>Kirim jenis acara, tanggal, venue, dan perkiraan jumlah tamu.</p>
-      <a class="button button-signal" href={quote} target="_blank" rel="noopener noreferrer">Buka WhatsApp <span aria-hidden="true">↗</span></a>
+      <p>Kirim jenis acara, tanggal, venue, perkiraan jumlah tamu, dan item yang dibutuhkan.</p>
+      <a class="button button-signal" href={quote} target="_blank" rel="noopener noreferrer">Chat WhatsApp <span aria-hidden="true">↗</span></a>
     </div>
   </div>
   <div class="page-shell footer-bottom">
     <span>© {new Date().getFullYear()} HR Production</span>
-    <span>Jakarta · Tangerang Selatan · Jabodetabek</span>
+    <span>Marketing & booking · Event equipment</span>
     <a href={path("/katalog.pdf")} target="_blank" rel="noopener noreferrer">Katalog PDF ↗</a>
   </div>
 </footer>

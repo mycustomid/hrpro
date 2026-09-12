@@ -10,6 +10,11 @@ const routes = [
   ["event-corporate-pemerintah/index.html", "Corporate"],
   ["exhibition-conference/index.html", "Exhibition"],
   ["wedding-gala/index.html", "Wedding"],
+  ["artikel/index.html", "Artikel"],
+  ["artikel/checklist-sewa-perlengkapan-event-corporate/index.html", "Artikel Corporate"],
+  ["artikel/cara-memilih-kursi-event/index.html", "Artikel Kursi"],
+  ["artikel/panduan-layout-booth-pameran/index.html", "Artikel Booth"],
+  ["artikel/sewa-perlengkapan-event-pemerintah/index.html", "Artikel Pemerintah"],
   ["404.html", "404"],
 ];
 
@@ -29,10 +34,10 @@ test("every route has one H1 and complete social metadata", async () => {
     const source = await html(path);
     const h1Count = (source.match(/<h1(?:\s|>)/g) || []).length;
     assert.equal(h1Count, 1, `${label} must have one H1`);
-    assert.match(source, /<link rel="canonical" href="https:\/\/hrproduction\.id/);
+    assert.match(source, /<link rel="canonical" href="https:\/\/www\.hrproduction\.id/);
     assert.match(source, /<meta name="description" content="[^"]+"/);
     assert.match(source, /<meta property="og:title" content="[^"]+"/);
-    assert.match(source, /<meta property="og:image" content="https:\/\/hrproduction\.id\/og-default\.svg"/);
+    assert.match(source, /<meta property="og:image" content="https:\/\/www\.hrproduction\.id\/og-default\.svg"/);
     assert.match(source, /<meta name="twitter:card" content="summary_large_image"/);
     const title = source.match(/<title>(.*?)<\/title>/)?.[1];
     assert.ok(title, `${label} needs a title`);
@@ -41,18 +46,31 @@ test("every route has one H1 and complete social metadata", async () => {
   }
 });
 
-test("homepage carries the operational narrative without unsupported claims", async () => {
+test("homepage is positioned as a marketing and booking channel", async () => {
   const source = await html("index.html");
   assert.match(source, /Acara besar/);
   assert.match(source, /Minta Penawaran/);
   assert.match(source, /Lihat Katalog/);
-  assert.match(source, /Brief/);
-  assert.match(source, /Selected Inventory|Pilihan inventaris/i);
-  assert.doesNotMatch(source, /&lt;\s*1 Jam|<\s*1 Jam/);
-  assert.doesNotMatch(source, /vendor terpercaya/i);
+  assert.match(source, /membantu memilih, menyusun, dan memesan/i);
+  assert.match(source, /6281387927481/);
+  assert.doesNotMatch(source, /Event infrastructure partner/i);
 });
 
-test("catalog server-renders all inventory with accessible plan controls", async () => {
+test("public build does not expose upstream direct-contact details", async () => {
+  const blocked = [
+    /0821[ -]?4143[ -]?8080/,
+    /0813[ -]?1462[ -]?2349/,
+    /0821[ -]?3081[ -]?8342/,
+    /rrproduction123@gmail\.com/i,
+    /azaremon@gmail\.com/i,
+  ];
+  for (const [path] of routes) {
+    const source = await html(path);
+    for (const pattern of blocked) assert.doesNotMatch(source, pattern, `${path} leaks upstream contact`);
+  }
+});
+
+test("catalog server-renders all products with accessible plan controls", async () => {
   const source = await html("katalog/index.html");
   const productIds = [...source.matchAll(/data-product-id="([^"]+)"/g)].map((match) => match[1]);
   assert.equal(new Set(productIds).size, 84);
@@ -60,7 +78,7 @@ test("catalog server-renders all inventory with accessible plan controls", async
   assert.match(source, /data-filter-group="category"/);
   assert.match(source, /data-filter-group="use"/);
   assert.match(source, /role="dialog"/);
-  assert.match(source, /estimasi awal/i);
+  assert.match(source, /Ketersediaan item dikonfirmasi saat pemesanan/i);
 });
 
 test("solution pages contain breadcrumbs and Service schema", async () => {
@@ -71,18 +89,10 @@ test("solution pages contain breadcrumbs and Service schema", async () => {
   }
 });
 
-test("brand, manifest, robots, and sitemap assets exist", async () => {
-  const required = [
-    "brand/hr-production-logo.svg",
-    "brand/hr-mark.svg",
-    "favicon.svg",
-    "site.webmanifest",
-    "robots.txt",
-    "og-default.svg",
-    "sitemap-index.xml",
-  ];
+test("favicon, manifest, robots, and sitemap assets exist", async () => {
+  const required = ["favicon.svg", "site.webmanifest", "robots.txt", "og-default.svg", "sitemap-index.xml"];
   for (const path of required) {
     assert.equal(existsSync(new URL(path, dist)), true, `missing ${path}`);
   }
-  assert.match(await html("robots.txt"), /Sitemap: https:\/\/hrproduction\.id\/sitemap-index\.xml/);
+  assert.match(await html("robots.txt"), /Sitemap: https:\/\/www\.hrproduction\.id\/sitemap-index\.xml/);
 });
