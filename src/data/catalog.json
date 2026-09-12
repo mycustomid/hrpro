@@ -1,982 +1,1318 @@
 [
   {
-    "name": "Sofa Single Putih",
-    "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: 90 cm Tinggi : 90 cm Lebar : 80 cm",
-    "price": 150000,
+    "name": "Sofa Single",
+    "description": "Warna : Hitam, Putih · Bahan : Oscar / Kulit Sintetis · Panjang: 90 cm · Tinggi : 90 cm · Lebar : 80 cm · Sofa VIP yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Sofa",
-    "image": "/images/products/sofa-single-putih.png",
+    "image": "/images/products/sofa-single.webp",
     "tags": [
+      "VIP",
       "Wedding",
       "Gala Dinner"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Sofa Double Putih",
-    "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: 150 cm Tinggi : 90 cm Lebar : 82 cm",
-    "price": 275000,
+    "description": "Warna : Hitam, Putih · Bahan : Oscar / Kulit Sintetis · Panjang: 180 cm · Tinggi : 90 cm · Lebar : 82 cm · Sofa VIP yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Sofa",
-    "image": "/images/products/sofa-double-putih.png",
+    "image": "/images/products/sofa-double-putih.webp",
     "tags": [
+      "VIP",
       "Wedding",
       "Gala Dinner"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Sofa Triple Putih",
-    "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: 205 cm Tinggi : 90 cm Lebar : 82 cm",
-    "price": 400000,
+    "description": "Warna : Hitam, Putih · Bahan : Oscar / Kulit Sintetis · Panjang: 205 cm · Tinggi : 90 cm · Lebar : 82 cm · Sofa VIP yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Sofa",
-    "image": "/images/products/sofa-triple-putih.png",
+    "image": "/images/products/sofa-triple-putih.webp",
     "tags": [
+      "VIP",
       "Wedding",
       "Gala Dinner"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Sofa Oval Putih",
-    "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: 58 cm Tinggi : 66 cm Lebar : 65 cm",
-    "price": 350000,
+    "description": "Warna : Hitam, Putih · Bahan : Oscar / Kulit Sintetis · Panjang: 58 cm · Tinggi : 66 cm · Lebar : 65 cm · Sofa VIP yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Sofa",
-    "image": "/images/products/sofa-oval-putih.png",
+    "image": "/images/products/sofa-oval-putih.webp",
     "tags": [
       "VIP",
-      "Wedding"
-    ],
-    "status": "Tersedia"
-  },
-  {
-    "name": "Sofa scandiv Putih",
-    "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: 77 cm Tinggi : 80 cm Lebar : 78 cm",
-    "price": 275000,
-    "category": "Sofa",
-    "image": "/images/products/sofa-scandiv-putih.png",
-    "tags": [
-      "Wedding"
-    ],
-    "status": "Tersedia"
-  },
-  {
-    "name": "Sofa Oval VIP",
-    "description": "Tinggi: 50 cm Lebar : 70 cm Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis",
-    "price": 350000,
-    "category": "Sofa",
-    "image": "/images/products/sofa-oval-vip.png",
-    "tags": [
-      "VIP",
-      "BUMN"
-    ],
-    "status": "Tersedia"
-  },
-  {
-    "name": "Sofa Queen Putih",
-    "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: - cm Tinggi Sandaran : 55 cm Lebar Diameter : 40 cm",
-    "price": 200000,
-    "category": "Sofa",
-    "image": "/images/products/sofa-queen-putih.png",
-    "tags": [
-      "Wedding"
-    ],
-    "status": "Tersedia"
-  },
-  {
-    "name": "Sofa Oval Hitam",
-    "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: 58 cm Tinggi : 66 cm Lebar : 65 cm",
-    "price": 350000,
-    "category": "Sofa",
-    "image": "/images/products/sofa-oval-hitam.png",
-    "tags": [
-      "VIP",
-      "Wedding"
-    ],
-    "status": "Tersedia"
-  },
-  {
-    "name": "Sofa Single Hitam",
-    "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: 90 cm Tinggi : 90 cm Lebar : 80 cm",
-    "price": 150000,
-    "category": "Sofa",
-    "image": "/images/products/sofa-single-hitam.png",
-    "tags": [
       "Wedding",
       "Gala Dinner"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "Sofa Scandiv Putih",
+    "description": "Warna : Hitam, Putih · Bahan : Oscar / Kulit Sintetis · Panjang: 77 cm · Tinggi : 80 cm · Lebar : 78 cm · Sofa VIP yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara pesta resmi anda.",
+    "price": null,
+    "category": "Sofa",
+    "image": "/images/products/sofa-scandiv-putih.webp",
+    "tags": [
+      "VIP",
+      "Wedding",
+      "Gala Dinner"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "Sofa Scandiv Kipas",
+    "description": "Warna : Putih · Bahan : Oscar / Kulit Sintetis · Panjang: 77 cm · Tinggi : 80 cm · Lebar : 78 cm · Sofa VIP yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara pesta resmi anda.",
+    "price": null,
+    "category": "Sofa",
+    "image": "/images/products/sofa-scandiv-kipas.webp",
+    "tags": [
+      "VIP",
+      "Wedding",
+      "Gala Dinner"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Sofa Lesehan Arab",
-    "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: 70 cm Tinggi : 60 cm Lebar : 55 cm",
-    "price": 200000,
+    "description": "Warna : Putih · Bahan : Oscar / Kulit Sintetis · Panjang: 70 cm · Tinggi : 60 cm · Lebar : 55 cm · Sofa VIP yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Sofa",
-    "image": "/images/products/sofa-lesehan-arab.png",
+    "image": "/images/products/sofa-lesehan-arab.webp",
     "tags": [
+      "VIP",
       "Wedding",
-      "Outdoor"
+      "Gala Dinner"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "Sofa Lesehan Arab",
+    "description": "Warna : Abu abu, Coklat, Hitam · Bahan : Oscar / Kulit Sintetis · Panjang: 70 cm · Tinggi : 60 cm · Lebar : 55 cm · Sofa VIP yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara pesta resmi anda.",
+    "price": null,
+    "category": "Sofa",
+    "image": "/images/products/sofa-lesehan-arab-2.webp",
+    "tags": [
+      "VIP",
+      "Wedding",
+      "Gala Dinner"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "Sofa Queen Putih",
+    "description": "Warna : Putih · Bahan : Oscar / Kulit Sintetis · Panjang: -cm · Tinggi Sandaran: 55 cm · Lebar Diameter : 40 cm · Sofa VIP yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara pesta resmi anda.",
+    "price": null,
+    "category": "Sofa",
+    "image": "/images/products/sofa-queen-putih.webp",
+    "tags": [
+      "VIP",
+      "Wedding",
+      "Gala Dinner"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Bench panjang",
-    "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: 90 cm Tinggi : 52 cm Lebar : – cm",
-    "price": 175000,
+    "description": "Warna : Hitam, Putih · Bahan : Oscar / Kulit Sintetis · Panjang: 90 cm · Tinggi : 52 cm · Lebar : – cm · Sofa VIP yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
     "category": "Sofa",
-    "image": "/images/products/bench-panjang.png",
+    "image": "/images/products/bench-panjang.webp",
     "tags": [
-      "Outdoor",
-      "Konferensi"
+      "VIP",
+      "Wedding",
+      "Gala Dinner"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "Puff Bulat dan kotak",
-    "description": "Warna : Hitam, Putih Bahan : Oscar / Kulit Sintetis Panjang: 50 cm Tinggi : 50 cm Lebar : 50 cm",
-    "price": 100000,
+    "name": "Puff kotak",
+    "description": "Warna : Warna-warni · Bahan : Oscar / Kulit Sintetis · Panjang: 50 cm · Tinggi : 50 cm · Lebar : 50 cm · Sofa VIP yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Sofa",
-    "image": "/images/products/puff-bulat-dan-kotak.png",
+    "image": "/images/products/puff-kotak.webp",
     "tags": [
-      "Outdoor",
-      "Wedding"
+      "VIP",
+      "Wedding",
+      "Gala Dinner"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "Meja IBM Cover Stretcht",
-    "description": "Warna : Putih Bahan : – Panjang: 180 cm Tinggi : 75 cm Lebar : 60 cm",
-    "price": 150000,
-    "category": "Meja",
-    "image": "/images/products/meja-ibm-cover-stretcht.png",
+    "name": "Puff Bulat",
+    "description": "Warna : Warna-warni · Bahan : Oscar / Kulit Sintetis · Panjang: – cm · Tinggi : 50 cm · Lebar Diameter : 50 cm · Sofa ini memiliki bentuk yang kecil dan imut. kami sediakan untuk menjamu tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
+    "category": "Sofa",
+    "image": "/images/products/puff-bulat.webp",
     "tags": [
-      "Konferensi",
-      "BUMN"
+      "VIP",
+      "Wedding",
+      "Gala Dinner"
     ],
-    "status": "Tersedia"
-  },
-  {
-    "name": "Meja IBM cover",
-    "description": "Warna : Hitam, Putih Bahan : Panjang: 180 cm Tinggi : 75 cm Lebar : 60 cm",
-    "price": 150000,
-    "category": "Meja",
-    "image": "/images/products/meja-ibm-cover.png",
-    "tags": [
-      "Konferensi",
-      "BUMN"
-    ],
-    "status": "Tersedia"
-  },
-  {
-    "name": "Meja IBM cover runner",
-    "description": "Warna : Coklat Bahan : Kayu Panjang: 180 cm Tinggi : 75 cm Lebar : 60 cm",
-    "price": 175000,
-    "category": "Meja",
-    "image": "/images/products/meja-ibm-cover-runner.png",
-    "tags": [
-      "Konferensi",
-      "BUMN"
-    ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Meja skirting cover",
-    "description": "Warna : Hitam, Putih Bahan : Kayu Panjang: 120 cm Tinggi : 75 cm Lebar : 80 cm",
-    "price": 125000,
+    "description": "Warna : Cover · Bahan : HPL · Panjang: 120 cm · Tinggi : 80 cm · Lebar : 75 cm · meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-skirting-cover.png",
+    "image": "/images/products/meja-skirting-cover.webp",
     "tags": [
-      "Konferensi"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "Meja cover Stretcht",
-    "description": "Warna : Hitam, Putih Bahan : – Panjang: 120 cm Tinggi : 75 cm Lebar : 80 cm",
-    "price": 125000,
+    "name": "Meja IBM cover",
+    "description": "Warna : Cover · Bahan : HPL · Panjang: 180 cm · Tinggi : 75 cm · Lebar : 60 cm · meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-cover-stretcht.png",
+    "image": "/images/products/meja-ibm-cover.webp",
     "tags": [
-      "Konferensi"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "Meja dealing kaca cover",
-    "description": "Warna : Putih Bahan : Kaki Stainlis Panjang: – cm Tinggi : 75 cm Lebar Diameter : 80 cm",
-    "price": 175000,
+    "name": "Meja IBM cover runner",
+    "description": "Warna : Cover · Bahan : HPL · Panjang: 180 cm · Tinggi : 75 cm · Lebar : 60 cm · Meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-dealing-kaca-cover.png",
+    "image": "/images/products/meja-ibm-cover-runner.webp",
     "tags": [
-      "VIP",
-      "BUMN"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "Meja skirting cover",
+    "description": "Warna : Putih · Bahan : – · Panjang: 180 cm · Tinggi : 75 cm · Lebar : 60 cm · Meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
+    "category": "Meja",
+    "image": "/images/products/meja-skirting-cover-2.webp",
+    "tags": [
+      "Konferensi",
+      "Wedding"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "Meja cover",
+    "description": "Warna : Cover · Bahan : – · Panjang: 120 cm · Tinggi : 80 cm · Lebar : 75 cm · meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
+    "category": "Meja",
+    "image": "/images/products/meja-cover.webp",
+    "tags": [
+      "Konferensi",
+      "Wedding"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "Meja dealing cover",
+    "description": "Warna : Putih · Bahan : Kaki Stainlis · Panjang: – cm · Tinggi : 75 cm · Lebar Diameter : 80 cm · Meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
+    "category": "Meja",
+    "image": "/images/products/meja-dealing-cover.webp",
+    "tags": [
+      "Konferensi",
+      "Wedding"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Meja round table 160cm cover",
-    "description": "Warna : Putih Bahan : Plastik Panjang: 160 cm Tinggi : 75 cm Lebar Diameter: 160 cm",
-    "price": 200000,
+    "description": "Warna : Putih · Bahan : Plastik · Panjang: – cm · Tinggi : – cm · Lebar Diameter: 160 cm · Meja yg kami sediakan untuk menjamu tamu VIP yang anda Undang di acara resmi anda, kapasitas 6-8 orang.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-round-table-160cm-cover.png",
+    "image": "/images/products/meja-round-table-160cm-cover.webp",
     "tags": [
-      "Wedding",
-      "Gala Dinner"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "round table 160cm cover rumbai",
-    "description": "Warna : Putih Bahan : Plastik Panjang: 160cm Tinggi : 75cm Lebar Diameter: 160 cm",
-    "price": 225000,
+    "description": "Warna : Putih · Bahan : Plastik · Panjang: – cm · Tinggi : – cm · Lebar Diameter: 160 cm · Meja yg kami sediakan untuk menjamu tamu VIP yang anda Undang di acara resmi anda, kapasitas 6-8 orang.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/round-table-160cm-cover-rumbai.png",
+    "image": "/images/products/round-table-160cm-cover-rumbai.webp",
     "tags": [
-      "Wedding",
-      "Gala Dinner"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "round table 160cm cover Runner",
-    "description": "Warna : Putih Bahan : Plastik Panjang: 160 cm Tinggi : 75 cm Lebar Diameter: 160 cm",
-    "price": 225000,
+    "description": "Warna : Putih · Bahan : Plastik · Panjang: – cm · Tinggi : – cm · Lebar Diameter: 160 cm · Meja yg kami sediakan untuk menjamu tamu VIP yang anda Undang di acara resmi anda, kapasitas 6-8 orang.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/round-table-160cm-cover-runner.png",
+    "image": "/images/products/round-table-160cm-cover-runner.webp",
     "tags": [
-      "Wedding",
-      "Gala Dinner"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Meja konsul",
-    "description": "Warna : Coklat Bahan : Kayu Jati Panjang: 120 cm Tinggi : 75 cm Lebar : 50 cm",
-    "price": 300000,
+    "description": "Warna : Coklat · Bahan : Kayu Jati · Panjang: 120 cm · Tinggi : 75 cm · Lebar : 50 cm · Meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-konsul.png",
+    "image": "/images/products/meja-konsul.webp",
     "tags": [
-      "VIP"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Meja VIP jati",
-    "description": "Warna : Coklat Bahan : Kayu Jati Panjang: 80 cm Tinggi : 45 cm Lebar : 50 cm",
-    "price": 175000,
+    "description": "Warna : Coklat · Bahan : Kayu Jati · Panjang: 80 cm · Tinggi : 45 cm · Lebar : 50 cm · Meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-vip-jati.png",
+    "image": "/images/products/meja-vip-jati.webp",
     "tags": [
+      "Konferensi",
+      "Wedding",
       "VIP",
       "BUMN"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Meja lesehan",
-    "description": "Warna : Coklat Bahan : Kayu Panjang: 100 cm Tinggi : 35 cm Lebar : 50 cm",
-    "price": 125000,
+    "description": "Warna : Coklat · Bahan : Kayu · Panjang: 100 cm · Tinggi : 35 cm · Lebar : 50 cm · Meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-lesehan.png",
+    "image": "/images/products/meja-lesehan.webp",
     "tags": [
-      "Outdoor",
+      "Konferensi",
       "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "Meja Scremble tinggi",
-    "description": "Warna : Putih Bahan : Plastik Panjang: – cm Tinggi : 75 cm Lebar Diameter: 60 cm",
-    "price": 125000,
+    "name": "Meja scremble tinggi",
+    "description": "Warna : Putih · Bahan : kaki kayu · Panjang: – cm · Tinggi : 75 cm · Lebar Diameter : 60 cm · Meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-scremble-tinggi.png",
+    "image": "/images/products/meja-scremble-tinggi.webp",
     "tags": [
-      "Gala Dinner"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "Meja Scremble pendek",
-    "description": "Warna : Putih Bahan : Plastik Panjang: – cm Tinggi : 45 cm Lebar Diameter: 60 cm",
-    "price": 125000,
+    "name": "Meja scremble",
+    "description": "Warna : Putih · Bahan : kaki kayu · Panjang: – cm · Tinggi : 45 cm · Lebar : 60 cm · Meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-scremble-pendek.png",
+    "image": "/images/products/meja-scremble.webp",
     "tags": [
-      "Gala Dinner"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "Meja Dealing Alumunium",
-    "description": "Warna : Putih Bahan : Alumunium Panjang: – cm Tinggi : 75 cm Lebar Diameter: 60 cm",
-    "price": 150000,
+    "name": "Meja dealing",
+    "description": "Warna : Putih · Bahan : kaki alumunium · Panjang: – cm · Tinggi : 75 cm · Lebar : 60 cm · Meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-dealing-alumunium.png",
+    "image": "/images/products/meja-dealing.webp",
     "tags": [
-      "BUMN"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Meja bar Round putih",
-    "description": "Warna : Putih Bahan : khaki stainlis Panjang: – cm Tinggi : 100 cm Lebar Diameter : 60 cm",
-    "price": 175000,
+    "description": "Warna : Putih · Bahan : kaki stainlis · Panjang: – cm · Tinggi : 100 cm · Lebar Diameter : 60 cm · Meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-bar-round-putih.png",
+    "image": "/images/products/meja-bar-round-putih.webp",
     "tags": [
-      "Gala Dinner"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "Meja bar cover Stretcht",
-    "description": "Warna : Putih Bahan : kaki stainlis Panjang: – cm Tinggi : 100 cm Lebar Diameter : 60 cm",
-    "price": 175000,
+    "name": "Meja bar cover",
+    "description": "Warna : Putih · Bahan : kaki stainlis · Panjang: – cm · Tinggi : 100 cm · Lebar Diameter : 60 cm · Meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-bar-cover-stretcht.png",
+    "image": "/images/products/meja-bar-cover.webp",
     "tags": [
-      "Gala Dinner"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "Meja bar cover Stretcht",
-    "description": "Warna : putih, hitam Bahan : khaki stainlis Panjang: – cm Tinggi : 100 cm Lebar Diameter : 60 cm",
-    "price": 175000,
+    "name": "Meja bar cover strech",
+    "description": "Warna : putih, hitam · Bahan : kaki stainlis · Panjang: – cm · Tinggi : 100 cm · Lebar Diameter : 60 cm · Meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-bar-cover-stretcht-2.png",
+    "image": "/images/products/meja-bar-cover-strech.webp",
     "tags": [
-      "Gala Dinner"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Meja Sofa putih",
-    "description": "Warna : Putih Bahan : – Panjang: 90 cm Tinggi : 45 cm Lebar : 50 cm",
-    "price": 150000,
+    "description": "Warna : Putih · Bahan : – · Panjang: 90 cm · Tinggi : 45 cm · Lebar : 50 cm · Meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-sofa-putih.png",
+    "image": "/images/products/meja-sofa-putih.webp",
     "tags": [
+      "Konferensi",
       "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Meja dealing kaca",
-    "description": "Warna : Putih Bahan : alumunium Panjang: 80 cm Tinggi : 75 cm Lebar : 80 cm",
-    "price": 175000,
+    "description": "Warna : Putih · Bahan : alumunium · Panjang: – cm · Tinggi : 75 cm · Lebar : 80 cm · Meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-dealing-kaca.png",
+    "image": "/images/products/meja-dealing-kaca.webp",
     "tags": [
-      "BUMN",
-      "VIP"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Meja dealing kotak",
-    "description": "Warna : Coklat Model : kotak, bulat Panjang: 60 cm Tinggi : 75 cm Lebar : 60 cm",
-    "price": 175000,
+    "description": "Warna : Coklat · Bahan : · Panjang: 60 cm · Tinggi : 75 cm · Lebar : 60 cm · Meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-dealing-kotak.png",
+    "image": "/images/products/meja-dealing-kotak.webp",
     "tags": [
-      "BUMN"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Meja Betawi",
-    "description": "Warna : Coklat Bahan : Kayu Panjang: – cm Tinggi : 75 cm Lebar Diameter : 70 cm",
-    "price": 175000,
+    "description": "Warna : Coklat · Bahan : Kayu · Panjang: – cm · Tinggi : 75 cm · Lebar Diameter : 70 cm · Meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-betawi.png",
+    "image": "/images/products/meja-betawi.webp",
     "tags": [
-      "Outdoor",
+      "Konferensi",
       "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Meja sudut jati",
-    "description": "Warna : Coklat Bahan : Kayu Panjang: 40 cm Tinggi : 45 cm Lebar : 30 cm",
-    "price": 150000,
+    "description": "Warna : Coklat · Bahan : Kayu · Panjang: 30 cm · Tinggi : 45 cm · Lebar : 30 cm · Meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-sudut-jati.png",
+    "image": "/images/products/meja-sudut-jati.webp",
     "tags": [
-      "VIP"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Meja sudut kotak",
-    "description": "Warna : Hitam , Putih Bahan : Kayu Panjang: 50 cm Tinggi : 45 cm Lebar : 50 cm",
-    "price": 150000,
+    "description": "Warna : Hitam , Putih · Bahan : Kayu · Panjang: 50 cm · Tinggi : 45 cm · Lebar : 50 cm · Meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-sudut-kotak.png",
+    "image": "/images/products/meja-sudut-kotak.webp",
     "tags": [
+      "Konferensi",
       "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Meja Taman Set",
-    "description": "Warna : Coklat Bahan : Kayu Panjang: 160 cm Tinggi : 75 cm Lebar : 70 cm",
-    "price": 750000,
+    "description": "Warna : Coklat · Bahan : Kayu · Panjang: 160 cm · Tinggi : 75 cm · Lebar : 70 cm · Meja yg kami sediakan untuk menjamu tamu-tamu VIP yang anda Undang di acara resmi anda.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-taman-set.png",
+    "image": "/images/products/meja-taman-set.webp",
     "tags": [
-      "Outdoor",
+      "Konferensi",
       "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "Meja Taman Set",
-    "description": "Warna : Kayu Bahan : -cm Panjang: -cm Lebar : -cm Parasol Set memiliki fungsi utama",
-    "price": 750000,
+    "name": "Kursi Taman Magic",
+    "description": "Warna : Coklat · Bahan : Kayu · Panjang: 130 cm · Tinggi : 75 cm · Lebar : 138 cm · Meja yg kami sediakan untuk menjamu tamu-tamu anda Undang di acaraOutdoor.",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/meja-taman-set-2.png",
+    "image": "/images/products/kursi-taman-magic.webp",
     "tags": [
-      "Outdoor",
+      "Konferensi",
       "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "Bean bag",
-    "description": "Warna : merah,putih,hitam,biru,kuning ect Bahan : Oscar / Kulit Sintetis Panjang: 100 cm Diameter : 50 cm tertutup berisi kacang kering, diperluas, atau polypropylene",
-    "price": 100000,
+    "name": "Puff Kotak Kayu",
+    "description": "Warna : Coklat · Bahan : Kayu · Panjang: 50 cm · Tinggi : 50 cm · Lebar : 50 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu anda di acara Outdoor .",
+    "price": null,
     "category": "Meja",
-    "image": "/images/products/bean-bag.png",
+    "image": "/images/products/puff-kotak-kayu.webp",
     "tags": [
-      "Outdoor"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "KURSI MEJA ANAK",
+    "description": "Warna : Merah, kuning, Hijau, Biru · Bahan : Plastik(Aman Untuk Anak) · Panjang: 120cm · Tinggi : 50 cm · Lebar : 60 cm · Meja kursi yg kami sediakan untuk acara untuk anak anak",
+    "price": null,
+    "category": "Meja",
+    "image": "/images/products/kursi-meja-anak.webp",
+    "tags": [
+      "Konferensi",
+      "Wedding"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "MEJA RIAS PORTABLE",
+    "description": "Warna : Putih · Bahan: Kayu · Keunggulan meja rias portable terletak pada tampilannya yang elegan, material kokoh, serta pencahayaan optimal yang membantu menghasilkan riasan sempurna.",
+    "price": null,
+    "category": "Meja",
+    "image": "/images/products/meja-rias-portable.webp",
+    "tags": [
+      "Konferensi",
+      "Wedding"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Kursi Futura",
-    "description": "Warna : Merah Bahan : – Panjang: 48 cm Tinggi : 97 cm Lebar : 46 cm",
-    "price": 15000,
+    "description": "Warna : Merah · Bahan : – · Panjang: 48 cm · Tinggi : 97 cm · Lebar : 46 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/kursi-futura.png",
+    "image": "/images/products/kursi-futura.webp",
     "tags": [
       "Konferensi",
-      "Outdoor"
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Kursi Futura Cover",
-    "description": "Warna : Merah Cover Putih Bahan : – Panjang: 48 cm Tinggi : 97 cm Lebar : 46 cm",
-    "price": 20000,
+    "description": "Warna : Merah Cover Putih · Bahan : – · Panjang: 48 cm · Tinggi : 97 cm · Lebar : 46 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/kursi-futura-cover.png",
+    "image": "/images/products/kursi-futura-cover.webp",
     "tags": [
       "Konferensi",
       "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "kursi futura cover Pita",
-    "description": "Warna : Merah Bahan : – Panjang: 48 cm Tinggi : 97 cm Lebar : 46 cm",
-    "price": 22000,
+    "description": "Warna : Merah · Bahan : – · Panjang: 48 cm · Tinggi : 97 cm · Lebar : 46 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/kursi-futura-cover-pita.png",
+    "image": "/images/products/kursi-futura-cover-pita.webp",
     "tags": [
       "Konferensi",
       "Wedding"
     ],
-    "status": "Tersedia"
-  },
-  {
-    "name": "Kursi Futura Cover",
-    "description": "Warna : Gold Bahan : – Panjang: 48 cm Tinggi : 97 cm Lebar : 46 cm Lebar : 46 cm",
-    "price": 22000,
-    "category": "Kursi",
-    "image": "/images/products/kursi-futura-cover-2.png",
-    "tags": [
-      "Wedding",
-      "Gala Dinner"
-    ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "kursi futura cover Pita",
-    "description": "Warna : Biru Bahan : – Panjang: 48 cm Tinggi : 97 cm Lebar : 46 cm",
-    "price": 22000,
+    "description": "Warna : Gold · Bahan : – · Panjang: 48 cm · Tinggi : 97 cm · Lebar : 46 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/kursi-futura-cover-pita-2.png",
+    "image": "/images/products/kursi-futura-cover-pita-2.webp",
     "tags": [
       "Konferensi",
       "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "kursi futura cover Pita",
+    "description": "Warna : Biru · Bahan : – · Panjang: 48 cm · Tinggi : 97 cm · Lebar : 46 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
+    "category": "Kursi",
+    "image": "/images/products/kursi-futura-cover-pita-3.webp",
+    "tags": [
+      "Konferensi",
+      "Wedding"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Kursi Kuliah",
-    "description": "Warna : Hitam, Bahan : Stainlis Panjang: 90 cm Tinggi : 82 cm Lebar : 80 cm",
-    "price": 25000,
+    "description": "Warna : Hitam, · Bahan : Stainlis · Panjang: 90 cm · Tinggi : 82 cm · Lebar : 80 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/kursi-kuliah.png",
+    "image": "/images/products/kursi-kuliah.webp",
     "tags": [
-      "Konferensi"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Dealing chair",
-    "description": "Warna : Hitam, Bahan : Plastik Panjang: 55 cm Tinggi : 82 cm Lebar : 46 cm",
-    "price": 60000,
+    "description": "Warna : Putih · Bahan : Plastik · Panjang: 90 cm · Tinggi : 82 cm · Lebar : 80 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/dealing-chair.png",
+    "image": "/images/products/dealing-chair.webp",
     "tags": [
       "Konferensi",
-      "BUMN"
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "kursi Dealing VIP",
-    "description": "Warna : Hitam, putih Bahan : Fiber Panjang: 55 cm Tinggi : 82 cm Lebar : 46 cm",
-    "price": 85000,
+    "description": "Warna : Putih · Bahan : Fiber · Panjang: 90 cm · Tinggi : 82 cm · Lebar : 80 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/kursi-dealing-vip.png",
+    "image": "/images/products/kursi-dealing-vip.webp",
     "tags": [
+      "Konferensi",
+      "Wedding",
       "VIP",
       "BUMN"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "kursi Olivia gold",
-    "description": "Warna : Gold, Bahan : Kayu Panjang: – cm Tinggi : 44 cm (D) Lebar : 45 cm",
-    "price": 85000,
+    "description": "Warna : Gold, · Bahan : Kayu · Panjang: – cm · Tinggi : 45 cm · Lebar : 45 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/kursi-olivia-gold.png",
+    "image": "/images/products/kursi-olivia-gold.webp",
     "tags": [
-      "VIP",
+      "Konferensi",
       "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Kursi Tiffany gold",
-    "description": "Warna : Gold, Bahan : Kayu Panjang: – cm Tinggi : 44 cm Lebar : 45 cm",
-    "price": 25000,
+    "description": "Warna : Gold, · Bahan : Kayu · Tinggi : 44 cm · Lebar : 45 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/kursi-tiffany-gold.png",
+    "image": "/images/products/kursi-tiffany-gold.webp",
     "tags": [
-      "Wedding",
-      "Gala Dinner"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Kursi Tiffany putih",
-    "description": "Warna : putih Bahan : Kayu Panjang: – cm Tinggi : 44 cm Lebar : 45 cm",
-    "price": 25000,
+    "description": "Warna : putih · Bahan : Kayu · Tinggi : 44 cm · Lebar : 45 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/kursi-tiffany-putih.png",
+    "image": "/images/products/kursi-tiffany-putih.webp",
     "tags": [
-      "Wedding",
-      "Gala Dinner"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Kursi Tiffany Acrylic",
-    "description": "Warna : putih Bahan : Acrylic Panjang: – cm Tinggi : 44 cm Lebar : 45 cm",
-    "price": 45000,
+    "description": "Warna : putih · Bahan : Acrylic · Tinggi : 44 cm · Lebar : 45 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/kursi-tiffany-acrylic.png",
+    "image": "/images/products/kursi-tiffany-acrylic.webp",
     "tags": [
-      "Wedding",
-      "VIP"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "Kursi Armchair Jokowi",
-    "description": "Warna : putih Bahan : Kayu Panjang: 53 cm Tinggi : 63cm Lebar : 90 cm",
-    "price": 250000,
+    "name": "Kursi Armchair Classic",
+    "description": "Warna : putih · Bahan : Kayu · Panjang: 53 cm · Tinggi : 63 cm · Lebar : 90 cm · Sangat nyaman untuk tamu VIP Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/kursi-armchair-jokowi.png",
+    "image": "/images/products/kursi-armchair-classic.webp",
     "tags": [
-      "VIP",
-      "BUMN"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Kursi armchair oval",
-    "description": "Warna : putih Bahan : Kayu Panjang: 60 cm Tinggi : 90 cm Lebar : 50 cm",
-    "price": 250000,
+    "description": "Warna : putih · Bahan : Kayu · Panjang: 60 cm · Tinggi : 50 cm · Lebar : 90 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/kursi-armchair-oval.png",
+    "image": "/images/products/kursi-armchair-oval.webp",
     "tags": [
-      "VIP",
-      "BUMN"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "kursi betawi",
-    "description": "Warna : Coklat Bahan : Kayu Panjang: 61 cm Tinggi : 78 cm Lebar : 50 cm",
-    "price": 150000,
+    "description": "Warna : Coklat · Bahan : Kayu · Panjang: 60 cm · Tinggi : 78 cm · Lebar : 50 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/kursi-betawi.png",
+    "image": "/images/products/kursi-betawi.webp",
     "tags": [
-      "Wedding",
-      "Outdoor"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Kursi Direktur",
-    "description": "Warna : Hitam Bahan : – Panjang: – cm Tinggi : 103,5 – 125,5cm. Lebar : 69,5cm",
-    "price": 300000,
+    "description": "Warna : Hitam · Bahan : – · Panjang: – cm · Tinggi : 103,5 – 125,5cm. · Lebar : 69,5cm · k ursi ini di rangkai dengan rangkaian besi yang kokoh, kursi ini juga memiliki hidrolik pegas untuk ke atas dan ke bawah.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/kursi-direktur.png",
+    "image": "/images/products/kursi-direktur.webp",
     "tags": [
-      "BUMN",
-      "Konferensi"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
-  },
-  {
-    "name": "Kursi sebaguna",
-    "description": "Warna : Hitam Bahan : – Panjang: – cm Tinggi : 44 cm Lebar : 38 cm",
-    "price": 175000,
-    "category": "Kursi",
-    "image": "/images/products/kursi-sebaguna.png",
-    "tags": [
-      "Konferensi"
-    ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Kursi Staff",
-    "description": "Warna : Hitam Bahan : – Panjang: – cm Tinggi : - cm Lebar : - cm",
-    "price": 150000,
+    "description": "Warna : Hitam · Bahan : – · Panjang: – cm · Tinggi : 40-50 cm · Lebar : 57 cm · k ursi ini di rangkai dengan rangkaian besi yang kokoh, kursi ini juga memiliki hidrolik pegas untuk ke atas dan ke bawah.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/kursi-staff.png",
+    "image": "/images/products/kursi-staff.webp",
     "tags": [
-      "Konferensi"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "Kursi Dealing",
+    "description": "Warna : Hitam · Bahan : – · Panjang: – cm · Tinggi : 44 cm · Lebar : 38 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
+    "category": "Kursi",
+    "image": "/images/products/kursi-dealing.webp",
+    "tags": [
+      "Konferensi",
+      "Wedding"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Kursi barstool kotak",
-    "description": "Warna : putih Bahan : – Panjang: – cm Tinggi : 44 cm Lebar : 38 cm",
-    "price": 110000,
+    "description": "Warna : putih, HItam · Bahan : – · Panjang: – cm · Tinggi : 44 cm · Lebar : 38 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/kursi-barstool-kotak.png",
+    "image": "/images/products/kursi-barstool-kotak.webp",
     "tags": [
-      "Gala Dinner",
+      "Konferensi",
       "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "Kursi barstool sandar vip",
-    "description": "Warna : putih Bahan : – Panjang: – cm Tinggi : 44 cm Lebar : 38 cm",
-    "price": 150000,
+    "name": "Kursi barstool sandar",
+    "description": "Warna : putih, Hitam · Bahan : – · Panjang: – cm · Tinggi : 44 cm · Lebar : 38 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/kursi-barstool-sandar-vip.png",
+    "image": "/images/products/kursi-barstool-sandar.webp",
     "tags": [
-      "VIP",
-      "Gala Dinner"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Kursi barstool con",
-    "description": "Warna : Hitam Bahan : – Panjang: – cm Tinggi : 44 cm Lebar : 38 cm",
-    "price": 110000,
+    "description": "Warna : putih, Hitam · Bahan : plastik · Panjang: – cm · Tinggi : 44 cm · Lebar : 38 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/kursi-barstool-con.png",
+    "image": "/images/products/kursi-barstool-con.webp",
     "tags": [
-      "Gala Dinner"
-    ],
-    "status": "Tersedia"
-  },
-  {
-    "name": "kursi oval Donat",
-    "description": "Warna : putih Gold Bahan : besi Panjang: – cm Tinggi : – cm Lebar : 38 cm",
-    "price": 110000,
-    "category": "Kursi",
-    "image": "/images/products/kursi-oval-donat.png",
-    "tags": [
+      "Konferensi",
       "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "kursi-oval-Donat",
+    "description": "Warna : putih Gold · Bahan : besi · Panjang: – cm · Tinggi : – cm · Lebar : 38 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
+    "category": "Kursi",
+    "image": "/images/products/kursi-oval-donat.webp",
+    "tags": [
+      "Konferensi",
+      "Wedding"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Kursi Crossback",
-    "description": "Warna : putih Bahan : Kayu Panjang: – cm Tinggi : – cm Lebar : 38 cm",
-    "price": 60000,
+    "description": "Warna : putih · Bahan : Kayu · Tinggi Dudukan: 48 cm · Tinggi Sandaran : 47cm · Lebar : 44 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/kursi-crossback.png",
+    "image": "/images/products/kursi-crossback.webp",
     "tags": [
+      "Konferensi",
       "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Kursi bakso bulat",
-    "description": "Warna : putih Bahan : – Panjang: – cm Tinggi : – cm Lebar : 38 cm",
-    "price": 25000,
+    "description": "Warna : putih · Bahan : – · Panjang: – cm · Tinggi : – cm · Lebar : 38 cm · Kursi yg kami sediakan untuk menjamu tamu-tamu yang anda Undang di acara pesta resmi anda.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/kursi-bakso-bulat.png",
+    "image": "/images/products/kursi-bakso-bulat.webp",
     "tags": [
-      "Outdoor"
+      "Konferensi",
+      "Wedding"
     ],
-    "status": "Tersedia"
-  },
-  {
-    "name": "kursi Fiber Bulat",
-    "description": "Warna : putih Gold Bahan : besi Panjang: – cm Tinggi : – cm Lebar : 38 cm",
-    "price": 200000,
-    "category": "Kursi",
-    "image": "/images/products/kursi-fiber-bulat.png",
-    "tags": [
-      "VIP",
-      "Gala Dinner"
-    ],
-    "status": "Tersedia"
-  },
-  {
-    "name": "Kursi Cobra",
-    "description": "Warna : Hitam Bahan : – Panjang: – cm Tinggi : 44 cm Lebar : 38 cm",
-    "price": 150000,
-    "category": "Kursi",
-    "image": "/images/products/kursi-cobra.png",
-    "tags": [
-      "Konferensi"
-    ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Bantal Lesehan",
-    "description": "Warna : Aneka Warna Bahan : – Panjang: 40 cm Tinggi : - cm Lebar : 40 cm bersantai di lantai, Bantal ini umumnya lebih besar dan lebih",
-    "price": 25000,
+    "description": "Warna : putih Gold · Bahan : besi · Panjang: – cm · Tinggi : 40 cm · Lebar : 40 cm · Bantal lesehan adalah bantal yang biasanya digunakan untuk bersantai di lantai, Bantal ini umumnya lebih besar dan lebih empuk dari bantal biasa.",
+    "price": null,
     "category": "Kursi",
-    "image": "/images/products/bantal-lesehan.png",
+    "image": "/images/products/bantal-lesehan.webp",
     "tags": [
-      "Outdoor",
+      "Konferensi",
       "Wedding"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "Podium",
-    "description": "Warna : Coklat Bahan : Jati, stainless steel Panjang: – cm Tinggi : – cm Lebar : – cm",
-    "price": 350000,
+    "name": "podium lambang garuda",
+    "description": "Warna : Coklat · Bahan : Jati · Panjang: – cm · Tinggi : – cm · Lebar : – cm · Biasanya podium digunakan untuk acara formal seperti pada acara peresmian, seminar, rapat, kegiatan universita, kegiatan instansi pemerintah, dan masih banyak lagi.",
+    "price": null,
     "category": "Perlengkapan",
-    "image": "/images/products/podium.png",
+    "image": "/images/products/podium-lambang-garuda.webp",
     "tags": [
       "Konferensi",
-      "BUMN"
-    ],
-    "status": "Tersedia"
-  },
-  {
-    "name": "Podium",
-    "description": "Warna : Coklat Bahan : Jati Panjang: – cm Tinggi : – cm Lebar : – cm",
-    "price": 350000,
-    "category": "Perlengkapan",
-    "image": "/images/products/podium-2.png",
-    "tags": [
-      "Konferensi",
-      "BUMN"
-    ],
-    "status": "Tersedia"
-  },
-  {
-    "name": "Podium",
-    "description": "Warna : Black Bahan : Jati Panjang: – cm Tinggi : – cm Lebar : – cm",
-    "price": 350000,
-    "category": "Perlengkapan",
-    "image": "/images/products/podium-3.png",
-    "tags": [
-      "Konferensi",
-      "BUMN"
-    ],
-    "status": "Tersedia"
-  },
-  {
-    "name": "Podium lambang garuda",
-    "description": "Warna : Coklat Bahan : Jati Panjang: – cm Tinggi : – cm Lebar : – cm",
-    "price": 350000,
-    "category": "Perlengkapan",
-    "image": "/images/products/podium-lambang-garuda.png",
-    "tags": [
       "VIP",
       "BUMN"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "Podium",
-    "description": "Warna : Coklat Bahan : Jati Panjang: – cm Tinggi : – cm Lebar : – cm",
-    "price": 350000,
+    "name": "podium Acara Resmi",
+    "description": "Warna : Coklat · Bahan : Jati · Panjang: – cm · Tinggi : – cm · Lebar : – cm · Biasanya podium digunakan untuk acara formal seperti pada acara peresmian, seminar, rapat, kegiatan universita, kegiatan instansi pemerintah, dan masih banyak lagi.",
+    "price": null,
     "category": "Perlengkapan",
-    "image": "/images/products/podium-4.png",
+    "image": "/images/products/podium-acara-resmi.webp",
     "tags": [
       "Konferensi",
+      "VIP",
       "BUMN"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "Podium Acrylic",
-    "description": "Warna : transparan Bahan : Acrylic Panjang: 36.5 cm Tinggi : 115 cm Lebar : 60 cm acara formal seperti pada acara",
-    "price": 400000,
+    "name": "podium Acara Resmi",
+    "description": "Warna : Hitam · Bahan : Jati · Panjang: – cm · Tinggi : – cm · Lebar : – cm · Biasanya podium digunakan untuk acara formal seperti pada acara peresmian, seminar, rapat, kegiatan universita, kegiatan instansi pemerintah, dan masih banyak lagi.",
+    "price": null,
     "category": "Perlengkapan",
-    "image": "/images/products/podium-acrylic.png",
+    "image": "/images/products/podium-acara-resmi-2.webp",
     "tags": [
       "Konferensi",
-      "Wedding"
+      "VIP",
+      "BUMN"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "Podium Acara Resmi",
+    "description": "Warna : Coklat · Bahan : Jati · Panjang: – cm · Tinggi : – cm · Lebar : – cm · Biasanya podium digunakan untuk acara formal seperti pada acara peresmian, seminar, rapat, kegiatan universita, kegiatan instansi pemerintah, dan masih banyak lagi.",
+    "price": null,
+    "category": "Perlengkapan",
+    "image": "/images/products/podium-acara-resmi-3.webp",
+    "tags": [
+      "Konferensi",
+      "VIP",
+      "BUMN"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "podium Acara resmi",
+    "description": "Warna : Coklat · Bahan : Jati · Panjang: – cm · Tinggi : – cm · Lebar : – cm · Biasanya podium digunakan untuk acara formal seperti pada acara peresmian, seminar, rapat, kegiatan universita, kegiatan instansi pemerintah, dan masih banyak lagi.",
+    "price": null,
+    "category": "Perlengkapan",
+    "image": "/images/products/podium-acara-resmi-4.webp",
+    "tags": [
+      "Konferensi",
+      "VIP",
+      "BUMN"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "podium akrilik",
+    "description": "Warna : Transparan · Bahan : akrilik · Panjang: 36.5 cm · Tinggi : 115 cm · Lebar : 60 cm · Biasanya podium digunakan untuk acara formal seperti pada acara peresmian, seminar, rapat, kegiatan universita, kegiatan instansi pemerintah, dan masih banyak lagi.",
+    "price": null,
+    "category": "Perlengkapan",
+    "image": "/images/products/podium-akrilik.webp",
+    "tags": [
+      "Konferensi",
+      "VIP",
+      "BUMN"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "podium-akrilik-sirine",
-    "description": "Warna : Putih Bahan : akrilik Panjang: - Tinggi : -cm Lebar : - cm Podium akrilik sirine memiliki keanggunan kontemporer.cocok",
-    "price": 400000,
+    "description": "Warna : Putih · Bahan : akrilik · Panjang: – · Tinggi : -cm · Lebar : – cm · Podium akrilik sirine memiliki keanggunan kontemporer yang dikombinasikan dengan daya tahan yang dapat diandalkan karena terbuat dari 100% material berbahan akrilik. cocok untuk melengkapi peresmian event acara anda,",
+    "price": null,
     "category": "Perlengkapan",
-    "image": "/images/products/podium-akrilik-sirine.png",
+    "image": "/images/products/podium-akrilik-sirine.webp",
     "tags": [
       "Konferensi",
-      "Wedding"
-    ],
-    "status": "Tersedia"
-  },
-  {
-    "name": "Rope Stand VIP (Beludru)",
-    "description": "Warna : Merah,,Biru Bahan : Beludru (Tali) Tiang (Steinless) Panjang: 1.5 m Tinggi : 90 cm Lebar : - cm atau garis yg di inginkan di Area",
-    "price": 125000,
-    "category": "Perlengkapan",
-    "image": "/images/products/rope-stand-vip-beludru.png",
-    "tags": [
       "VIP",
       "BUMN"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "Rope Stand VIP Gold",
-    "description": "Warna : Gold Bahan : Beludru(Tal Tiang (Steinless) Panjang: 1.5 m Tinggi : 90 cm Lebar : - cm atau garis yg di inginkan di Area",
-    "price": 150000,
+    "name": "Rak brosur",
+    "description": "Rak brosur · Bahan : Stainless · Ukuran: A4 dan A3 · Tinggi : 155 cm · Rak brosur digunakan di stand stand pameran",
+    "price": null,
     "category": "Perlengkapan",
-    "image": "/images/products/rope-stand-vip-gold.png",
-    "tags": [
-      "VIP",
-      "BUMN"
-    ],
-    "status": "Tersedia"
-  },
-  {
-    "name": "Rak Brosur",
-    "description": "Rak brosur Bahan : Stainless Ukuran: A4 dan A3 Tinggi : 155 cm stand pameran",
-    "price": 275000,
-    "category": "Perlengkapan",
-    "image": "/images/products/rak-brosur.png",
+    "image": "/images/products/rak-brosur.webp",
     "tags": [
       "Konferensi"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "Tiang Signed",
-    "description": "Bahan : Stainless Ukuran: A4 dan A3 Model: Lanscape. Potrait Tinggi: 90 cm",
-    "price": 150000,
+    "description": "Bahan : Stainless · Ukuran: A4 dan A3 · Model: Lanscape. Potrait · Tinggi: 90 cm · digunakan di stand stand pameran",
+    "price": null,
     "category": "Perlengkapan",
-    "image": "/images/products/tiang-signed.png",
+    "image": "/images/products/tiang-signed.webp",
     "tags": [
       "Konferensi"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "Pembatas",
-    "description": "Warna : Hitam, merah, Biru Bahan Tiang (Steinless) Panjang: 1.8 m Tinggi : 90 cm Lebar : – cm Lebar : cm atau garis yg di inginkan di Area",
-    "price": 125000,
+    "name": "Rope Stand VIP (Beludru)",
+    "description": "Warna : Merah, Biru, · Bahan : Beludru (Tali) · Tiang (Steinless) · Panjang: 1.5 m · Tinggi : 90 cm · Lebar : – cm · Kegunaan tiang antrian atau tiang pembatas adalah membuat line atau garis yg di inginkan di Area suatu acara,agar lebih rapih & lebih tertib.",
+    "price": null,
     "category": "Perlengkapan",
-    "image": "/images/products/pembatas.png",
+    "image": "/images/products/rope-stand-vip-beludru.webp",
     "tags": [
-      "Outdoor",
-      "Konferensi"
-    ],
-    "status": "Tersedia"
-  },
-  {
-    "name": "Gong",
-    "description": "Warna : Gold Bahan : besi Panjang: – cm Tinggi : – cm Lebar : 38 cm",
-    "price": 850000,
-    "category": "Perlengkapan",
-    "image": "/images/products/gong.png",
-    "tags": [
+      "Konferensi",
       "VIP",
       "BUMN"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "Karpet Permadani",
-    "description": "Warna : merah Bahan : Kualitas Premium Panjang: 3.1 meter Lebar : 2.1 meter Permadani memiliki fungsi utama",
-    "price": 250000,
+    "name": "Rope Stand GOLD VIP",
+    "description": "Warna : Gold · Bahan : Beludru (Tali) · Tiang (Steinless) Gold · Panjang: 1.5 m · Tinggi : 90 cm · Lebar : – cm · Kegunaan tiang antrian atau tiang pembatas adalah membuat line atau garis yg di inginkan di Area suatu acara,agar lebih rapih & lebih tertib.",
+    "price": null,
     "category": "Perlengkapan",
-    "image": "/images/products/karpet-permadani.png",
+    "image": "/images/products/rope-stand-gold-vip.webp",
     "tags": [
+      "Konferensi",
       "VIP",
-      "Wedding"
+      "BUMN"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "Misty Fan",
-    "description": "Warna : BLACK Bahan : besi Tinggi: 175 cm Lebar : 26 inc disertai dengan embun, sehingga dapat memberikan kesejukan di",
-    "price": 250000,
+    "name": "Pembatas",
+    "description": "Warna : Merah · Bahan : Tiang (Steinless) · Panjang: 1.8 m · Tinggi : 90 cm · Lebar : – cm · Kegunaan tiang antrian atau tiang pembatas adalah membuat line atau garis yg di inginkan di Area suatu acara,agar lebih rapih & lebih tertib.",
+    "price": null,
     "category": "Perlengkapan",
-    "image": "/images/products/misty-fan.png",
+    "image": "/images/products/pembatas.webp",
     "tags": [
-      "Outdoor"
+      "Konferensi"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "STANDING AC -5PK",
-    "description": "Tinggi: – Lebar : – Tersedia sewa AC standing portable kantor/apartemen dan acara lainnya. juga gaya.",
-    "price": 750000,
+    "name": "Bean bag",
+    "description": "Warna : merah,putih,hitam,biru,kuning ect · Bahan : – · Panjang: 100 cm · Lebar : 50 cm · Beanbag memiliki fungsi utama yang ada hubungan nya dengan kita yaitu mendapat kesenangan, kenyaman, dan juga gaya.",
+    "price": null,
     "category": "Perlengkapan",
-    "image": "/images/products/standing-ac-5pk.png",
+    "image": "/images/products/bean-bag.webp",
+    "tags": [
+      "Konferensi"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "Parasol set",
+    "description": "Warna : Kayu · Bahan : -cm · Panjang: -cm · Lebar : -cm · Parasol Set memiliki fungsi utama yang ada hubungan nya dengan kita yaitu mendapat kesenangan, kenyaman, dan juga gaya.",
+    "price": null,
+    "category": "Perlengkapan",
+    "image": "/images/products/parasol-set.webp",
     "tags": [
       "Konferensi",
       "Outdoor"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
-    "name": "TENDA SARNAFIL",
-    "description": "Warna : Putih Bahan : Kualitas Premium Ukuran: 3 x 3 , 5 x 5 Melayani jasa pemasangan tenda , karpet flooring, sebagai alas lantai pada pemasangan tenda dekorasi, kerucut/sarnafil, flooring tenda",
-    "price": 750000,
+    "name": "Kursi Betawi Set",
+    "description": "Warna : Kayu. · Bahan : -cm · Panjang:- cm · Lebar :- cm · Kursi Betawi Set memiliki fungsi utama yang ada hubungan nya dengan kita yaitu mendapat kesenangan, kenyaman, dan juga gaya",
+    "price": null,
     "category": "Perlengkapan",
-    "image": "/images/products/tenda-sarnafil.png",
+    "image": "/images/products/kursi-betawi-set.webp",
     "tags": [
-      "Outdoor",
-      "Wedding"
+      "Konferensi"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "KARPET PERMADANI",
+    "description": "Warna : merah · Bahan : Kualitas Premium · Panjang: 3.1 meter · Lebar : 2.1 meter · Permadani memiliki fungsi utama yang ada hubungan nya dengan kita yaitu mendapat kesenangan, kenyaman, dan juga gaya.",
+    "price": null,
+    "category": "Perlengkapan",
+    "image": "/images/products/karpet-permadani.webp",
+    "tags": [
+      "Konferensi"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "MISTY FAN",
+    "description": "Warna : BLACK · Bahan : besi · Tinggi: 175 cm · Lebar : 26 inc · Misty fan kipas angin yang disertai dengan embun, sehingga dapat memberikan kesejukan di ruangan Anda.",
+    "price": null,
+    "category": "Perlengkapan",
+    "image": "/images/products/misty-fan.webp",
+    "tags": [
+      "Konferensi",
+      "Outdoor"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "STANDING MIRROR",
+    "description": "Warna : frame putih · Bahan : Kualitas Premium · Tinggi: 1.5 meter · Lebar : 40 cm · standing mirror adalah cermin berdiri. Bentuknya persegi panjang dan diberi penyangga di bagian belakang, agar cermin ini bisa didirikan. “Standing mirror cukup laris sekarang ini.",
+    "price": null,
+    "category": "Perlengkapan",
+    "image": "/images/products/standing-mirror.webp",
+    "tags": [
+      "Konferensi"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "STANDING AC -5PK",
+    "description": "Warna :- · Tinggi: – · Lebar : –",
+    "price": null,
+    "category": "Perlengkapan",
+    "image": "/images/products/standing-ac-5pk.webp",
+    "tags": [
+      "Konferensi"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "TENDA SARNAFIL 3 X 3",
+    "description": "Warna : Putih · Bahan : Kualitas Premium · Panjang: 300 cm · Lebar : 300 cm · Melayani jasa pemasangan tenda , karpet flooring, sebagai alas lantai pada pemasangan tenda dekorasi, flooring untuk tenda kerucut/sarnafil, flooring tenda roder, flooring untuk menutupi jalan agar tak terkena genangan air.",
+    "price": null,
+    "category": "Perlengkapan",
+    "image": "/images/products/tenda-sarnafil-3-x-3.webp",
+    "tags": [
+      "Konferensi",
+      "Outdoor"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "TENDA SARNAFIL 5 X 5",
+    "description": "Warna : Putih · Bahan : Kualitas Premium · Panjang: 500 cm · Lebar: 500 cm · Melayani jasa pemasangan tenda , karpet flooring, sebagai alas lantai pada pemasangan tenda dekorasi, flooring untuk tenda kerucut/sarnafil, flooring tenda roder, flooring untuk menutupi jalan agar tak terkena genangan",
+    "price": null,
+    "category": "Perlengkapan",
+    "image": "/images/products/tenda-sarnafil-5-x-5.webp",
+    "tags": [
+      "Konferensi",
+      "Outdoor"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "TIANG BENDERA",
+    "description": "Warna :Coklat · Tinggi: – · Lebar : – · Digunakan Untuk Acara Acara resmi Kenegaraan, dan Acara acara resmi Lainnya.",
+    "price": null,
+    "category": "Perlengkapan",
+    "image": "/images/products/tiang-bendera.webp",
+    "tags": [
+      "Konferensi"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "PAPAN TULIS",
+    "description": "Warna :Putih · Tinggi: 100 CM · Lebar : 70 CM · Flipchart adalah alat presentasi yang sering digunakan dalam pertemuan, pelatihan, atau workshop untuk menampilkan informasi dengan cara visual yang mudah diikuti oleh audiens.",
+    "price": null,
+    "category": "Perlengkapan",
+    "image": "/images/products/papan-tulis.webp",
+    "tags": [
+      "Konferensi"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   },
   {
     "name": "TRAFFIC CONE",
-    "description": "Warna : Orange Tinggi: 75 cm Diameter : 30 cm raya dan manajemen lalu lintas. menandai area, mengarahkan lalu lintas.",
-    "price": 85000,
+    "description": "Warna :Putih · Tinggi: 75 CM · Diamneter : 30 CM · Jika Anda ingin menyewa traffic cone, baik untuk keperluan event, proyek konstruksi, atau pengaturan lalu lintas,",
+    "price": null,
     "category": "Perlengkapan",
-    "image": "/images/products/traffic-cone.png",
+    "image": "/images/products/traffic-cone.webp",
     "tags": [
+      "Konferensi",
       "Outdoor"
     ],
-    "status": "Tersedia"
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "GONG",
+    "description": "Warna : Gold · Bahan : Tiang (Kayu) · Panjang: – cm · Tinggi : 120 cm · Lebar diameter : 70 cm · Untuk Meresmikan Acara Pembukaan. yang lebih resmi.",
+    "price": null,
+    "category": "Perlengkapan",
+    "image": "/images/products/gong.webp",
+    "tags": [
+      "Konferensi",
+      "VIP",
+      "BUMN"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "TEMPAT SAMPAH",
+    "description": "Kapasitas: 120 Liter · Bahan : Plastik · UKURAN: 47 x 55 x 95 cm · Tempat sampah yang sering digunakan di acara acara outdoor, agar area event tetap bersih.",
+    "price": null,
+    "category": "Perlengkapan",
+    "image": "/images/products/tempat-sampah.webp",
+    "tags": [
+      "Konferensi"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
+  },
+  {
+    "name": "GANTUNGAN BAJU",
+    "description": "Warna : Hitam dan Putih · Bahan : Besi · UKURAN: 82 cm x 41 cm x 152 cm",
+    "price": null,
+    "category": "Perlengkapan",
+    "image": "/images/products/gantungan-baju.webp",
+    "tags": [
+      "Konferensi"
+    ],
+    "status": "Konfirmasi ketersediaan",
+    "source": "RR Production",
+    "sourcePage": "https://www.rr-production.com/katalog/"
   }
 ]
