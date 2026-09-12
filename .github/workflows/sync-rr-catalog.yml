@@ -14,7 +14,7 @@ permissions:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
@@ -28,7 +28,20 @@ jobs:
       - name: Rebuild catalog from RR Production
         id: sync
         continue-on-error: true
-        run: python scripts/sync-rr-catalog.py
+        shell: bash
+        run: |
+          set +e
+          status=1
+          for attempt in 1 2 3 4 5; do
+            echo "RR catalog sync attempt $attempt/5"
+            python scripts/sync-rr-catalog.py
+            status=$?
+            if [ $status -eq 0 ]; then
+              exit 0
+            fi
+            sleep $((attempt * 8))
+          done
+          exit $status
       - name: Commit diagnostic or synced catalog
         run: |
           git config user.name "github-actions[bot]"
