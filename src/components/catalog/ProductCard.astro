@@ -1,0 +1,18 @@
+---
+import { formatIDR } from "../../lib/catalog.mjs";
+
+interface Product { id: string; name: string; description: string; price: number; category: string; image: string; tags: string[]; searchText: string; }
+interface Props { product: Product; index: number; }
+const { product, index } = Astro.props;
+const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const imagePath = `${base}${product.image.replace(/^\//, "")}`;
+---
+<article class="product-card" data-product data-product-id={product.id} data-search={product.searchText} data-category={product.category} data-tags={product.tags.join("|")}>
+  <div class="product-media"><span class="product-index">{String(index + 1).padStart(2, "0")}</span><img src={imagePath} width="329" height="224" loading={index < 4 ? "eager" : "lazy"} decoding="async" alt={product.name} /></div>
+  <div class="product-details">
+    <div class="product-meta"><span>{product.category}</span><span>{product.tags.join(" · ")}</span></div>
+    <h2>{product.name}</h2>
+    <p>{product.description}</p>
+    <div class="product-action"><div><small>Mulai dari</small><strong>{formatIDR(product.price)}</strong></div><button type="button" class="add-product" data-add-id={product.id} data-product-name={product.name} data-product-price={product.price} aria-label={`Tambahkan ${product.name} ke rencana event`}>Tambah <span aria-hidden="true">＋</span></button></div>
+  </div>
+</article>

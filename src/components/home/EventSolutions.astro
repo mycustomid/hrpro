@@ -1,0 +1,10 @@
+---
+const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const path = (value: string) => `${base}${value.replace(/^\//, "")}`;
+const solutions = [
+  { index: "01", title: "Corporate, BUMN & Pemerintah", body: "Saat rundown ketat dan administrasi harus rapi, kebutuhan venue tidak bisa diputuskan satu per satu di hari terakhir.", detail: "VIP seating · podium · meeting furniture · queue system", href: "/event-corporate-pemerintah" },
+  { index: "02", title: "Exhibition & Conference", body: "Arus pengunjung, titik registrasi, area pembicara, dan fasilitas peserta perlu dibaca sebagai satu sistem.", detail: "Booth support · dealing area · conference seating · signage", href: "/exhibition-conference" },
+  { index: "03", title: "Wedding & Gala", body: "Tampilan harus kuat di kamera. Namun di belakang visual itu, jumlah, penempatan, pengiriman, dan pickup tetap harus presisi.", detail: "Sofa · round table · Tiffany · bar setup · outdoor support", href: "/wedding-gala" },
+];
+---
+<section class="section section-paper solutions" id="solusi"><div class="page-shell"><div class="section-intro"><p class="eyebrow">Event solutions</p><div><h2>Beda acara.<br/><em>Beda tekanannya.</em></h2><p class="section-intro-copy">Kami tidak memulai dari daftar barang. Kami mulai dari apa yang harus berjalan tanpa salah di venue.</p></div></div><div class="solution-list">{solutions.map((item) => <article class="solution-row" data-reveal><span class="solution-index">{item.index}</span><div><h3>{item.title}</h3><p>{item.body}</p><small>{item.detail}</small></div><a class="solution-arrow" href={path(item.href)} aria-label={`Lihat solusi ${item.title}`}><span aria-hidden="true">↗</span></a></article>)}</div></div></section>

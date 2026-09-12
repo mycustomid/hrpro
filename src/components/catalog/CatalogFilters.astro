@@ -1,0 +1,13 @@
+---
+const categories = ["Semua", "Sofa", "Meja", "Kursi", "Perlengkapan"];
+const uses = ["Semua", "VIP", "BUMN", "Konferensi", "Wedding", "Gala Dinner", "Outdoor"];
+---
+<aside class="catalog-controls" aria-label="Filter katalog">
+  <div class="catalog-search">
+    <label for="catalog-search">Cari nama, fungsi, atau detail</label>
+    <div class="search-field"><input id="catalog-search" type="search" inputmode="search" autocomplete="off" placeholder="Contoh: kursi VIP" aria-label="Cari produk" data-catalog-search /><span aria-hidden="true">⌕</span></div>
+  </div>
+  <fieldset data-filter-group="category"><legend>Kategori</legend><div class="filter-list">{categories.map((value) => <button type="button" class="filter-button" data-filter-category={value} aria-pressed={value === "Semua" ? "true" : "false"}>{value}</button>)}</div></fieldset>
+  <fieldset data-filter-group="use"><legend>Kebutuhan event</legend><div class="filter-list">{uses.map((value) => <button type="button" class="filter-button" data-filter-use={value} aria-pressed={value === "Semua" ? "true" : "false"}>{value}</button>)}</div></fieldset>
+  <button type="button" class="reset-filters" data-reset-filters>Reset filter</button>
+</aside>

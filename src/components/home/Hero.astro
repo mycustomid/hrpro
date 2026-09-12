@@ -1,0 +1,33 @@
+---
+import { site } from "../../config/site.mjs";
+interface Product {
+  image: string;
+  name: string;
+}
+
+interface Props {
+  products: Product[];
+}
+
+const { products } = Astro.props;
+const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+const path = (value: string) => `${base}${value.replace(/^\//, "")}`;
+const quote = site.wa("Halo HR Production, saya ingin meminta penawaran untuk event. Jenis acara: — Tanggal: — Venue: — Perkiraan tamu: —");
+---
+<section class="home-hero">
+  <div class="hero-grid-lines" aria-hidden="true"></div>
+  <div class="page-shell hero-meta"><span>Event infrastructure partner</span><span>Jakarta · Tangsel · Jabodetabek</span><span>Readiness / 01</span></div>
+  <div class="page-shell hero-layout">
+    <div class="hero-copy" data-reveal>
+      <p class="eyebrow">HR Production</p>
+      <h1>Acara besar <em>tidak boleh</em> bergantung pada improvisasi.</h1>
+      <div class="hero-lower-copy"><p>Kami menyiapkan furniture, perlengkapan, dan alur operasional untuk corporate event, instansi, exhibition, conference, gala, wedding, serta agenda protokoler.</p><div class="hero-actions"><a class="button button-ink" href={quote} target="_blank" rel="noopener noreferrer">Minta Penawaran <span aria-hidden="true">↗</span></a><a class="button" href={path("/katalog")}>Lihat Katalog <span aria-hidden="true">→</span></a></div></div>
+    </div>
+    <div class="inventory-stage" aria-label="Pilihan inventaris HR Production" data-reveal>
+      <div class="stage-label"><span>Inventory study</span><strong>04 / 84</strong></div>
+      {products.map((product, index) => <figure class={`stage-product stage-product-${index + 1}`}><img src={path(product.image)} width="329" height="224" alt={product.name} decoding="async" fetchpriority={index === 0 ? "high" : "auto"} /><figcaption>{String(index + 1).padStart(2, "0")} · {product.name}</figcaption></figure>)}
+      <div class="stage-axis" aria-hidden="true"><span>X / 120</span><span>Y / 084</span></div>
+    </div>
+  </div>
+  <div class="hero-ticker" aria-label="Cakupan solusi HR Production"><div><span>Furniture Event</span><span>VIP Seating</span><span>Conference</span><span>Exhibition</span><span>Protocol Event</span><span>Delivery & Setup</span></div></div>
+</section>
