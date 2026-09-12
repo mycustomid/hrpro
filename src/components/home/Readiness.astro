@@ -1,4 +1,10 @@
 ---
-const items = [["Cleaning", "Kondisi visual unit diperiksa sebelum masuk kendaraan."], ["Quality check", "Jumlah, fungsi, dan kelengkapan dicocokkan dengan kebutuhan."], ["Loading map", "Barang dikelompokkan agar urutan bongkar lebih terkendali."], ["Delivery", "Jadwal masuk venue menjadi bagian dari persiapan, bukan catatan kaki."], ["Documentation", "Rincian penawaran, invoice, dan kebutuhan administrasi disiapkan."]];
+const items = [
+  ["Availability check", "Ketersediaan item dikonfirmasi sebelum penawaran dikunci."],
+  ["Specification check", "Model, jumlah, fungsi, dan kebutuhan visual dicocokkan dengan brief."],
+  ["Loading coordination", "Akses venue, jam loading, dan urutan kebutuhan dibahas sejak awal."],
+  ["Delivery coordination", "Jadwal pengiriman dan setup diselaraskan dengan rundown lapangan."],
+  ["Documentation", "Rincian penawaran dan kebutuhan administrasi disiapkan untuk memudahkan approval."],
+];
 ---
-<section class="section section-dark readiness" aria-labelledby="readiness-title"><div class="page-shell readiness-grid"><div class="readiness-statement" data-reveal><p class="eyebrow">Operational readiness</p><h2 id="readiness-title">Yang terlihat tamu hanya hasil akhirnya.</h2><p>Yang membuatnya berjalan adalah pemeriksaan, pengelompokan, pengiriman, setup, dan koordinasi sebelum pintu venue dibuka.</p></div><div class="readiness-list">{items.map(([title, body], index) => <article data-reveal><span>{String(index + 1).padStart(2, "0")}</span><h3>{title}</h3><p>{body}</p></article>)}</div></div></section>
+<section class="section section-dark readiness" aria-labelledby="readiness-title"><div class="page-shell readiness-grid"><div class="readiness-statement" data-reveal><p class="eyebrow">Booking readiness</p><h2 id="readiness-title">Yang terlihat tamu hanya hasil akhirnya.</h2><p>Yang perlu dikunci sebelum hari acara adalah item, jumlah, jadwal, akses venue, dan siapa yang bertanggung jawab pada setiap titik koordinasi.</p></div><div class="readiness-list">{items.map(([title, body], index) => <article data-reveal><span>{String(index + 1).padStart(2, "0")}</span><h3>{title}</h3><p>{body}</p></article>)}</div></div></section>

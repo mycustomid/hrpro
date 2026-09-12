@@ -8,23 +8,24 @@ import FinalCTA from "../components/FinalCTA.astro";
 import catalogSource from "../data/catalog.json";
 import eventTypes from "../data/event_types.json";
 import { normalizeCatalog, normalizeText } from "../lib/catalog.mjs";
+import { site } from "../config/site.mjs";
 import "../styles/catalog.css";
 
 const products = normalizeCatalog(catalogSource);
 const bySourceName = new Map(products.map((product) => [normalizeText(product.sourceName), product]));
 const packages = eventTypes.map((event) => ({ ...event, resolvedItems: event.recommended_items.flatMap((name) => { const product = bySourceName.get(normalizeText(name)); return product ? [{ id: product.id, qty: 1 }] : []; }) }));
-const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Beranda", item: "https://www.hrproduction.id/" }, { "@type": "ListItem", position: 2, name: "Katalog", item: "https://www.hrproduction.id/katalog" }] };
+const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Beranda", item: `${site.domain}/` }, { "@type": "ListItem", position: 2, name: "Katalog", item: `${site.domain}/katalog` }] };
 ---
-<BaseLayout title="Katalog Rental Furniture & Perlengkapan Event | HR Production" description="Cari 84 referensi sofa, meja, kursi, dan perlengkapan event lalu susun estimasi awal untuk penawaran HR Production." canonicalPath="/katalog" schema={breadcrumbSchema} bodyClass="catalog-page">
+<BaseLayout title="Katalog Rental Furniture & Perlengkapan Event | HR Production" description="Jelajahi 84 referensi sofa, meja, kursi, dan perlengkapan event lalu kirim kebutuhan Anda ke marketing HR Production untuk konfirmasi ketersediaan dan penawaran." canonicalPath="/katalog" schema={breadcrumbSchema} bodyClass="catalog-page">
   <nav class="breadcrumb" aria-label="Breadcrumb"><ol class="page-shell"><li><a href="/">Beranda</a></li><li aria-current="page">Katalog</li></ol></nav>
   <div data-catalog-content>
-    <header class="catalog-hero"><div class="page-shell"><p class="eyebrow">84 inventory references</p><div class="catalog-title-row"><h1>Rencana event,<br/><em>dirakit dengan jelas.</em></h1><div><p>Temukan item berdasarkan kategori dan kebutuhan event. Tambahkan ke rencana, atur jumlah, lalu kirim konteks lengkap ke WhatsApp.</p><button class="button button-ink" type="button" data-open-drawer aria-haspopup="dialog">Buka rencana event <span aria-hidden="true">↗</span></button></div></div></div></header>
+    <header class="catalog-hero"><div class="page-shell"><p class="eyebrow">84 referensi katalog</p><div class="catalog-title-row"><h1>Rencana event,<br/><em>dirakit dengan jelas.</em></h1><div><p>Temukan item berdasarkan kategori dan kebutuhan event. Tambahkan ke rencana, atur jumlah, lalu kirim ke WhatsApp. Ketersediaan item dikonfirmasi saat pemesanan.</p><button class="button button-ink" type="button" data-open-drawer aria-haspopup="dialog">Buka rencana event <span aria-hidden="true">↗</span></button></div></div></div></header>
     <section class="catalog-workspace page-shell" aria-labelledby="catalog-results-title">
       <CatalogFilters />
-      <div class="catalog-results"><div class="results-bar"><p><strong data-result-count>{products.length}</strong> hasil</p><p data-active-filters>Semua kategori · Semua kebutuhan</p></div><h2 id="catalog-results-title" class="sr-only">Daftar produk</h2><div class="product-grid">{products.map((product, index) => <ProductCard product={product} index={index} />)}</div><div class="no-results" data-no-results hidden><p class="eyebrow">Tidak ditemukan</p><h2>Coba kata yang lebih umum.</h2><p>Reset filter atau kirim kebutuhan spesifik Anda langsung ke tim kami.</p><button type="button" class="button button-ink" data-reset-filters>Reset pencarian</button></div></div>
+      <div class="catalog-results"><div class="results-bar"><p><strong data-result-count>{products.length}</strong> hasil</p><p data-active-filters>Semua kategori · Semua kebutuhan</p></div><h2 id="catalog-results-title" class="sr-only">Daftar produk</h2><div class="product-grid">{products.map((product, index) => <ProductCard product={product} index={index} />)}</div><div class="no-results" data-no-results hidden><p class="eyebrow">Tidak ditemukan</p><h2>Coba kata yang lebih umum.</h2><p>Reset filter atau kirim kebutuhan spesifik Anda langsung ke marketing HR Production.</p><button type="button" class="button button-ink" data-reset-filters>Reset pencarian</button></div></div>
     </section>
     <EventPackages packages={packages} />
-    <FinalCTA eyebrow="Butuh item khusus?" title="Katalog adalah titik awal, bukan batas." body="Kirim brief jika kebutuhan belum muncul di daftar. Sertakan jenis acara, tanggal, venue, dan jumlah tamu agar diskusi lebih terarah." />
+    <FinalCTA eyebrow="Butuh item khusus?" title="Katalog adalah titik awal, bukan batas." body="Kirim brief jika kebutuhan belum muncul di daftar. Sertakan jenis acara, tanggal, venue, dan jumlah tamu agar marketing HR Production dapat memeriksa opsi yang tersedia." />
   </div>
   <QuoteDrawer />
   <script>

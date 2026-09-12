@@ -16,20 +16,24 @@ async function walk(directory) {
 }
 
 await walk(dist);
-assert.equal(htmlFiles.length, 6, "expected six public HTML routes");
+assert.equal(htmlFiles.length, 11, "expected eleven public HTML routes");
 
 for (const file of htmlFiles) {
   const source = await readFile(file, "utf8");
   const relative = file.slice(dist.length + 1);
   assert.equal((source.match(/<h1(?:\s|>)/g) || []).length, 1, `${relative}: expected one H1`);
   assert.equal((source.match(/<link rel="canonical"/g) || []).length, 1, `${relative}: expected one canonical`);
-  assert.match(source, /<meta name="description" content="[^\"]{40,}/, `${relative}: missing useful description`);
+  assert.match(source, /<meta name="description" content="[^"]{40,}/, `${relative}: missing useful description`);
   assert.doesNotMatch(source, /<\s*1 Jam|vendor terpercaya|stok tersedia|real.time availability/i, `${relative}: contains unsupported claim`);
+  assert.doesNotMatch(source, /0821[ -]?4143[ -]?8080|0813[ -]?1462[ -]?2349|0821[ -]?3081[ -]?8342|rrproduction123@gmail\.com|azaremon@gmail\.com/i, `${relative}: upstream direct contact leaked`);
 
-  const ids = [...source.matchAll(/\sid="([^\"]+)"/g)].map((match) => match[1]);
+  const ids = [...source.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]);
   assert.equal(new Set(ids).size, ids.length, `${relative}: duplicate HTML id`);
 
-  const localUrls = [...source.matchAll(/(?:href|src)="([^\"]+)"/g)].map((match) => match[1]).filter((url) => url.startsWith("/") && !url.startsWith("//"));
+  const localUrls = [...source.matchAll(/(?:href|src)="([^"]+)"/g)]
+    .map((match) => match[1])
+    .filter((url) => url.startsWith("/") && !url.startsWith("//"));
+
   for (const url of localUrls) {
     const pathname = url.split(/[?#]/)[0];
     if (!pathname || pathname === "/") continue;
@@ -39,13 +43,20 @@ for (const file of htmlFiles) {
   }
 }
 
+const homepage = await readFile(join(dist, "index.html"), "utf8");
+assert.match(homepage, /6281387927481/, "homepage must route WhatsApp to HR marketing");
+assert.match(homepage, /instagram\.com\/hrproduction/i, "Instagram profile missing");
+assert.match(homepage, /tiktok\.com\/@hrproduction/i, "TikTok profile missing");
+
 const catalog = await readFile(join(dist, "katalog", "index.html"), "utf8");
-const products = [...catalog.matchAll(/data-product-id="([^\"]+)"/g)].map((match) => match[1]);
+const products = [...catalog.matchAll(/data-product-id="([^"]+)"/g)].map((match) => match[1]);
 assert.equal(products.length, 84, "catalog must render 84 product nodes");
 assert.equal(new Set(products).size, 84, "catalog product IDs must be unique");
+
 assert.equal(existsSync(join(dist, "robots.txt")), true, "robots.txt missing");
+assert.equal(existsSync(join(dist, "sitemap.xml")), true, "sitemap fallback missing");
 assert.equal(existsSync(join(dist, "sitemap-index.xml")), true, "sitemap index missing");
-assert.equal(existsSync(join(dist, "brand", "hr-production-logo.svg")), true, "brand logo missing");
 assert.equal(existsSync(join(dist, "favicon.svg")), true, "favicon missing");
+assert.equal(existsSync(join(dist, "site.webmanifest")), true, "manifest missing");
 
 console.log(`Build audit passed: ${htmlFiles.length} routes, ${products.length} products, local links/assets resolved.`);
