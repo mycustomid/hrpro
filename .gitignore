@@ -26,3 +26,4 @@ pnpm-debug.log*
 # local archives / raw assets
 _archive/
 _source/
+.vercel
