@@ -3,7 +3,6 @@ import io
 import json
 import re
 import shutil
-import sys
 import tempfile
 import unicodedata
 from pathlib import Path
@@ -26,7 +25,7 @@ CATEGORY_MAP = {
     "PERLENGKAPAN": "Perlengkapan",
 }
 IMAGE_BLACKLIST = ("logo", "banner", "icon", "whatsapp", "instagram", "youtube", "member-of", "cropped-")
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; HRProductionCatalogSync/1.0)"}
+HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; HRProductionCatalogSync/1.1)"}
 REPORT = []
 
 def log(message):
@@ -42,6 +41,23 @@ def norm(value):
 
 def slugify(value):
     return norm(value).replace(" ", "-") or "produk"
+
+def normalize_fragment(value):
+    return str(value or "").replace("\\/", "/").replace("&amp;", "&")
+
+def media_urls(fragment):
+    text = normalize_fragment(fragment)
+    urls = re.findall(r'https?://[^\s"\'<>\\)]+?\.(?:jpe?g|png|webp)(?:\?[^\s"\'<>\\)]*)?', text, flags=re.I)
+    urls += [urljoin(SOURCE_URL, p) for p in re.findall(r'(/wp-content/uploads/[^\s"\'<>\\)]+?\.(?:jpe?g|png|webp)(?:\?[^\s"\'<>\\)]*)?)', text, flags=re.I)]
+    unique = []
+    for url in urls:
+        url = url.rstrip(";,")
+        haystack = norm(url)
+        if any(token in haystack for token in IMAGE_BLACKLIST):
+            continue
+        if url not in unique:
+            unique.append(url)
+    return unique
 
 def image_url(img):
     for key in ("data-src", "data-lazy-src", "src"):
@@ -62,17 +78,40 @@ def valid_img(img):
     haystack = norm(" ".join([img.get("alt", ""), img.get("title", ""), url]))
     return not any(token in haystack for token in IMAGE_BLACKLIST)
 
-def product_image(heading):
+def product_media_url(heading):
+    # RR currently renders most catalog photos as Elementor background images.
+    # Find the smallest ancestor containing one product heading and one or more media URLs.
     node = heading
-    for _ in range(10):
+    for _ in range(12):
         node = node.parent
         if not node:
             break
         headings = node.find_all("h4")
+        urls = media_urls(str(node))
+        if len(headings) == 1 and urls:
+            return urls[0]
         imgs = [img for img in node.find_all("img") if valid_img(img)]
         if len(headings) == 1 and imgs:
-            return imgs[0]
+            return image_url(imgs[0])
 
+    # Elementor often separates visual/text into sibling columns. Search the nearest
+    # preceding/following sibling blocks before expanding further.
+    parent = heading.parent
+    for _ in range(6):
+        if not parent:
+            break
+        siblings = []
+        if getattr(parent, "previous_sibling", None):
+            siblings.append(parent.previous_sibling)
+        if getattr(parent, "next_sibling", None):
+            siblings.append(parent.next_sibling)
+        for sibling in siblings:
+            urls = media_urls(str(sibling))
+            if urls:
+                return urls[0]
+        parent = parent.parent
+
+    # Final bounded fallback for real img tags.
     prev = heading.previous_element
     for _ in range(220):
         if prev is None:
@@ -80,7 +119,7 @@ def product_image(heading):
         if getattr(prev, "name", None) in ("h4", "h2"):
             break
         if getattr(prev, "name", None) == "img" and valid_img(prev):
-            return prev
+            return image_url(prev)
         prev = prev.previous_element
 
     nxt = heading.next_element
@@ -90,7 +129,7 @@ def product_image(heading):
         if getattr(nxt, "name", None) in ("h4", "h2"):
             break
         if getattr(nxt, "name", None) == "img" and valid_img(nxt):
-            return nxt
+            return image_url(nxt)
         nxt = nxt.next_element
     return None
 
@@ -143,9 +182,13 @@ def main():
     response.raise_for_status()
 
     soup = BeautifulSoup(response.text, "html.parser")
+    doc_media = media_urls(response.text)
     log(f"h2_count={len(soup.find_all('h2'))}")
     log(f"h4_count={len(soup.find_all('h4'))}")
     log(f"img_count={len(soup.find_all('img'))}")
+    log(f"document_media_urls={len(doc_media)}")
+    if doc_media:
+        log("document_media_sample=" + " | ".join(doc_media[:12]))
 
     raw = []
     active_category = None
@@ -163,11 +206,7 @@ def main():
         name = clean(node.get_text(" ", strip=True))
         if not name or len(name) > 100:
             continue
-        img = product_image(node)
-        if not img:
-            missing_image.append(f"{active_category}:{name}")
-            continue
-        url = image_url(img)
+        url = product_media_url(node)
         if not url:
             missing_image.append(f"{active_category}:{name}")
             continue
@@ -184,6 +223,8 @@ def main():
     log(f"missing_image_count={len(missing_image)}")
     if missing_image:
         log("missing_image_sample=" + " | ".join(missing_image[:20]))
+    if raw:
+        log("pair_sample=" + " | ".join(f"{row['name']}=>{row['sourceImage']}" for row in raw[:10]))
 
     if len(raw) < 50:
         raise RuntimeError(f"only {len(raw)} product/image pairs found; refusing replacement")
@@ -230,7 +271,7 @@ def main():
         shutil.rmtree(OUT_DIR)
     shutil.copytree(temp_images, OUT_DIR)
     DATA_FILE.write_text(json.dumps(products, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    log(f"status=success")
+    log("status=success")
     log(f"synced_products={len(products)}")
     shutil.rmtree(temp_root, ignore_errors=True)
 
