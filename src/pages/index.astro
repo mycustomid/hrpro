@@ -14,8 +14,8 @@ import "../styles/home.css";
 const catalog = normalizeCatalog(catalogSource);
 const byId = new Map(catalog.map((item) => [item.id, item]));
 const select = (ids: string[]) => ids.map((id) => byId.get(id)).filter(Boolean);
-const heroProducts = select(["sofa-oval-vip", "podium-lambang-garuda", "kursi-tiffany-gold", "meja-dealing-kaca-cover"]);
-const featured = select(["sofa-oval-vip", "kursi-armchair-jokowi", "meja-dealing-kaca-cover", "podium-lambang-garuda", "tenda-sarnafil"]);
+const heroProducts = select(["sofa-single", "kursi-futura", "meja-dealing-kaca", "podium-lambang-garuda"]);
+const featured = select(["sofa-single", "kursi-futura", "meja-dealing-kaca", "podium-lambang-garuda", "rope-stand-gold-vip"]);
 ---
 <BaseLayout title="Sewa Furniture & Perlengkapan Event | HR Production" description="HR Production melayani konsultasi dan pemesanan sewa furniture, VIP seating, conference, exhibition, wedding, serta perlengkapan event untuk Jakarta, Tangerang Selatan, dan Jabodetabek." canonicalPath="/">
   <Hero products={heroProducts} />

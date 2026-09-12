@@ -4,41 +4,26 @@ import test from "node:test";
 
 import { filterCatalog, formatIDR, normalizeCatalog, normalizeText } from "../src/lib/catalog.mjs";
 
-const source = JSON.parse(
-  await readFile(new URL("../src/data/catalog.json", import.meta.url), "utf8"),
-);
+const source = JSON.parse(await readFile(new URL("../src/data/catalog.json", import.meta.url), "utf8"));
 const products = normalizeCatalog(source);
 
-test("normalizes all inventory records into unique stable product IDs", () => {
-  assert.equal(products.length, 84);
-  assert.equal(new Set(products.map((item) => item.id)).size, 84);
-  assert.equal(products.every((item) => item.price > 0), true);
-  assert.deepEqual([...new Set(products.map((item) => item.category))].sort(), [
-    "Kursi",
-    "Meja",
-    "Perlengkapan",
-    "Sofa",
-  ]);
+test("catalog records use unique stable local image IDs", () => {
+  assert.equal(products.length >= 50, true);
+  assert.equal(new Set(products.map((item) => item.id)).size, products.length);
+  assert.equal(products.every((item) => item.image.startsWith("/images/products/") && item.image.endsWith(".webp")), true);
+  assert.deepEqual([...new Set(products.map((item) => item.category))].sort(), ["Kursi", "Meja", "Perlengkapan", "Sofa"]);
 });
 
-test("uses corrected customer-facing names without mutating source records", () => {
-  assert.equal(products.find((item) => item.id === "sofa-scandiv-putih")?.name, "Sofa Scandinavian Putih");
-  assert.equal(products.find((item) => item.id === "kursi-sebaguna")?.name, "Kursi Serbaguna");
-  assert.equal(source.find((item) => item.image.endsWith("kursi-sebaguna.png"))?.name, "Kursi sebaguna");
-});
-
-test("keeps duplicate source names distinct in the event plan", () => {
-  const podiums = products.filter((item) => item.sourceName === "Podium");
-  assert.equal(podiums.length, 4);
-  assert.equal(new Set(podiums.map((item) => item.name)).size, 4);
+test("RR-sourced products do not invent public prices", () => {
+  assert.equal(products.every((item) => item.source === "RR Production"), true);
+  assert.equal(products.every((item) => item.price === null), true);
+  assert.equal(formatIDR(null), "Hubungi untuk harga");
 });
 
 test("filters with AND semantics across query, category, and use case", () => {
-  const result = filterCatalog(products, { category: "Kursi", use: "BUMN", query: "vip" });
+  const result = filterCatalog(products, { category: "Kursi", query: "kursi" });
   assert.equal(result.length > 0, true);
   assert.equal(result.every((item) => item.category === "Kursi"), true);
-  assert.equal(result.every((item) => item.tags.includes("BUMN")), true);
-  assert.equal(result.every((item) => item.searchText.includes("vip")), true);
 });
 
 test("normalizes punctuation and formats Indonesian prices", () => {

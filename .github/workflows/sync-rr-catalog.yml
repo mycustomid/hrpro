@@ -1,0 +1,40 @@
+name: Sync RR catalog
+
+on:
+  push:
+    branches: [sync/rr-catalog-live]
+    paths:
+      - scripts/sync-rr-catalog.py
+      - .github/workflows/sync-rr-catalog.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install scraper dependencies
+        run: pip install requests beautifulsoup4 pillow
+      - name: Rebuild catalog from RR Production
+        run: python scripts/sync-rr-catalog.py
+      - name: Commit synced catalog and local images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/catalog.json public/images/products
+          if git diff --cached --quiet; then
+            echo "No catalog changes."
+          else
+            git commit -m "chore(catalog): sync RR Production products and images"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
