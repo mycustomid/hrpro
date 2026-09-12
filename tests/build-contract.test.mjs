@@ -4,6 +4,7 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 const dist = new URL("../dist/", import.meta.url);
+const catalogData = JSON.parse(await readFile(new URL("../src/data/catalog.json", import.meta.url), "utf8"));
 const routes = [
   ["index.html", "HR Production"],
   ["katalog/index.html", "Katalog"],
@@ -70,15 +71,19 @@ test("public build does not expose upstream direct-contact details", async () =>
   }
 });
 
-test("catalog server-renders all products with accessible plan controls", async () => {
+test("catalog server-renders the synced RR catalog with accessible plan controls", async () => {
   const source = await html("katalog/index.html");
   const productIds = [...source.matchAll(/data-product-id="([^"]+)"/g)].map((match) => match[1]);
-  assert.equal(new Set(productIds).size, 84);
+  assert.equal(productIds.length, catalogData.length);
+  assert.equal(new Set(productIds).size, catalogData.length);
+  assert.equal(catalogData.length >= 50, true);
   assert.match(source, /aria-label="Cari produk"/);
   assert.match(source, /data-filter-group="category"/);
   assert.match(source, /data-filter-group="use"/);
   assert.match(source, /role="dialog"/);
   assert.match(source, /Ketersediaan item dikonfirmasi saat pemesanan/i);
+  assert.match(source, /Hubungi untuk harga/i);
+  assert.doesNotMatch(source, /rr-production\.com\/wp-content/i);
 });
 
 test("solution pages contain breadcrumbs and Service schema", async () => {
