@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { articles } from "../../data/articles.mjs";
+import "../../styles/articles.css";
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Artikel HR Production",
+  url: "https://www.hrproduction.id/artikel",
+  description: "Panduan praktis rental furniture, perlengkapan event, exhibition, corporate event, wedding, dan acara pemerintahan."
+};
+---
+<BaseLayout title="Artikel & Panduan Event | HR Production" description="Panduan praktis rental furniture, perlengkapan event, exhibition, corporate event, wedding, dan acara pemerintahan." canonicalPath="/artikel" schema={schema}>
+  <nav class="breadcrumb" aria-label="Breadcrumb"><ol class="page-shell"><li><a href="/">Beranda</a></li><li aria-current="page">Artikel</li></ol></nav>
+  <header class="article-list-hero page-shell">
+    <p class="eyebrow">Knowledge base</p>
+    <h1>Brief yang lebih jelas menghasilkan event yang lebih rapi.</h1>
+    <p class="lead">Panduan operasional untuk tim procurement, GA, EO, panitia, dan penyelenggara yang sedang menyusun kebutuhan event.</p>
+  </header>
+  <section class="page-shell" aria-label="Daftar artikel">
+    <div class="article-grid">
+      {articles.map((article) => (
+        <article class="article-card">
+          <p class="meta">{article.category} · {article.readTime}</p>
+          <h2>{article.title}</h2>
+          <p>{article.description}</p>
+          <a class="text-link" href={`/artikel/${article.slug}/`}>Baca artikel <span aria-hidden="true">↗</span></a>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
