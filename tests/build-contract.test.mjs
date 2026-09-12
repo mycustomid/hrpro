@@ -94,6 +94,21 @@ test("solution pages contain breadcrumbs and Service schema", async () => {
   }
 });
 
+test("every solution page resolves four current RR catalog products", async () => {
+  const expectations = [
+    ["event-corporate-pemerintah/index.html", ["Sofa Oval Putih", "Kursi Armchair Classic", "podium lambang garuda", "Rope Stand GOLD VIP"]],
+    ["exhibition-conference/index.html", ["Meja dealing kaca", "Kursi Kuliah", "Rak brosur", "STANDING AC -5PK"]],
+    ["wedding-gala/index.html", ["Kursi Tiffany gold", "Meja round table 160cm cover", "Sofa Oval Putih", "KARPET PERMADANI"]],
+  ];
+
+  for (const [path, names] of expectations) {
+    const source = (await html(path)).toLowerCase();
+    for (const name of names) {
+      assert.equal(source.includes(name.toLowerCase()), true, `${path} missing ${name}`);
+    }
+  }
+});
+
 test("brand, favicon, manifest, robots, and sitemap assets exist", async () => {
   const required = [
     "favicon.svg",
