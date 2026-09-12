@@ -1,16 +1,3 @@
-catalog_http=200
-catalog_bytes=437294
-h2_count=5
-h4_count=93
-img_count=4
-category=SOFA VIP->Sofa
-category=MEJA->Meja
-category=KURSI->Kursi
-category=PERLENGKAPAN->Perlengkapan
-paired_products=0
-category_counts={}
-missing_image_count=93
-missing_image_sample=Sofa:Sofa Single | Sofa:Sofa Double Putih | Sofa:Sofa Triple Putih | Sofa:Sofa Oval Putih | Sofa:Sofa Scandiv Putih | Sofa:Sofa Scandiv Kipas | Sofa:Sofa Lesehan Arab | Sofa:Sofa Lesehan Arab | Sofa:Sofa Queen Putih | Sofa:Bench panjang | Sofa:Puff kotak | Sofa:Puff Bulat | Meja:Meja skirting cover | Meja:Meja IBM cover | Meja:Meja IBM cover runner | Meja:Meja skirting cover | Meja:Meja cover | Meja:Meja dealing cover | Meja:Meja round table 160cm cover | Meja:round table 160cm cover rumbai
 status=failure
-error_type=RuntimeError
-error=only 0 product/image pairs found; refusing replacement
+error_type=ConnectionError
+error=HTTPSConnectionPool(host='www.rr-production.com', port=443): Max retries exceeded with url: /katalog/ (Caused by NewConnectionError("HTTPSConnection(host='www.rr-production.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable"))
