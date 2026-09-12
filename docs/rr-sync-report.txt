@@ -1,0 +1,22 @@
+catalog_http=200
+catalog_bytes=427197
+h2_count=5
+h4_count=93
+img_count=4
+stylesheet_count=47
+stylesheet_fetched=46
+css_blocks_with_media=94
+elementor_media_map=94
+css_map_sample=662ce93f=>https://www.rr-production.com/wp-content/uploads/2024/03/background-katalog-1.jpg | e8da365=>https://www.rr-production.com/wp-content/uploads/2024/03/background-katalog.jpg | 3dc6e5a=>https://www.rr-production.com/wp-content/uploads/2024/03/3.-Sofa-Single.png | d31a866=>https://www.rr-production.com/wp-content/uploads/2024/03/3.-Sofa-Double.jpg | 4666014=>https://www.rr-production.com/wp-content/uploads/2024/03/4.-Sofa-Triple.jpg | 07f9803=>https://www.rr-production.com/wp-content/uploads/2024/03/2.-Sofa-Oval.jpg | 58b56d5=>https://www.rr-production.com/wp-content/uploads/2024/03/9.-sofa-scandiv.jpg | 26216c6=>https://www.rr-production.com/wp-content/uploads/2024/03/9.-Pusat_-Sewa_Sofa-scandiv-Kipas-1.jpg | 6c17f79=>https://www.rr-production.com/wp-content/uploads/2024/03/13.-Lesehan-Arab.jpg | d72db35=>https://www.rr-production.com/wp-content/uploads/2024/03/12.Pusat_sewa_Sofa-Lesehan-Arab-abu-abu.jpg | f6ca5d9=>https://www.rr-production.com/wp-content/uploads/2024/03/16.-sofa-queen.jpg | 2a1a4c9=>https://www.rr-production.com/wp-content/uploads/2024/03/8.-bench-kotak.jpg
+category=SOFA VIP->Sofa
+category=MEJA->Meja
+category=KURSI->Kursi
+category=PERLENGKAPAN->Perlengkapan
+paired_products=93
+category_counts={"Kursi": 25, "Meja": 29, "Perlengkapan": 27, "Sofa": 12}
+missing_image_count=0
+pair_sample=Sofa Single=>https://www.rr-production.com/wp-content/uploads/2024/03/3.-Sofa-Single.png | Sofa Double Putih=>https://www.rr-production.com/wp-content/uploads/2024/03/3.-Sofa-Double.jpg | Sofa Triple Putih=>https://www.rr-production.com/wp-content/uploads/2024/03/4.-Sofa-Triple.jpg | Sofa Oval Putih=>https://www.rr-production.com/wp-content/uploads/2024/03/2.-Sofa-Oval.jpg | Sofa Scandiv Putih=>https://www.rr-production.com/wp-content/uploads/2024/03/9.-sofa-scandiv.jpg | Sofa Scandiv Kipas=>https://www.rr-production.com/wp-content/uploads/2024/03/9.-Pusat_-Sewa_Sofa-scandiv-Kipas-1.jpg | Sofa Lesehan Arab=>https://www.rr-production.com/wp-content/uploads/2024/03/13.-Lesehan-Arab.jpg | Sofa Lesehan Arab=>https://www.rr-production.com/wp-content/uploads/2024/03/12.Pusat_sewa_Sofa-Lesehan-Arab-abu-abu.jpg | Sofa Queen Putih=>https://www.rr-production.com/wp-content/uploads/2024/03/16.-sofa-queen.jpg | Bench panjang=>https://www.rr-production.com/wp-content/uploads/2024/03/8.-bench-kotak.jpg
+downloaded_products=93
+download_failures=0
+status=success
+synced_products=93

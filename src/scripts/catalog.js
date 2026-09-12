@@ -2,7 +2,18 @@ import { normalizeText, formatIDR } from "../lib/catalog.mjs";
 import { PLAN_STORAGE_KEY, parseStoredPlan, serializePlan, calculatePlan, buildWhatsAppUrl } from "../lib/quote.mjs";
 
 const productNodes = [...document.querySelectorAll("[data-product]")];
-const catalog = productNodes.map((node) => ({ id: node.dataset.productId, name: node.querySelector("[data-product-name]")?.dataset.productName || "Produk", price: Number(node.querySelector("[data-product-price]")?.dataset.productPrice || 0), category: node.dataset.category || "", tags: (node.dataset.tags || "").split("|").filter(Boolean), searchText: node.dataset.search || "" }));
+const catalog = productNodes.map((node) => {
+  const rawPrice = node.querySelector("[data-product-price]")?.dataset.productPrice;
+  const price = Number(rawPrice);
+  return {
+    id: node.dataset.productId,
+    name: node.querySelector("[data-product-name]")?.dataset.productName || "Produk",
+    price: Number.isFinite(price) && price > 0 ? price : null,
+    category: node.dataset.category || "",
+    tags: (node.dataset.tags || "").split("|").filter(Boolean),
+    searchText: node.dataset.search || "",
+  };
+});
 const catalogById = new Map(catalog.map((item) => [item.id, item]));
 let plan = parseStoredPlan(localStorage.getItem(PLAN_STORAGE_KEY), catalogById);
 let category = "Semua";
@@ -20,15 +31,19 @@ function savePlan() { localStorage.setItem(PLAN_STORAGE_KEY, serializePlan(plan)
 function addItem(id, qty = 1) { const product = catalogById.get(id); if (!product) return; const current = plan.find((item) => item.id === id); if (current) current.qty += qty; else plan.push({ ...product, qty }); savePlan(); renderPlan(); announce(`${product.name} ditambahkan ke rencana event.`); }
 function changeQty(id, delta) { const item = plan.find((entry) => entry.id === id); if (!item) return; item.qty += delta; if (item.qty < 1) plan = plan.filter((entry) => entry.id !== id); savePlan(); renderPlan(); }
 
+function priceLabel(item, qty = 1) {
+  return item.price ? formatIDR(item.price * qty) : "Harga dikonfirmasi";
+}
+
 function renderPlan() {
   const summary = calculatePlan(plan);
-  if (planItems) planItems.innerHTML = plan.map((item) => `<li class="plan-line"><div><strong>${escapeHTML(item.name)}</strong><small>${formatIDR(item.price)} / unit</small></div><div class="qty-control"><button type="button" data-qty-id="${item.id}" data-qty-delta="-1" aria-label="Kurangi ${escapeHTML(item.name)}">−</button><span>${item.qty}</span><button type="button" data-qty-id="${item.id}" data-qty-delta="1" aria-label="Tambah ${escapeHTML(item.name)}">＋</button></div><strong>${formatIDR(item.price * item.qty)}</strong><button type="button" class="remove-line" data-remove-id="${item.id}" aria-label="Hapus ${escapeHTML(item.name)}">×</button></li>`).join("");
+  if (planItems) planItems.innerHTML = plan.map((item) => `<li class="plan-line"><div><strong>${escapeHTML(item.name)}</strong><small>${item.price ? `${formatIDR(item.price)} / unit` : "Harga dikonfirmasi"}</small></div><div class="qty-control"><button type="button" data-qty-id="${item.id}" data-qty-delta="-1" aria-label="Kurangi ${escapeHTML(item.name)}">−</button><span>${item.qty}</span><button type="button" data-qty-id="${item.id}" data-qty-delta="1" aria-label="Tambah ${escapeHTML(item.name)}">＋</button></div><strong>${priceLabel(item, item.qty)}</strong><button type="button" class="remove-line" data-remove-id="${item.id}" aria-label="Hapus ${escapeHTML(item.name)}">×</button></li>`).join("");
   document.querySelector("[data-plan-empty]")?.toggleAttribute("hidden", plan.length > 0);
-  document.querySelectorAll("[data-plan-total]").forEach((node) => { node.textContent = formatIDR(summary.total); });
+  const totalLabel = summary.total > 0 && summary.unpricedUnits === 0 ? formatIDR(summary.total) : "Harga dikonfirmasi";
+  document.querySelectorAll("[data-plan-total], [data-plan-total-inline]").forEach((node) => { node.textContent = totalLabel; });
   document.querySelectorAll("[data-plan-units], [data-plan-count-inline]").forEach((node) => { node.textContent = String(summary.units); });
-  document.querySelectorAll("[data-plan-total-inline]").forEach((node) => { node.textContent = formatIDR(summary.total); });
   const link = document.querySelector("[data-plan-whatsapp]");
-  if (link) { link.href = plan.length ? buildWhatsAppUrl("6281381178127", plan) : "#"; link.setAttribute("aria-disabled", String(plan.length === 0)); }
+  if (link) { link.href = plan.length ? buildWhatsAppUrl("6281387927481", plan) : "#"; link.setAttribute("aria-disabled", String(plan.length === 0)); }
   document.querySelector("[data-clear-plan]")?.toggleAttribute("disabled", plan.length === 0);
 }
 

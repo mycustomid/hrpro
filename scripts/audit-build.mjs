@@ -48,10 +48,16 @@ assert.match(homepage, /6281387927481/, "homepage must route WhatsApp to HR mark
 assert.match(homepage, /instagram\.com\/hrproduction/i, "Instagram profile missing");
 assert.match(homepage, /tiktok\.com\/@hrproduction/i, "TikTok profile missing");
 
+const catalogData = JSON.parse(await readFile(join(root, "src", "data", "catalog.json"), "utf8"));
+assert.equal(catalogData.length >= 50, true, "synced catalog unexpectedly small");
+assert.equal(catalogData.every((item) => item.source === "RR Production"), true, "catalog must come from RR Production");
+assert.equal(catalogData.every((item) => String(item.image).endsWith(".webp")), true, "catalog assets must be local WebP files");
+
 const catalog = await readFile(join(dist, "katalog", "index.html"), "utf8");
 const products = [...catalog.matchAll(/data-product-id="([^"]+)"/g)].map((match) => match[1]);
-assert.equal(products.length, 84, "catalog must render 84 product nodes");
-assert.equal(new Set(products).size, 84, "catalog product IDs must be unique");
+assert.equal(products.length, catalogData.length, "rendered product count must match synced catalog");
+assert.equal(new Set(products).size, products.length, "catalog product IDs must be unique");
+assert.doesNotMatch(catalog, /rr-production\.com\/wp-content/i, "catalog must not hotlink RR images");
 
 assert.equal(existsSync(join(dist, "robots.txt")), true, "robots.txt missing");
 assert.equal(existsSync(join(dist, "sitemap.xml")), true, "sitemap fallback missing");
@@ -59,4 +65,4 @@ assert.equal(existsSync(join(dist, "sitemap-index.xml")), true, "sitemap index m
 assert.equal(existsSync(join(dist, "favicon.svg")), true, "favicon missing");
 assert.equal(existsSync(join(dist, "site.webmanifest")), true, "manifest missing");
 
-console.log(`Build audit passed: ${htmlFiles.length} routes, ${products.length} products, local links/assets resolved.`);
+console.log(`Build audit passed: ${htmlFiles.length} routes, ${products.length} RR products, local links/assets resolved.`);

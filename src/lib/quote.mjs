@@ -1,17 +1,23 @@
 import { formatIDR } from "./catalog.mjs";
 
 export const PLAN_STORAGE_KEY = "hr-production:event-plan";
-export const PLAN_STORAGE_VERSION = 1;
+export const PLAN_STORAGE_VERSION = 2;
 
 export function calculatePlan(items = []) {
   return items.reduce(
     (summary, item) => {
       const qty = positiveInteger(item.qty);
+      const price = Number(item.price);
       summary.units += qty;
-      summary.total += Number(item.price || 0) * qty;
+      if (Number.isFinite(price) && price > 0) {
+        summary.total += price * qty;
+        summary.pricedUnits += qty;
+      } else {
+        summary.unpricedUnits += qty;
+      }
       return summary;
     },
-    { units: 0, total: 0 },
+    { units: 0, total: 0, pricedUnits: 0, unpricedUnits: 0 },
   );
 }
 
@@ -41,18 +47,24 @@ export function serializePlan(items = []) {
 
 export function buildQuoteMessage(items = []) {
   const validItems = items.filter((item) => positiveInteger(item.qty) > 0);
-  const { units, total } = calculatePlan(validItems);
-  const lines = validItems.map(
-    (item, index) => `${index + 1}. ${item.name} × ${positiveInteger(item.qty)} — ${formatIDR(Number(item.price) * positiveInteger(item.qty))}`,
-  );
+  const { units, total, unpricedUnits } = calculatePlan(validItems);
+  const lines = validItems.map((item, index) => {
+    const qty = positiveInteger(item.qty);
+    const price = Number(item.price);
+    const priceText = Number.isFinite(price) && price > 0 ? formatIDR(price * qty) : "harga dikonfirmasi";
+    return `${index + 1}. ${item.name} × ${qty} — ${priceText}`;
+  });
+
+  const totals = [`Total unit: ${units}`];
+  if (total > 0) totals.push(`Subtotal item berharga: ${formatIDR(total)}`);
+  if (unpricedUnits > 0) totals.push("Harga final: mohon penawaran");
 
   return [
     "Halo HR Production, saya ingin meminta penawaran perlengkapan event:",
     "",
     ...lines,
     "",
-    `Total unit: ${units}`,
-    `Total estimasi awal: ${formatIDR(total)}`,
+    ...totals,
     "",
     "Jenis acara:",
     "Tanggal acara:",
