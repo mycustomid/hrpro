@@ -1,6 +1,6 @@
 export const site = {
   name: "HR Production",
-  domain: "https://hrproduction.id",
+  domain: "https://www.hrproduction.id",
   phone: "6281381178127",
   phoneDisplay: "+62 813-8117-8127",
   email: "hrproduction202@gmail.com",
