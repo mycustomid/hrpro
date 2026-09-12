@@ -3,6 +3,8 @@ import io
 import json
 import re
 import shutil
+import sys
+import tempfile
 import unicodedata
 from pathlib import Path
 from urllib.parse import urljoin
@@ -15,6 +17,7 @@ SOURCE_URL = "https://www.rr-production.com/katalog/"
 ROOT = Path(__file__).resolve().parents[1]
 OUT_DIR = ROOT / "public" / "images" / "products"
 DATA_FILE = ROOT / "src" / "data" / "catalog.json"
+REPORT_FILE = ROOT / "docs" / "rr-sync-report.txt"
 
 CATEGORY_MAP = {
     "SOFA VIP": "Sofa",
@@ -24,6 +27,11 @@ CATEGORY_MAP = {
 }
 IMAGE_BLACKLIST = ("logo", "banner", "icon", "whatsapp", "instagram", "youtube", "member-of", "cropped-")
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; HRProductionCatalogSync/1.0)"}
+REPORT = []
+
+def log(message):
+    print(message)
+    REPORT.append(str(message))
 
 def clean(value):
     return re.sub(r"\s+", " ", value or "").strip()
@@ -55,9 +63,8 @@ def valid_img(img):
     return not any(token in haystack for token in IMAGE_BLACKLIST)
 
 def product_image(heading):
-    # Prefer a local Elementor/card ancestor containing exactly this one product heading.
     node = heading
-    for _ in range(8):
+    for _ in range(10):
         node = node.parent
         if not node:
             break
@@ -66,9 +73,8 @@ def product_image(heading):
         if len(headings) == 1 and imgs:
             return imgs[0]
 
-    # Fallback: nearest image before/after the heading, bounded by another product/category heading.
     prev = heading.previous_element
-    for _ in range(120):
+    for _ in range(220):
         if prev is None:
             break
         if getattr(prev, "name", None) in ("h4", "h2"):
@@ -78,7 +84,7 @@ def product_image(heading):
         prev = prev.previous_element
 
     nxt = heading.next_element
-    for _ in range(160):
+    for _ in range(220):
         if nxt is None:
             break
         if getattr(nxt, "name", None) in ("h4", "h2"):
@@ -99,7 +105,6 @@ def product_description(heading):
             if text and text not in parts and len(text) < 600:
                 parts.append(text)
         node = node.find_next()
-    # Keep specifications concise; do not copy sales CTA/contact text.
     blocked = ("sewa ", "hubungi", "whatsapp", "admin ")
     safe = [p for p in parts if not any(b in p.lower() for b in blocked)]
     return " · ".join(safe[:8])[:900]
@@ -116,8 +121,7 @@ def tags_for(category, name):
     else:
         tags += ["Konferensi"]
     if any(x in text for x in ("vip", "podium", "gong", "rope stand", "garuda")):
-        tags.append("VIP")
-        tags.append("BUMN")
+        tags += ["VIP", "BUMN"]
     if any(x in text for x in ("tenda", "misty", "parasol", "traffic", "cone", "outdoor")):
         tags.append("Outdoor")
     return list(dict.fromkeys(tags))
@@ -129,23 +133,30 @@ def download_webp(session, url, dest):
     if image.mode not in ("RGB", "RGBA"):
         image = image.convert("RGBA" if "transparency" in image.info else "RGB")
     image.thumbnail((1400, 1400), Image.Resampling.LANCZOS)
-    if image.mode == "RGBA":
-        bg = Image.new("RGBA", image.size, (255, 255, 255, 0))
-        bg.alpha_composite(image)
-        image = bg
     image.save(dest, "WEBP", quality=84, method=6)
 
 def main():
     session = requests.Session()
     response = session.get(SOURCE_URL, headers=HEADERS, timeout=45)
+    log(f"catalog_http={response.status_code}")
+    log(f"catalog_bytes={len(response.content)}")
     response.raise_for_status()
+
     soup = BeautifulSoup(response.text, "html.parser")
+    log(f"h2_count={len(soup.find_all('h2'))}")
+    log(f"h4_count={len(soup.find_all('h4'))}")
+    log(f"img_count={len(soup.find_all('img'))}")
 
     raw = []
     active_category = None
+    category_counts = {}
+    missing_image = []
     for node in soup.find_all(["h2", "h4"]):
         if node.name == "h2":
-            active_category = CATEGORY_MAP.get(clean(node.get_text(" ", strip=True)).upper())
+            heading_text = clean(node.get_text(" ", strip=True)).upper()
+            active_category = CATEGORY_MAP.get(heading_text)
+            if active_category:
+                log(f"category={heading_text}->{active_category}")
             continue
         if not active_category:
             continue
@@ -154,10 +165,11 @@ def main():
             continue
         img = product_image(node)
         if not img:
-            print(f"SKIP no image: {active_category} / {name}")
+            missing_image.append(f"{active_category}:{name}")
             continue
         url = image_url(img)
         if not url:
+            missing_image.append(f"{active_category}:{name}")
             continue
         raw.append({
             "name": name,
@@ -165,27 +177,34 @@ def main():
             "description": product_description(node),
             "sourceImage": url,
         })
+        category_counts[active_category] = category_counts.get(active_category, 0) + 1
+
+    log(f"paired_products={len(raw)}")
+    log(f"category_counts={json.dumps(category_counts, ensure_ascii=False, sort_keys=True)}")
+    log(f"missing_image_count={len(missing_image)}")
+    if missing_image:
+        log("missing_image_sample=" + " | ".join(missing_image[:20]))
 
     if len(raw) < 50:
-        raise SystemExit(f"Refusing sync: only {len(raw)} product/image pairs found")
+        raise RuntimeError(f"only {len(raw)} product/image pairs found; refusing replacement")
 
-    # Rebuild from scratch. No old product assets survive.
-    if OUT_DIR.exists():
-        shutil.rmtree(OUT_DIR)
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    temp_root = Path(tempfile.mkdtemp(prefix="rr-catalog-"))
+    temp_images = temp_root / "products"
+    temp_images.mkdir(parents=True, exist_ok=True)
 
     used = {}
     products = []
+    failures = []
     for row in raw:
         base = slugify(row["name"])
         used[base] = used.get(base, 0) + 1
         suffix = "" if used[base] == 1 else f"-{used[base]}"
         slug = f"{base}{suffix}"
-        dest = OUT_DIR / f"{slug}.webp"
+        dest = temp_images / f"{slug}.webp"
         try:
             download_webp(session, row["sourceImage"], dest)
         except Exception as exc:
-            print(f"SKIP image download: {row['name']} -> {exc}")
+            failures.append(f"{row['name']}::{type(exc).__name__}:{exc}")
             continue
         products.append({
             "name": row["name"],
@@ -199,11 +218,31 @@ def main():
             "sourcePage": SOURCE_URL,
         })
 
-    if len(products) < 50:
-        raise SystemExit(f"Refusing sync: only {len(products)} images downloaded")
+    log(f"downloaded_products={len(products)}")
+    log(f"download_failures={len(failures)}")
+    if failures:
+        log("download_failure_sample=" + " | ".join(failures[:10]))
 
+    if len(products) < 50:
+        raise RuntimeError(f"only {len(products)} product images downloaded; refusing replacement")
+
+    if OUT_DIR.exists():
+        shutil.rmtree(OUT_DIR)
+    shutil.copytree(temp_images, OUT_DIR)
     DATA_FILE.write_text(json.dumps(products, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Synced {len(products)} RR Production products with local WebP assets.")
+    log(f"status=success")
+    log(f"synced_products={len(products)}")
+    shutil.rmtree(temp_root, ignore_errors=True)
 
 if __name__ == "__main__":
-    main()
+    REPORT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        main()
+    except Exception as exc:
+        log("status=failure")
+        log(f"error_type={type(exc).__name__}")
+        log(f"error={exc}")
+        REPORT_FILE.write_text("\n".join(REPORT) + "\n", encoding="utf-8")
+        raise
+    else:
+        REPORT_FILE.write_text("\n".join(REPORT) + "\n", encoding="utf-8")
