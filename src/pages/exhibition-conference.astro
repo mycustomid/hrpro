@@ -1,0 +1,11 @@
+---
+import SolutionPage from "../components/SolutionPage.astro";
+import catalogSource from "../data/catalog.json";
+import { normalizeCatalog } from "../lib/catalog.mjs";
+const catalog = normalizeCatalog(catalogSource);
+const ids = ["meja-dealing-kaca-cover", "kursi-kuliah", "rak-brosur", "standing-ac-5pk"];
+const products = ids.map((id) => catalog.find((product) => product.id === id)).filter(Boolean);
+const needs = [{ title: "Arus peserta", body: "Registrasi, ruang plenary, breakout, booth, dan jalur servis perlu bekerja sebagai satu sistem." }, { title: "Rotasi ruang", body: "Perubahan sesi dan konfigurasi menuntut furniture yang tepat fungsi serta mudah diarahkan." }, { title: "Kenyamanan durasi", body: "Kapasitas kursi, meja kerja, pendinginan, dan titik informasi perlu mengikuti lama kegiatan." }];
+const response = [{ step: "Baca floor plan", body: "Tandai kapasitas, booth, panggung, akses teknis, dan jalur pergerakan peserta." }, { step: "Kelompokkan fungsi", body: "Susun inventaris per zona agar pengiriman, setup, dan pengecekan lebih terarah." }, { step: "Siapkan transisi", body: "Kunci waktu masuk, pergantian sesi, area simpan, serta jadwal bongkar setelah acara." }];
+---
+<SolutionPage eyebrow="Exhibition · Expo · Conference" title="Banyak zona. Satu ritme operasional." intro="Dari meja dealing hingga seating seminar, kebutuhan exhibition dan conference disusun mengikuti arus peserta, fungsi ruang, dan jadwal akses venue." description="Rental furniture booth pameran, expo, seminar, dan conference di Jabodetabek dengan rencana kebutuhan terstruktur." canonicalPath="/exhibition-conference" needs={needs} response={response} products={products} catalogQuery="?use=Konferensi" schemaName="Exhibition & Conference" schemaDescription="Penyediaan furniture dan perlengkapan untuk exhibition, expo, seminar, dan conference di Jabodetabek." signal="exhibition" />
