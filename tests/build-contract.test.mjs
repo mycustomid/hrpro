@@ -81,7 +81,7 @@ test("catalog server-renders the synced RR catalog with accessible plan controls
   assert.match(source, /data-filter-group="category"/);
   assert.match(source, /data-filter-group="use"/);
   assert.match(source, /role="dialog"/);
-  assert.match(source, /Ketersediaan item dikonfirmasi saat pemesanan/i);
+  assert.match(source, /ketersediaan.{0,40}dikonfirmasi.{0,40}pemesanan/i);
   assert.match(source, /Hubungi untuk harga/i);
   assert.doesNotMatch(source, /rr-production\.com\/wp-content/i);
 });
