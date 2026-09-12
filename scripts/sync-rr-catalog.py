@@ -24,8 +24,9 @@ CATEGORY_MAP = {
     "KURSI": "Kursi",
     "PERLENGKAPAN": "Perlengkapan",
 }
+IMAGE_EXT_RE = re.compile(r"\.(?:jpe?g|png|webp)(?:\?.*)?$", re.I)
 IMAGE_BLACKLIST = ("logo", "banner", "icon", "whatsapp", "instagram", "youtube", "member-of", "cropped-")
-HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; HRProductionCatalogSync/1.1)"}
+HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; HRProductionCatalogSync/1.2)"}
 REPORT = []
 
 def log(message):
@@ -42,95 +43,143 @@ def norm(value):
 def slugify(value):
     return norm(value).replace(" ", "-") or "produk"
 
-def normalize_fragment(value):
-    return str(value or "").replace("\\/", "/").replace("&amp;", "&")
+def safe_media_url(raw, base_url):
+    raw = clean(str(raw or "").strip("'\"")).replace("\\/", "/")
+    if not raw or raw.startswith("data:"):
+        return None
+    url = urljoin(base_url, raw)
+    haystack = norm(url)
+    if any(token in haystack for token in IMAGE_BLACKLIST):
+        return None
+    if not IMAGE_EXT_RE.search(url):
+        return None
+    return url
 
-def media_urls(fragment):
-    text = normalize_fragment(fragment)
-    urls = re.findall(r'https?://[^\s"\'<>\\)]+?\.(?:jpe?g|png|webp)(?:\?[^\s"\'<>\\)]*)?', text, flags=re.I)
-    urls += [urljoin(SOURCE_URL, p) for p in re.findall(r'(/wp-content/uploads/[^\s"\'<>\\)]+?\.(?:jpe?g|png|webp)(?:\?[^\s"\'<>\\)]*)?)', text, flags=re.I)]
-    unique = []
-    for url in urls:
-        url = url.rstrip(";,")
-        haystack = norm(url)
-        if any(token in haystack for token in IMAGE_BLACKLIST):
-            continue
-        if url not in unique:
-            unique.append(url)
-    return unique
-
-def image_url(img):
+def inline_img_url(img):
     for key in ("data-src", "data-lazy-src", "src"):
-        value = img.get(key)
-        if value and not value.startswith("data:"):
-            return urljoin(SOURCE_URL, value)
+        url = safe_media_url(img.get(key), SOURCE_URL)
+        if url:
+            return url
     srcset = img.get("srcset") or img.get("data-srcset")
     if srcset:
         candidates = [part.strip().split(" ")[0] for part in srcset.split(",") if part.strip()]
-        if candidates:
-            return urljoin(SOURCE_URL, candidates[-1])
+        for candidate in reversed(candidates):
+            url = safe_media_url(candidate, SOURCE_URL)
+            if url:
+                return url
     return None
 
-def valid_img(img):
-    url = image_url(img)
-    if not url:
-        return False
-    haystack = norm(" ".join([img.get("alt", ""), img.get("title", ""), url]))
-    return not any(token in haystack for token in IMAGE_BLACKLIST)
+def build_elementor_css_map(session, soup):
+    css_links = []
+    for link in soup.find_all("link", href=True):
+        rel = " ".join(link.get("rel") or [])
+        href = link.get("href")
+        if "stylesheet" not in rel.lower() or not href:
+            continue
+        absolute = urljoin(SOURCE_URL, href)
+        if absolute not in css_links:
+            css_links.append(absolute)
 
-def product_media_url(heading):
-    # RR currently renders most catalog photos as Elementor background images.
-    # Find the smallest ancestor containing one product heading and one or more media URLs.
+    log(f"stylesheet_count={len(css_links)}")
+    mapping = {}
+    fetched = 0
+    blocks_with_media = 0
+
+    for css_url in css_links:
+        try:
+            response = session.get(css_url, headers=HEADERS, timeout=25)
+            if response.status_code != 200:
+                continue
+        except Exception:
+            continue
+        fetched += 1
+        css = response.text
+        for block in css.split("}"):
+            if "elementor-element-" not in block or "url(" not in block:
+                continue
+            ids = re.findall(r"elementor-element-([a-zA-Z0-9]+)", block)
+            raw_urls = re.findall(r"url\(([^)]+)\)", block, flags=re.I)
+            urls = []
+            for raw in raw_urls:
+                url = safe_media_url(raw, css_url)
+                if url and url not in urls:
+                    urls.append(url)
+            if not ids or not urls:
+                continue
+            blocks_with_media += 1
+            for element_id in ids:
+                bucket = mapping.setdefault(element_id, [])
+                for url in urls:
+                    if url not in bucket:
+                        bucket.append(url)
+
+    log(f"stylesheet_fetched={fetched}")
+    log(f"css_blocks_with_media={blocks_with_media}")
+    log(f"elementor_media_map={len(mapping)}")
+    if mapping:
+        sample = []
+        for key, urls in list(mapping.items())[:12]:
+            sample.append(f"{key}=>{urls[0]}")
+        log("css_map_sample=" + " | ".join(sample))
+    return mapping
+
+def element_ids(node):
+    ids = []
+    for element in [node, *node.find_all(True)]:
+        for cls in element.get("class") or []:
+            match = re.fullmatch(r"elementor-element-([a-zA-Z0-9]+)", cls)
+            if match:
+                ids.append(match.group(1))
+    return list(dict.fromkeys(ids))
+
+def product_media_url(heading, css_map):
+    # Product art on RR is mainly an Elementor background in a sibling/ancestor card.
     node = heading
     for _ in range(12):
         node = node.parent
         if not node:
             break
         headings = node.find_all("h4")
-        urls = media_urls(str(node))
-        if len(headings) == 1 and urls:
-            return urls[0]
-        imgs = [img for img in node.find_all("img") if valid_img(img)]
-        if len(headings) == 1 and imgs:
-            return image_url(imgs[0])
+        if len(headings) == 1:
+            for element_id in element_ids(node):
+                urls = css_map.get(element_id)
+                if urls:
+                    return urls[0]
+            for img in node.find_all("img"):
+                url = inline_img_url(img)
+                if url:
+                    return url
 
-    # Elementor often separates visual/text into sibling columns. Search the nearest
-    # preceding/following sibling blocks before expanding further.
-    parent = heading.parent
-    for _ in range(6):
-        if not parent:
+    # If visual/text columns are separated, inspect sibling blocks of progressively wider ancestors.
+    node = heading
+    for _ in range(8):
+        node = node.parent
+        if not node:
             break
-        siblings = []
-        if getattr(parent, "previous_sibling", None):
-            siblings.append(parent.previous_sibling)
-        if getattr(parent, "next_sibling", None):
-            siblings.append(parent.next_sibling)
+        siblings = [s for s in (node.previous_sibling, node.next_sibling) if getattr(s, "find_all", None)]
         for sibling in siblings:
-            urls = media_urls(str(sibling))
-            if urls:
-                return urls[0]
-        parent = parent.parent
+            for element_id in element_ids(sibling):
+                urls = css_map.get(element_id)
+                if urls:
+                    return urls[0]
+            for img in sibling.find_all("img"):
+                url = inline_img_url(img)
+                if url:
+                    return url
 
-    # Final bounded fallback for real img tags.
-    prev = heading.previous_element
-    for _ in range(220):
-        if prev is None:
-            break
-        if getattr(prev, "name", None) in ("h4", "h2"):
-            break
-        if getattr(prev, "name", None) == "img" and valid_img(prev):
-            return image_url(prev)
-        prev = prev.previous_element
-
-    nxt = heading.next_element
-    for _ in range(220):
-        if nxt is None:
-            break
-        if getattr(nxt, "name", None) in ("h4", "h2"):
-            break
-        if getattr(nxt, "name", None) == "img" and valid_img(nxt):
-            return image_url(nxt)
-        nxt = nxt.next_element
+    # Last fallback: nearest previous/next Elementor element with media.
+    for direction in ("previous", "next"):
+        current = heading
+        for _ in range(80):
+            current = current.find_previous(True) if direction == "previous" else current.find_next(True)
+            if current is None:
+                break
+            if current.name in ("h4", "h2") and current is not heading:
+                break
+            for cls in current.get("class") or []:
+                match = re.fullmatch(r"elementor-element-([a-zA-Z0-9]+)", cls)
+                if match and css_map.get(match.group(1)):
+                    return css_map[match.group(1)][0]
     return None
 
 def product_description(heading):
@@ -166,7 +215,7 @@ def tags_for(category, name):
     return list(dict.fromkeys(tags))
 
 def download_webp(session, url, dest):
-    response = session.get(url, headers=HEADERS, timeout=45)
+    response = session.get(url, headers=HEADERS, timeout=30)
     response.raise_for_status()
     image = Image.open(io.BytesIO(response.content))
     if image.mode not in ("RGB", "RGBA"):
@@ -176,19 +225,17 @@ def download_webp(session, url, dest):
 
 def main():
     session = requests.Session()
-    response = session.get(SOURCE_URL, headers=HEADERS, timeout=45)
+    response = session.get(SOURCE_URL, headers=HEADERS, timeout=35)
     log(f"catalog_http={response.status_code}")
     log(f"catalog_bytes={len(response.content)}")
     response.raise_for_status()
 
     soup = BeautifulSoup(response.text, "html.parser")
-    doc_media = media_urls(response.text)
     log(f"h2_count={len(soup.find_all('h2'))}")
     log(f"h4_count={len(soup.find_all('h4'))}")
     log(f"img_count={len(soup.find_all('img'))}")
-    log(f"document_media_urls={len(doc_media)}")
-    if doc_media:
-        log("document_media_sample=" + " | ".join(doc_media[:12]))
+
+    css_map = build_elementor_css_map(session, soup)
 
     raw = []
     active_category = None
@@ -206,7 +253,7 @@ def main():
         name = clean(node.get_text(" ", strip=True))
         if not name or len(name) > 100:
             continue
-        url = product_media_url(node)
+        url = product_media_url(node, css_map)
         if not url:
             missing_image.append(f"{active_category}:{name}")
             continue
@@ -263,7 +310,6 @@ def main():
     log(f"download_failures={len(failures)}")
     if failures:
         log("download_failure_sample=" + " | ".join(failures[:10]))
-
     if len(products) < 50:
         raise RuntimeError(f"only {len(products)} product images downloaded; refusing replacement")
 
