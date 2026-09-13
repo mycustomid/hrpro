@@ -1,28 +1,202 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Hero from "../components/home/Hero.astro";
-import ProofRail from "../components/home/ProofRail.astro";
-import EventSolutions from "../components/home/EventSolutions.astro";
-import SelectedInventory from "../components/home/SelectedInventory.astro";
-import Process from "../components/home/Process.astro";
-import Readiness from "../components/home/Readiness.astro";
-import FinalCTA from "../components/FinalCTA.astro";
-import catalogSource from "../data/catalog.json";
-import { normalizeCatalog } from "../lib/catalog.mjs";
-import "../styles/home.css";
+import catalog from "../data/catalog.json";
+import "../styles/global.css";
 
-const catalog = normalizeCatalog(catalogSource);
-const byId = new Map(catalog.map((item) => [item.id, item]));
-const select = (ids: string[]) => ids.map((id) => byId.get(id)).filter(Boolean);
-const heroProducts = select(["sofa-single", "kursi-futura", "meja-dealing-kaca", "podium-lambang-garuda"]);
-const featured = select(["sofa-single", "kursi-futura", "meja-dealing-kaca", "podium-lambang-garuda", "rope-stand-gold-vip"]);
+const base = import.meta.env.BASE_URL ?? "/";
+const normalizedBase = base.endsWith("/") ? base : `${base}/`;
+const withBase = (path) => (path.startsWith("/") ? `${normalizedBase}${path.slice(1)}` : `${normalizedBase}${path}`);
+
+const waNumber = "6281387927481";
+const waMessage = (name) =>
+  `Halo HRproduction, saya mau sewa ${name}. Mohon info harga & ketersediaan.`;
+
+const categoryOrder = ["Sofa", "Meja", "Kursi", "Perlengkapan"];
+const categories = categoryOrder.filter((c) =>
+  catalog.some((item) => item.category === c)
+);
+const grouped = categories.map((name) => ({
+  name,
+  items: catalog.filter((item) => item.category === name),
+}));
+
+const totalItems = catalog.length;
+const phonePrimary = "+62 813-8792-7481";
+const phoneAlt = "";
+const email = "hrproduction202@gmail.com";
+const address = "Jl Beringin II RT 001/007 Pamulang Barat, Tangsel";
 ---
-<BaseLayout title="Sewa Furniture & Perlengkapan Event | HR Production" description="HR Production melayani konsultasi dan pemesanan sewa furniture, VIP seating, conference, exhibition, wedding, serta perlengkapan event untuk Jakarta, Tangerang Selatan, dan Jabodetabek." canonicalPath="/">
-  <Hero products={heroProducts} />
-  <ProofRail />
-  <EventSolutions />
-  <SelectedInventory products={featured} />
-  <Process />
-  <Readiness />
-  <FinalCTA />
-</BaseLayout>
+
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="HR Production - katalog rental sofa, meja, kursi, dan perlengkapan event. Pilih produk lalu hubungi marketing melalui WhatsApp." />
+    <meta name="theme-color" content="#121620" />
+    <link rel="icon" href={withBase("/favicon.svg")} type="image/svg+xml" />
+    <link rel="icon" href={withBase("/favicon.ico")} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>HR Production | Katalog Rental Event</title>
+  </head>
+  <body>
+    <div class="bg-noise" aria-hidden="true"></div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <div class="logo-text">
+            <strong>HRproduction</strong>
+            <span>Pusat Rental Sofa & Perlengkapan Event</span>
+          </div>
+        </div>
+        <nav class="nav">
+          <a href="#produk">Produk</a>
+          <a href="#katalog">Katalog</a>
+          <a href="#kontak">Kontak</a>
+          <a class="btn btn-accent" href={`https://wa.me/${waNumber}?text=${encodeURIComponent("Halo HRproduction, saya ingin tanya ketersediaan produk.")}`} target="_blank" rel="noreferrer">Chat WA</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="katalog">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Katalog 2025/2026</p>
+            <h1>Katalog Rental Event yang Rapi, Lengkap, dan Siap Pakai</h1>
+            <p class="lead">
+              Dari sofa VIP sampai perlengkapan event, semua ada di satu katalog.
+              Cukup pilih produk, lalu pesan via WhatsApp.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-accent" href="#produk">Lihat Produk</a>
+              <a class="btn btn-ghost" href={withBase("/katalog.pdf")} target="_blank" rel="noreferrer">Download PDF</a>
+            </div>
+            <div class="hero-stats">
+              <div>
+                <strong>{totalItems}+</strong>
+                <span>Produk siap sewa</span>
+              </div>
+              <div>
+                <strong>4 Kategori</strong>
+                <span>Sofa, Meja, Kursi, Perlengkapan</span>
+              </div>
+              <div>
+                <strong>WA Fast Response</strong>
+                <span>Order langsung di WhatsApp</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card">
+            <div class="hero-card-inner">
+              <h2>Info Cepat</h2>
+              <ul>
+                <li>
+                  <span>Alamat</span>
+                  <strong>{address}</strong>
+                </li>
+                <li>
+                  <span>Telepon</span>
+                  <strong>{phonePrimary}</strong>
+                  {phoneAlt && <small>{phoneAlt}</small>}
+                </li>
+                <li>
+                  <span>Email</span>
+                  <strong>{email}</strong>
+                </li>
+              </ul>
+              <a
+                class="btn btn-dark"
+                href={`https://wa.me/${waNumber}?text=${encodeURIComponent("Halo HRproduction, saya ingin booking produk untuk event.")}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Booking via WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="produk">
+        <div class="container">
+          <div class="section-head">
+            <h2>Daftar Produk</h2>
+            <p>Pilih kategori, lihat detail, lalu pesan cepat melalui WA.</p>
+          </div>
+          <div class="category-chips">
+            {categories.map((name) => (
+              <a class="chip" href={`#cat-${name.toLowerCase()}`}>{name}</a>
+            ))}
+          </div>
+
+          {grouped.map((group) => (
+            <section class="category" id={`cat-${group.name.toLowerCase()}`}>
+              <div class="category-head">
+                <h3>{group.name}</h3>
+                <span>{group.items.length} item</span>
+              </div>
+              <div class="product-grid">
+                {group.items.map((item, idx) => (
+                  <article class="product-card" style={`--i: ${idx}`}>
+                    <div class="product-media">
+                      <img src={withBase(item.image)} alt={item.name} loading="lazy" />
+                    </div>
+                    <div class="product-body">
+                      <h4>{item.name}</h4>
+                      {item.description && <p>{item.description}</p>}
+                      <div class="product-meta">
+                        <span class="price">{item.price ? item.price : "Hubungi untuk harga"}</span>
+                        <a
+                          class="wa-link"
+                          href={`https://wa.me/${waNumber}?text=${encodeURIComponent(waMessage(item.name))}`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          Pesan via WA
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="kontak">
+      <div class="container footer-grid">
+        <div>
+          <h3>HRproduction</h3>
+          <p>Pusat rental sofa dan perlengkapan event. Amanah, bersih, dan siap acara.</p>
+        </div>
+        <div>
+          <h4>Kontak</h4>
+          <ul>
+            <li>{phonePrimary}</li>
+            {phoneAlt && <li>{phoneAlt}</li>}
+            <li>{email}</li>
+            <li>{address}</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Quick Action</h4>
+          <a class="btn btn-accent" href={`https://wa.me/${waNumber}?text=${encodeURIComponent("Halo HRproduction, saya mau tanya ketersediaan produk.")}`} target="_blank" rel="noreferrer">Chat WhatsApp</a>
+          <a class="btn btn-ghost" href={withBase("/katalog.pdf")} target="_blank" rel="noreferrer">Download PDF</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 HRproduction. All rights reserved.</span>
+      </div>
+    </footer>
+
+    <a class="float-wa" href={`https://wa.me/${waNumber}?text=${encodeURIComponent("Halo HRproduction, saya mau sewa produk.")}`} target="_blank" rel="noreferrer" aria-label="Chat WhatsApp">
+      WhatsApp
+    </a>
+  </body>
+</html>
