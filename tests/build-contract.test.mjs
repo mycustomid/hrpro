@@ -4,25 +4,24 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 const dist = new URL("../dist/", import.meta.url);
-const catalog = JSON.parse(await readFile(new URL("../src/data/catalog.json", import.meta.url), "utf8"));
 
-test("build is the original commit 11 single-page architecture", () => {
+test("build produces single-page architecture without redesign subroutes", () => {
   assert.equal(existsSync(new URL("index.html", dist)), true);
   assert.equal(existsSync(new URL("katalog/index.html", dist)), false);
   assert.equal(existsSync(new URL("artikel/index.html", dist)), false);
 });
 
-test("homepage matches the commit 11 visual structure", async () => {
+test("homepage matches the screenshot-era structure requested by Bos", async () => {
   const source = await readFile(new URL("index.html", dist), "utf8");
-  assert.match(source, /Katalog Rental Event yang Rapi, Lengkap, dan Siap Pakai/);
-  assert.match(source, /Info Cepat/);
-  assert.match(source, /Daftar Produk/);
-  assert.match(source, /Katalog 2025\/2026/);
+  assert.match(source, /SEMUA PERLENGKAPAN EVENT ADA DISINI/);
+  assert.match(source, /KATALOG LENGKAP/);
+  assert.match(source, /Kursi Tiffany/);
   assert.match(source, /6281387927481/);
 });
 
-test("homepage renders all 84 legacy catalog cards", async () => {
-  const source = await readFile(new URL("index.html", dist), "utf8");
-  assert.equal((source.match(/class="product-card"/g) || []).length, catalog.length);
-  assert.equal(catalog.length, 84);
+test("essential assets are bundled in dist output", () => {
+  assert.equal(existsSync(new URL("css/style.css", dist)), true);
+  assert.equal(existsSync(new URL("css/bootstrap.css", dist)), true);
+  assert.equal(existsSync(new URL("js/jquery-2.1.4.min.js", dist)), true);
+  assert.equal(existsSync(new URL("images/product/r1.jpg", dist)), true);
 });

@@ -35,4 +35,4 @@ jobs:
           port: ${{ secrets.FTP_PORT }}
           local-dir: dist/
           server-dir: ${{ secrets.FTP_REMOTE_DIR }}
-          state-name: .ftp-deploy-sync-state-c11.json
+          state-name: .ftp-deploy-sync-state-screenshot.json

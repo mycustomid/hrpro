@@ -6,17 +6,15 @@ import { join, resolve } from "node:path";
 const root = resolve(import.meta.dirname, "..");
 const dist = join(root, "dist");
 const source = await readFile(join(dist, "index.html"), "utf8");
-const catalog = JSON.parse(await readFile(join(root, "src", "data", "catalog.json"), "utf8"));
 
-assert.equal(catalog.length, 84, "expected pre-RR 84-product catalog");
-assert.equal((source.match(/class="product-card"/g) || []).length, 84, "all products must render");
-assert.match(source, /Katalog Rental Event yang Rapi, Lengkap, dan Siap Pakai/);
-assert.match(source, /Info Cepat/);
-assert.match(source, /6281387927481/);
-assert.doesNotMatch(source, /rr-production\.com/i);
+assert.match(source, /SEMUA PERLENGKAPAN EVENT ADA DISINI/, "must have target screenshot headline");
+assert.match(source, /KATALOG LENGKAP/, "must have yellow catalog button");
+assert.match(source, /Kursi Tiffany/, "must render favorite products");
+assert.match(source, /6281387927481/, "must use official marketing number");
 
-for (const item of catalog) {
-  assert.equal(existsSync(join(dist, item.image.replace(/^\//, ""))), true, item.image);
-}
+assert.equal(existsSync(join(dist, "css", "style.css")), true, "css/style.css must exist");
+assert.equal(existsSync(join(dist, "css", "bootstrap.css")), true, "css/bootstrap.css must exist");
+assert.equal(existsSync(join(dist, "js", "jquery-2.1.4.min.js")), true, "jquery must exist");
+assert.equal(existsSync(join(dist, "images", "product", "r1.jpg")), true, "product r1 image must exist");
 
-console.log("commit-11 audit passed: 84 legacy products, original single-page catalog.");
+console.log("screenshot-design audit passed: authentic HRproduction layout verified.");
