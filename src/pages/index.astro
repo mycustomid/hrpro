@@ -7,7 +7,7 @@ const base = import.meta.env.BASE_URL ?? "/";
 const normalizedBase = base.endsWith("/") ? base : `${base}/`;
 const withBase = (path) => (path.startsWith("/") ? `${normalizedBase}${path.slice(1)}` : `${normalizedBase}${path}`);
 
-const waNumber = "6281387927481";
+const waNumber = "6281381178127";
 const waLink = (text) => `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`;
 const formatPrice = (price) => `Rp ${price.toLocaleString("id-ID")}`;
 
@@ -41,31 +41,31 @@ const packages = featuredPackageIds
 
 const pillars = [
   {
-    title: "Kurasi Vendor Sesuai Kebutuhan",
-    desc: "Kami bantu mencocokkan kebutuhan acara dengan pilihan item dan vendor yang relevan.",
+    title: "Unit Steril & Siap Pakai",
+    desc: "Setiap unit dibersihkan dan diperiksa sebelum dikirim, tampil prima di hari H.",
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg>',
   },
   {
-    title: "Cek Harga & Ketersediaan",
-    desc: "Harga, stok, lokasi, dan jadwal dicek kembali sebelum penawaran dikunci.",
+    title: "Armada Pengiriman Tepat Waktu 24/7",
+    desc: "Pengiriman dan penjemputan terjadwal, siap dihubungi kapan saja.",
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V7a1 1 0 0 1 1-1h9v10"/><path d="M13 10h4l3 3v3h-7"/><circle cx="7.5" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/></svg>',
   },
   {
-    title: "Koordinasi Satu Pintu",
-    desc: "Brief kebutuhan dan komunikasi vendor diarahkan melalui satu kontak marketing.",
+    title: "Tim Loading Berpengalaman",
+    desc: "Tim lapangan terlatih menangani setup dan bongkar muat dengan rapi dan aman.",
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="6" r="2.4"/><path d="M4 20v-2a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v2"/><circle cx="17.5" cy="8" r="2"/><path d="M15 20v-1.5a3.2 3.2 0 0 1 3.5-3.2c1.4 0 2.5.6 3 1.7"/></svg>',
   },
   {
-    title: "Fleksibel Multi-Vendor",
-    desc: "Tidak terikat satu gudang; opsi vendor dapat disesuaikan dengan harga dan kebutuhan acara.",
+    title: "Faktur Pajak & Invoice Resmi BUMN",
+    desc: "Dokumen administrasi lengkap, sesuai standar pengadaan instansi dan korporasi.",
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v15H6z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>',
   },
 ];
 
 const totalItems = catalog.length;
-const phonePrimary = "+62 813-8792-7481";
+const phonePrimary = "+62 813-8117-8127";
 const email = "hrproduction202@gmail.com";
-const address = "Jakarta, Tangerang Selatan & Jabodetabek";
+const address = "Jl Beringin II RT 001/007 Pamulang Barat, Tangsel";
 ---
 
 <html lang="id">
@@ -74,7 +74,7 @@ const address = "Jakarta, Tangerang Selatan & Jabodetabek";
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="HR Production membantu mencarikan stage, booth, VIP seating, furniture, dan perlengkapan event dari jaringan vendor sesuai kebutuhan dan anggaran."
+      content="HR Production - pusat solusi stage, booth, VIP seating & event production. Vendor terpercaya BUMN dan instansi pemerintah."
     />
     <meta name="theme-color" content="#0a0e17" />
     <link rel="icon" href={withBase("/favicon.svg")} type="image/svg+xml" />
@@ -85,7 +85,7 @@ const address = "Jakarta, Tangerang Selatan & Jabodetabek";
       href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <title>HR Production | Stage, Booth &amp; VIP Seating Event</title>
+    <title>HR Production | Stage, Booth &amp; VIP Seating untuk Event Kenegaraan</title>
   </head>
   <body>
     <div class="bg-noise" aria-hidden="true"></div>
@@ -125,11 +125,11 @@ const address = "Jakarta, Tangerang Selatan & Jabodetabek";
         <div class="hero-beams" aria-hidden="true"></div>
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Marketing &amp; Sourcing Event</p>
+            <p class="eyebrow">Pusat Solusi Event Production</p>
             <h1>Stage &amp; Booth <em>Kelas Kenegaraan</em></h1>
             <p class="lead">
-              HR Production membantu mencarikan panggung, booth, VIP seating, furniture, dan perlengkapan
-              event dari berbagai vendor sesuai tanggal, lokasi, kebutuhan, dan anggaran.
+              HR Production menyiapkan panggung, booth, dan VIP seating untuk BUMN, instansi
+              pemerintah, dan korporasi — steril, tepat waktu, dan siap pakai.
             </p>
             <div class="hero-actions">
               <a class="btn btn-accent" href={withBase("/katalog.pdf")} target="_blank" rel="noreferrer">
@@ -142,15 +142,15 @@ const address = "Jakarta, Tangerang Selatan & Jabodetabek";
             <div class="hero-stats">
               <div>
                 <strong>{totalItems}+</strong>
-                <span>Referensi produk event</span>
+                <span>Produk siap sewa</span>
               </div>
               <div>
                 <strong>{categories.length} Kategori</strong>
                 <span>Sofa, Meja, Kursi, Perlengkapan</span>
               </div>
               <div>
-                <strong>Multi-vendor</strong>
-                <span>Harga &amp; stok dikonfirmasi</span>
+                <strong>&lt; 1 Jam</strong>
+                <span>Respon WhatsApp tim kami</span>
               </div>
             </div>
           </div>
@@ -164,7 +164,7 @@ const address = "Jakarta, Tangerang Selatan & Jabodetabek";
                   </defs>
                   <text font-size="10.6" letter-spacing="2.2">
                     <textPath href="#sealCircle" startOffset="0%">
-                      MULTI-VENDOR • EVENT CORPORATE &amp; PEMERINTAH • MULTI-VENDOR • EVENT CORPORATE &amp; PEMERINTAH •
+                      VENDOR TERPERCAYA • BUMN &amp; INSTANSI PEMERINTAH • VENDOR TERPERCAYA • BUMN &amp; INSTANSI PEMERINTAH •
                     </textPath>
                   </text>
                 </svg>
@@ -174,7 +174,7 @@ const address = "Jakarta, Tangerang Selatan & Jabodetabek";
                 <h2>Info Cepat</h2>
                 <ul>
                   <li>
-                    <span>Area layanan</span>
+                    <span>Alamat</span>
                     <strong>{address}</strong>
                   </li>
                   <li>
@@ -192,7 +192,7 @@ const address = "Jakarta, Tangerang Selatan & Jabodetabek";
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Minta Penawaran via WhatsApp
+                  Booking via WhatsApp
                 </a>
               </div>
             </div>
@@ -205,10 +205,10 @@ const address = "Jakarta, Tangerang Selatan & Jabodetabek";
           <div class="section-head">
             <div>
               <p class="eyebrow">Paket Event Unggulan</p>
-              <h2>Pilih Paket, Kami Carikan Opsinya</h2>
+              <h2>Pilih Paket, Tim Kami Siapkan Semua</h2>
             </div>
             <p class="section-note">
-              Setiap paket menjadi estimasi referensi. Harga final dan ketersediaan mengikuti vendor yang tersedia.
+              Setiap paket otomatis tersusun ke Rencana Anggaran Event — tinggal sesuaikan jumlah.
             </p>
           </div>
 
@@ -228,7 +228,7 @@ const address = "Jakarta, Tangerang Selatan & Jabodetabek";
                     <dd>{pkg.estimated_pax}</dd>
                   </div>
                   <div>
-                    <dt>Estimasi Referensi</dt>
+                    <dt>Estimasi Biaya</dt>
                     <dd>{formatPrice(pkg.estimatedTotal)}</dd>
                   </div>
                 </dl>
@@ -244,7 +244,7 @@ const address = "Jakarta, Tangerang Selatan & Jabodetabek";
                   data-package={pkg.name}
                   data-items={JSON.stringify(pkg.items)}
                 >
-                  Gunakan Paket Ini
+                  Pilih Paket Ini
                 </button>
               </article>
             ))}
@@ -260,7 +260,7 @@ const address = "Jakarta, Tangerang Selatan & Jabodetabek";
               <h2>Cari &amp; Susun Kebutuhan Event Anda</h2>
             </div>
             <p class="section-note">
-              {totalItems}+ referensi produk dari katalog lama. Harga dan stok dikonfirmasi saat inquiry.
+              {totalItems}+ produk siap sewa. Ketik nama produk atau pilih tag di bawah.
             </p>
           </div>
 
@@ -315,10 +315,10 @@ const address = "Jakarta, Tangerang Selatan & Jabodetabek";
                       <h4>{item.name}</h4>
                       {item.description && <p>{item.description}</p>}
                       <div class="product-meta">
-                        <span class="price">Referensi {formatPrice(item.price)}</span>
+                        <span class="price">{formatPrice(item.price)}</span>
                         <a
                           class="wa-link"
-                          href={waLink(`Halo HR Production, saya sedang mencari ${item.name}. Mohon cek harga, stok, dan opsi vendor.`)}
+                          href={waLink(`Halo HR Production, saya mau sewa ${item.name}. Mohon info harga & ketersediaan.`)}
                           target="_blank"
                           rel="noreferrer"
                           aria-label={`Pesan ${item.name} via WhatsApp`}
@@ -347,8 +347,8 @@ const address = "Jakarta, Tangerang Selatan & Jabodetabek";
         <div class="container">
           <div class="section-head">
             <div>
-              <p class="eyebrow">Cara HR Production Membantu</p>
-              <h2>Satu Kontak, Banyak Opsi Vendor</h2>
+              <p class="eyebrow">Mengapa BUMN &amp; Pemerintah Percaya Kami</p>
+              <h2>Standar Operasional Tanpa Kompromi</h2>
             </div>
           </div>
           <div class="pillar-grid">
@@ -369,8 +369,8 @@ const address = "Jakarta, Tangerang Selatan & Jabodetabek";
         <div>
           <h3>HR PRODUCTION</h3>
           <p>
-            Marketing dan sourcing rental event multi-vendor untuk corporate, pemerintah, wedding,
-            exhibition, dan kebutuhan event lainnya di Jabodetabek.
+            Pusat solusi stage, booth, VIP seating, dan event production untuk BUMN, instansi
+            pemerintah, dan korporasi di seluruh Indonesia.
           </p>
         </div>
         <div>
@@ -378,7 +378,7 @@ const address = "Jakarta, Tangerang Selatan & Jabodetabek";
           <ul>
             <li>{phonePrimary}</li>
             <li>{email}</li>
-            <li>Area: {address}</li>
+            <li>{address}</li>
           </ul>
         </div>
         <div>
@@ -406,18 +406,18 @@ const address = "Jakarta, Tangerang Selatan & Jabodetabek";
     <div class="cart-widget" id="cartWidget">
       <div class="cart-drawer" id="cartDrawer">
         <div class="cart-drawer-head">
-          <h3>Rencana Kebutuhan Event</h3>
+          <h3>Rencana Anggaran Event</h3>
           <button class="cart-close" id="cartClose" type="button" aria-label="Tutup">×</button>
         </div>
         <ul class="cart-list" id="cartList"></ul>
         <p class="cart-empty" id="cartEmpty">Belum ada item. Pilih paket atau tambahkan produk dari katalog.</p>
         <div class="cart-drawer-foot">
           <div class="cart-total-row">
-            <span>Estimasi Referensi</span>
+            <span>Total Estimasi</span>
             <strong id="cartTotal">Rp 0</strong>
           </div>
           <button class="btn btn-accent btn-block" id="cartSendWa" type="button" disabled>
-            Minta Penawaran via WhatsApp
+            Kirim Rencana Event via WhatsApp
           </button>
           <button class="btn btn-text" id="cartClear" type="button">Kosongkan Rencana</button>
         </div>
@@ -612,7 +612,7 @@ const address = "Jakarta, Tangerang Selatan & Jabodetabek";
         const lines = items.map((item) => `- ${item.name} x ${item.qty}: ${formatIDR(item.price * item.qty)}`);
         const message = `Halo HR Production, saya ingin mengajukan penawaran sewa perlengkapan event:\n${lines.join(
           "\n"
-        )}\nEstimasi Referensi: ${formatIDR(total)}\nMohon cek harga final, stok, dan opsi vendor untuk tanggal acara.`;
+        )}\nTotal Estimasi: ${formatIDR(total)}\nMohon info ketersediaan tanggal acara.`;
         window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`, "_blank", "noopener");
       });
 
