@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
 import { organizationSchema, site } from "../config/site.mjs";
 import "../styles/global.css";
 import "../styles/brand-overrides.css";
@@ -52,6 +53,7 @@ const base = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL :
     <Header />
     <main id="main-content"><slot /></main>
     <Footer />
+    <FloatingWhatsApp />
     <div class="live-region sr-only" aria-live="polite" aria-atomic="true" data-live-region></div>
     <script>
       import "../scripts/site.js";
