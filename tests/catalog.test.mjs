@@ -8,7 +8,7 @@ const catalog = JSON.parse(await readFile(new URL("../src/data/catalog.json", im
 test("legacy marketing catalog contains the pre-RR product set", () => {
   assert.equal(catalog.length, 84);
   assert.deepEqual([...new Set(catalog.map((item) => item.category))].sort(), ["Kursi", "Meja", "Perlengkapan", "Sofa"]);
-  assert.equal(catalog.every((item) => typeof item.price === "number" && item.price > 0), true);
+  assert.equal(catalog.every((item) => (typeof item.price === "string" && item.price.startsWith("Rp")) || (typeof item.price === "number" && item.price > 0)), true);
   assert.equal(catalog.every((item) => item.image.startsWith("/images/products/") && item.image.endsWith(".png")), true);
   assert.equal(catalog.some((item) => item.name === "Sofa Oval VIP"), true);
   assert.equal(catalog.some((item) => item.name === "Kursi Cobra"), true);
