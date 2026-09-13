@@ -5,11 +5,11 @@ import "../styles/global.css";
 
 const base = import.meta.env.BASE_URL ?? "/";
 const normalizedBase = base.endsWith("/") ? base : `${base}/`;
-const withBase = (path) => (path.startsWith("/") ? `${normalizedBase}${path.slice(1)}` : `${normalizedBase}${path}`);
+const withBase = (path: string) => (path.startsWith("/") ? `${normalizedBase}${path.slice(1)}` : `${normalizedBase}${path}`);
 
-const waNumber = "6281381178127";
-const waLink = (text) => `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`;
-const formatPrice = (price) => `Rp ${price.toLocaleString("id-ID")}`;
+const waNumber = "6281387927481";
+const waLink = (text: string) => `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`;
+const formatPrice = (price: number) => `Rp ${price.toLocaleString("id-ID")}`;
 
 const categoryOrder = ["Sofa", "Meja", "Kursi", "Perlengkapan"];
 const categories = categoryOrder.filter((c) => catalog.some((item) => item.category === c));
@@ -29,11 +29,11 @@ const featuredPackageIds = [
 ];
 const packages = featuredPackageIds
   .map((id) => eventTypes.find((e) => e.id === id))
-  .filter(Boolean)
+  .filter((pkg): pkg is NonNullable<typeof pkg> => Boolean(pkg))
   .map((pkg) => {
-    const items = pkg.recommended_items
+    const items = (pkg.recommended_items || [])
       .map((name) => catalogByName.get(name))
-      .filter(Boolean)
+      .filter((item): item is NonNullable<typeof item> => Boolean(item))
       .map((item) => ({ name: item.name, price: item.price }));
     const estimatedTotal = items.reduce((sum, item) => sum + item.price, 0);
     return { ...pkg, items, estimatedTotal };
@@ -41,29 +41,29 @@ const packages = featuredPackageIds
 
 const pillars = [
   {
-    title: "Unit Steril & Siap Pakai",
-    desc: "Setiap unit dibersihkan dan diperiksa sebelum dikirim, tampil prima di hari H.",
+    title: "Kurasi Kualitas & Rapi",
+    desc: "Setiap unit dipastikan bersih, terawat, dan siap tampil prima di hari H event Anda.",
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg>',
   },
   {
-    title: "Armada Pengiriman Tepat Waktu 24/7",
-    desc: "Pengiriman dan penjemputan terjadwal, siap dihubungi kapan saja.",
+    title: "Koordinasi Pengiriman Terjadwal",
+    desc: "Pengiriman dan penjemputan terjadwal rapi dan siap koordinasi kapan saja.",
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16V7a1 1 0 0 1 1-1h9v10"/><path d="M13 10h4l3 3v3h-7"/><circle cx="7.5" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/></svg>',
   },
   {
-    title: "Tim Loading Berpengalaman",
+    title: "Tim Lapangan Berpengalaman",
     desc: "Tim lapangan terlatih menangani setup dan bongkar muat dengan rapi dan aman.",
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="6" r="2.4"/><path d="M4 20v-2a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v2"/><circle cx="17.5" cy="8" r="2"/><path d="M15 20v-1.5a3.2 3.2 0 0 1 3.5-3.2c1.4 0 2.5.6 3 1.7"/></svg>',
   },
   {
-    title: "Faktur Pajak & Invoice Resmi BUMN",
-    desc: "Dokumen administrasi lengkap, sesuai standar pengadaan instansi dan korporasi.",
+    title: "Faktur Pajak & Administrasi Resmi",
+    desc: "Dokumen administrasi lengkap, sesuai standar pengadaan instansi BUMN dan korporasi.",
     icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l3 3v15H6z"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>',
   },
 ];
 
 const totalItems = catalog.length;
-const phonePrimary = "+62 813-8117-8127";
+const phonePrimary = "+62 813-8792-7481";
 const email = "hrproduction202@gmail.com";
 const address = "Jl Beringin II RT 001/007 Pamulang Barat, Tangsel";
 ---
@@ -74,7 +74,7 @@ const address = "Jl Beringin II RT 001/007 Pamulang Barat, Tangsel";
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="HR Production - pusat solusi stage, booth, VIP seating & event production. Vendor terpercaya BUMN dan instansi pemerintah."
+      content="HR Production - pusat solusi stage, booth, VIP seating & event production multi-vendor untuk BUMN, korporasi, dan instansi pemerintah."
     />
     <meta name="theme-color" content="#0a0e17" />
     <link rel="icon" href={withBase("/favicon.svg")} type="image/svg+xml" />
@@ -93,7 +93,9 @@ const address = "Jl Beringin II RT 001/007 Pamulang Barat, Tangsel";
     <header class="site-header" id="top">
       <div class="container header-inner">
         <a class="brand" href="#top">
-          <span class="brand-mark">HR</span>
+          <span class="brand-mark">
+            <img src={withBase("/brand/hr-emblem.png")} alt="HR Production Logo" class="brand-logo-img" width="40" height="40" />
+          </span>
           <span class="brand-text">
             <strong>HR PRODUCTION</strong>
             <span>Stage · Booth · VIP Seating · Event Production</span>
@@ -149,8 +151,8 @@ const address = "Jl Beringin II RT 001/007 Pamulang Barat, Tangsel";
                 <span>Sofa, Meja, Kursi, Perlengkapan</span>
               </div>
               <div>
-                <strong>&lt; 1 Jam</strong>
-                <span>Respon WhatsApp tim kami</span>
+                <strong>Multi-vendor</strong>
+                <span>Harga &amp; stok dikonfirmasi</span>
               </div>
             </div>
           </div>
@@ -164,7 +166,7 @@ const address = "Jl Beringin II RT 001/007 Pamulang Barat, Tangsel";
                   </defs>
                   <text font-size="10.6" letter-spacing="2.2">
                     <textPath href="#sealCircle" startOffset="0%">
-                      VENDOR TERPERCAYA • BUMN &amp; INSTANSI PEMERINTAH • VENDOR TERPERCAYA • BUMN &amp; INSTANSI PEMERINTAH •
+                      MULTI-VENDOR • EVENT CORPORATE &amp; PEMERINTAH • MULTI-VENDOR • EVENT CORPORATE &amp; PEMERINTAH •
                     </textPath>
                   </text>
                 </svg>
@@ -205,10 +207,10 @@ const address = "Jl Beringin II RT 001/007 Pamulang Barat, Tangsel";
           <div class="section-head">
             <div>
               <p class="eyebrow">Paket Event Unggulan</p>
-              <h2>Pilih Paket, Tim Kami Siapkan Semua</h2>
+              <h2>Pilih Paket, Kami Carikan Opsinya</h2>
             </div>
             <p class="section-note">
-              Setiap paket otomatis tersusun ke Rencana Anggaran Event — tinggal sesuaikan jumlah.
+              Setiap paket menjadi estimasi referensi. Harga final dan ketersediaan mengikuti vendor yang tersedia.
             </p>
           </div>
 
@@ -216,7 +218,7 @@ const address = "Jl Beringin II RT 001/007 Pamulang Barat, Tangsel";
             {packages.map((pkg) => (
               <article class="package-card">
                 <div class="package-tags">
-                  {pkg.tags.map((tag) => (
+                  {pkg.tags && pkg.tags.map((tag: string) => (
                     <span class="tag">{tag}</span>
                   ))}
                 </div>
@@ -228,7 +230,7 @@ const address = "Jl Beringin II RT 001/007 Pamulang Barat, Tangsel";
                     <dd>{pkg.estimated_pax}</dd>
                   </div>
                   <div>
-                    <dt>Estimasi Biaya</dt>
+                    <dt>Estimasi Referensi</dt>
                     <dd>{formatPrice(pkg.estimatedTotal)}</dd>
                   </div>
                 </dl>
@@ -244,7 +246,7 @@ const address = "Jl Beringin II RT 001/007 Pamulang Barat, Tangsel";
                   data-package={pkg.name}
                   data-items={JSON.stringify(pkg.items)}
                 >
-                  Pilih Paket Ini
+                  Gunakan Paket Ini
                 </button>
               </article>
             ))}
@@ -260,7 +262,7 @@ const address = "Jl Beringin II RT 001/007 Pamulang Barat, Tangsel";
               <h2>Cari &amp; Susun Kebutuhan Event Anda</h2>
             </div>
             <p class="section-note">
-              {totalItems}+ produk siap sewa. Ketik nama produk atau pilih tag di bawah.
+              {totalItems}+ referensi produk dari katalog lama. Harga dan stok dikonfirmasi saat inquiry.
             </p>
           </div>
 
@@ -315,10 +317,10 @@ const address = "Jl Beringin II RT 001/007 Pamulang Barat, Tangsel";
                       <h4>{item.name}</h4>
                       {item.description && <p>{item.description}</p>}
                       <div class="product-meta">
-                        <span class="price">{formatPrice(item.price)}</span>
+                        <span class="price">Referensi {formatPrice(item.price)}</span>
                         <a
                           class="wa-link"
-                          href={waLink(`Halo HR Production, saya mau sewa ${item.name}. Mohon info harga & ketersediaan.`)}
+                          href={waLink(`Halo HR Production, saya sedang mencari ${item.name}. Mohon cek harga, stok, dan opsi vendor.`)}
                           target="_blank"
                           rel="noreferrer"
                           aria-label={`Pesan ${item.name} via WhatsApp`}
@@ -347,8 +349,8 @@ const address = "Jl Beringin II RT 001/007 Pamulang Barat, Tangsel";
         <div class="container">
           <div class="section-head">
             <div>
-              <p class="eyebrow">Mengapa BUMN &amp; Pemerintah Percaya Kami</p>
-              <h2>Standar Operasional Tanpa Kompromi</h2>
+              <p class="eyebrow">Cara HR Production Membantu</p>
+              <h2>Satu Kontak, Banyak Opsi Vendor</h2>
             </div>
           </div>
           <div class="pillar-grid">
@@ -369,8 +371,8 @@ const address = "Jl Beringin II RT 001/007 Pamulang Barat, Tangsel";
         <div>
           <h3>HR PRODUCTION</h3>
           <p>
-            Pusat solusi stage, booth, VIP seating, dan event production untuk BUMN, instansi
-            pemerintah, dan korporasi di seluruh Indonesia.
+            Marketing dan sourcing rental event multi-vendor untuk corporate, pemerintah, wedding,
+            exhibition, dan kebutuhan event lainnya di Jabodetabek.
           </p>
         </div>
         <div>
@@ -378,7 +380,7 @@ const address = "Jl Beringin II RT 001/007 Pamulang Barat, Tangsel";
           <ul>
             <li>{phonePrimary}</li>
             <li>{email}</li>
-            <li>{address}</li>
+            <li>Area: {address}</li>
           </ul>
         </div>
         <div>
@@ -406,18 +408,18 @@ const address = "Jl Beringin II RT 001/007 Pamulang Barat, Tangsel";
     <div class="cart-widget" id="cartWidget">
       <div class="cart-drawer" id="cartDrawer">
         <div class="cart-drawer-head">
-          <h3>Rencana Anggaran Event</h3>
+          <h3>Rencana Kebutuhan Event</h3>
           <button class="cart-close" id="cartClose" type="button" aria-label="Tutup">×</button>
         </div>
         <ul class="cart-list" id="cartList"></ul>
         <p class="cart-empty" id="cartEmpty">Belum ada item. Pilih paket atau tambahkan produk dari katalog.</p>
         <div class="cart-drawer-foot">
           <div class="cart-total-row">
-            <span>Total Estimasi</span>
+            <span>Estimasi Referensi</span>
             <strong id="cartTotal">Rp 0</strong>
           </div>
           <button class="btn btn-accent btn-block" id="cartSendWa" type="button" disabled>
-            Kirim Rencana Event via WhatsApp
+            Minta Penawaran via WhatsApp
           </button>
           <button class="btn btn-text" id="cartClear" type="button">Kosongkan Rencana</button>
         </div>
@@ -442,7 +444,7 @@ const address = "Jl Beringin II RT 001/007 Pamulang Barat, Tangsel";
       </svg>
     </a>
 
-    <script define:vars={{ waNumber }}>
+    <script is:inline define:vars={{ waNumber }}>
       const cart = new Map();
 
       const searchInput = document.getElementById("productSearch");
@@ -612,7 +614,7 @@ const address = "Jl Beringin II RT 001/007 Pamulang Barat, Tangsel";
         const lines = items.map((item) => `- ${item.name} x ${item.qty}: ${formatIDR(item.price * item.qty)}`);
         const message = `Halo HR Production, saya ingin mengajukan penawaran sewa perlengkapan event:\n${lines.join(
           "\n"
-        )}\nTotal Estimasi: ${formatIDR(total)}\nMohon info ketersediaan tanggal acara.`;
+        )}\nEstimasi Referensi: ${formatIDR(total)}\nMohon info ketersediaan tanggal acara.`;
         window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`, "_blank", "noopener");
       });
 
