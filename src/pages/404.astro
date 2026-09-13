@@ -1,8 +1,0 @@
----
-import BaseLayout from "../layouts/BaseLayout.astro";
-import { site } from "../config/site.mjs";
-import "../styles/solution.css";
----
-<BaseLayout title="Halaman Tidak Ditemukan | HR Production" description="Halaman yang Anda cari tidak ditemukan. Kembali ke beranda, buka katalog, atau hubungi HR Production." canonicalPath="/404" bodyClass="not-found-page">
-  <section class="not-found"><div class="page-shell not-found-grid"><div class="error-code" aria-hidden="true">404</div><div><p class="eyebrow">Rute tidak ditemukan</p><h1>Halaman ini sudah tidak ada di floor plan.</h1><p>Kembali ke jalur utama atau langsung susun kebutuhan perlengkapan event Anda.</p><div class="not-found-actions"><a class="button button-signal" href="/">Kembali ke beranda</a><a class="button button-outline-light" href="/katalog">Buka katalog</a><a class="button button-text" href={site.wa("Halo HR Production, saya ingin bertanya tentang kebutuhan event.")} target="_blank" rel="noopener noreferrer">Hubungi WhatsApp ↗</a></div></div></div></section>
-</BaseLayout>
