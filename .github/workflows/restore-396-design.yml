@@ -1,0 +1,209 @@
+name: Restore 396 design
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/restore-396-design.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restore exact 396 presentation and pre-RR catalog
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git checkout 396b09a6e4ca1614da3b70d09400e63564fc6241 --             src/pages/index.astro             src/styles/global.css             src/data/catalog.json             src/data/event_types.json             public/katalog.pdf
+
+          rm -rf public/images/products
+          git checkout 396b09a6e4ca1614da3b70d09400e63564fc6241 -- public/images/products
+
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path("src/pages/index.astro")
+          text = path.read_text(encoding="utf-8-sig")
+
+          def repl(old, new, count=-1):
+              global text
+              if old not in text:
+                  raise SystemExit(f"missing expected source fragment: {old[:80]}")
+              text = text.replace(old, new, count)
+
+          repl('const waNumber = "6281381178127";', 'const waNumber = "6281387927481";')
+          repl('const phonePrimary = "+62 813-8117-8127";', 'const phonePrimary = "+62 813-8792-7481";')
+          repl('const address = "Jl Beringin II RT 001/007 Pamulang Barat, Tangsel";', 'const address = "Jakarta, Tangerang Selatan & Jabodetabek";')
+
+          repl('title: "Unit Steril & Siap Pakai",', 'title: "Kurasi Vendor Sesuai Kebutuhan",')
+          repl('desc: "Setiap unit dibersihkan dan diperiksa sebelum dikirim, tampil prima di hari H.",', 'desc: "Kami bantu mencocokkan kebutuhan acara dengan pilihan item dan vendor yang relevan.",')
+          repl('title: "Armada Pengiriman Tepat Waktu 24/7",', 'title: "Cek Harga & Ketersediaan",')
+          repl('desc: "Pengiriman dan penjemputan terjadwal, siap dihubungi kapan saja.",', 'desc: "Harga, stok, lokasi, dan jadwal dicek kembali sebelum penawaran dikunci.",')
+          repl('title: "Tim Loading Berpengalaman",', 'title: "Koordinasi Satu Pintu",')
+          repl('desc: "Tim lapangan terlatih menangani setup dan bongkar muat dengan rapi dan aman.",', 'desc: "Brief kebutuhan dan komunikasi vendor diarahkan melalui satu kontak marketing.",')
+          repl('title: "Faktur Pajak & Invoice Resmi BUMN",', 'title: "Fleksibel Multi-Vendor",')
+          repl('desc: "Dokumen administrasi lengkap, sesuai standar pengadaan instansi dan korporasi.",', 'desc: "Tidak terikat satu gudang; opsi vendor dapat disesuaikan dengan harga dan kebutuhan acara.",')
+
+          repl('content="HR Production - pusat solusi stage, booth, VIP seating & event production. Vendor terpercaya BUMN dan instansi pemerintah."', 'content="HR Production membantu mencarikan stage, booth, VIP seating, furniture, dan perlengkapan event dari jaringan vendor sesuai kebutuhan dan anggaran."')
+          repl('<title>HR Production | Stage, Booth &amp; VIP Seating untuk Event Kenegaraan</title>', '<title>HR Production | Stage, Booth &amp; VIP Seating Event</title>')
+
+          repl('<p class="eyebrow">Pusat Solusi Event Production</p>', '<p class="eyebrow">Marketing &amp; Sourcing Event</p>')
+          repl('HR Production menyiapkan panggung, booth, dan VIP seating untuk BUMN, instansi\n              pemerintah, dan korporasi — steril, tepat waktu, dan siap pakai.', 'HR Production membantu mencarikan panggung, booth, VIP seating, furniture, dan perlengkapan\n              event dari berbagai vendor sesuai tanggal, lokasi, kebutuhan, dan anggaran.')
+          repl('<span>Produk siap sewa</span>', '<span>Referensi produk event</span>')
+          repl('<strong>&lt; 1 Jam</strong>\n                <span>Respon WhatsApp tim kami</span>', '<strong>Multi-vendor</strong>\n                <span>Harga &amp; stok dikonfirmasi</span>')
+          repl('VENDOR TERPERCAYA • BUMN &amp; INSTANSI PEMERINTAH • VENDOR TERPERCAYA • BUMN &amp; INSTANSI PEMERINTAH •', 'MULTI-VENDOR • EVENT CORPORATE &amp; PEMERINTAH • MULTI-VENDOR • EVENT CORPORATE &amp; PEMERINTAH •')
+          repl('<span>Alamat</span>', '<span>Area layanan</span>', 1)
+          repl('Booking via WhatsApp', 'Minta Penawaran via WhatsApp')
+
+          repl('<h2>Pilih Paket, Tim Kami Siapkan Semua</h2>', '<h2>Pilih Paket, Kami Carikan Opsinya</h2>')
+          repl('Setiap paket otomatis tersusun ke Rencana Anggaran Event — tinggal sesuaikan jumlah.', 'Setiap paket menjadi estimasi referensi. Harga final dan ketersediaan mengikuti vendor yang tersedia.')
+          repl('<dt>Estimasi Biaya</dt>', '<dt>Estimasi Referensi</dt>')
+          repl('Pilih Paket Ini', 'Gunakan Paket Ini')
+
+          repl('{totalItems}+ produk siap sewa. Ketik nama produk atau pilih tag di bawah.', '{totalItems}+ referensi produk dari katalog lama. Harga dan stok dikonfirmasi saat inquiry.')
+          repl('<span class="price">{formatPrice(item.price)}</span>', '<span class="price">Referensi {formatPrice(item.price)}</span>')
+          repl('href={waLink(`Halo HR Production, saya mau sewa ${item.name}. Mohon info harga & ketersediaan.`)}', 'href={waLink(`Halo HR Production, saya sedang mencari ${item.name}. Mohon cek harga, stok, dan opsi vendor.`)}')
+
+          repl('<p class="eyebrow">Mengapa BUMN &amp; Pemerintah Percaya Kami</p>', '<p class="eyebrow">Cara HR Production Membantu</p>')
+          repl('<h2>Standar Operasional Tanpa Kompromi</h2>', '<h2>Satu Kontak, Banyak Opsi Vendor</h2>')
+
+          repl('Pusat solusi stage, booth, VIP seating, dan event production untuk BUMN, instansi\n            pemerintah, dan korporasi di seluruh Indonesia.', 'Marketing dan sourcing rental event multi-vendor untuk corporate, pemerintah, wedding,\n            exhibition, dan kebutuhan event lainnya di Jabodetabek.')
+          repl('<li>{address}</li>', '<li>Area: {address}</li>')
+
+          repl('<h3>Rencana Anggaran Event</h3>', '<h3>Rencana Kebutuhan Event</h3>')
+          repl('<span>Total Estimasi</span>', '<span>Estimasi Referensi</span>')
+          repl('Kirim Rencana Event via WhatsApp', 'Minta Penawaran via WhatsApp')
+          repl('Total Estimasi: ${formatIDR(total)}', 'Estimasi Referensi: ${formatIDR(total)}')
+          repl('Mohon info ketersediaan tanggal acara.', 'Mohon cek harga final, stok, dan opsi vendor untuk tanggal acara.')
+
+          path.write_text(text, encoding="utf-8")
+          PY
+
+          cat > tests/catalog.test.mjs <<'TEST'
+          import assert from "node:assert/strict";
+          import { existsSync } from "node:fs";
+          import { readFile } from "node:fs/promises";
+          import test from "node:test";
+
+          const catalog = JSON.parse(await readFile(new URL("../src/data/catalog.json", import.meta.url), "utf8"));
+
+          test("legacy marketing catalog contains the pre-RR product set", () => {
+            assert.equal(catalog.length, 84);
+            assert.deepEqual([...new Set(catalog.map((item) => item.category))].sort(), ["Kursi", "Meja", "Perlengkapan", "Sofa"]);
+            assert.equal(catalog.every((item) => typeof item.price === "number" && item.price > 0), true);
+            assert.equal(catalog.every((item) => item.image.startsWith("/images/products/") && item.image.endsWith(".png")), true);
+            assert.equal(catalog.some((item) => item.name === "Sofa Oval VIP"), true);
+            assert.equal(catalog.some((item) => item.name === "Kursi Cobra"), true);
+          });
+
+          test("every catalog image exists in the restored product folder", () => {
+            for (const item of catalog) {
+              assert.equal(existsSync(new URL(`../public${item.image}`, import.meta.url)), true, item.image);
+            }
+          });
+
+          test("catalog has no RR source coupling", () => {
+            assert.equal(catalog.some((item) => item.source === "RR Production"), false);
+            assert.equal(JSON.stringify(catalog).includes("rr-production.com"), false);
+          });
+          TEST
+
+          cat > tests/quote.test.mjs <<'TEST'
+          import assert from "node:assert/strict";
+          import test from "node:test";
+          import { buildWhatsAppUrl } from "../src/lib/quote.mjs";
+
+          test("marketing WhatsApp URL is encoded and uses the current number", () => {
+            const url = buildWhatsAppUrl("+62 813-8792-7481", [{ id: "sample", name: "Sofa VIP", price: 150000, qty: 1 }]);
+            assert.match(url, /^https:\/\/wa\.me\/6281387927481\?text=/);
+            assert.equal(url.includes(" "), false);
+          });
+          TEST
+
+          cat > tests/build-contract.test.mjs <<'TEST'
+          import assert from "node:assert/strict";
+          import { existsSync } from "node:fs";
+          import { readFile } from "node:fs/promises";
+          import test from "node:test";
+
+          const dist = new URL("../dist/", import.meta.url);
+          const catalog = JSON.parse(await readFile(new URL("../src/data/catalog.json", import.meta.url), "utf8"));
+
+          test("build is the 396-era single-page architecture", () => {
+            assert.equal(existsSync(new URL("index.html", dist)), true);
+            assert.equal(existsSync(new URL("katalog/index.html", dist)), false);
+            assert.equal(existsSync(new URL("artikel/index.html", dist)), false);
+          });
+
+          test("homepage matches the requested 396 visual structure", async () => {
+            const source = await readFile(new URL("index.html", dist), "utf8");
+            assert.match(source, /Stage &amp; Booth/);
+            assert.match(source, /Kelas Kenegaraan/);
+            assert.match(source, /Paket Event Unggulan/);
+            assert.match(source, /Simulasi Anggaran Event/);
+            assert.match(source, /Rencana Kebutuhan Event/);
+            assert.match(source, /6281387927481/);
+          });
+
+          test("homepage renders all 84 legacy catalog cards", async () => {
+            const source = await readFile(new URL("index.html", dist), "utf8");
+            assert.equal((source.match(/class="product-card"/g) || []).length, catalog.length);
+            assert.equal(catalog.length, 84);
+            assert.match(source, /Referensi Rp/);
+          });
+
+          test("operational ownership claims from the old copy are removed", async () => {
+            const source = await readFile(new URL("index.html", dist), "utf8");
+            assert.doesNotMatch(source, /Vendor Terpercaya/i);
+            assert.doesNotMatch(source, /Armada Pengiriman Tepat Waktu 24\/7/i);
+            assert.doesNotMatch(source, /Unit Steril &amp; Siap Pakai/i);
+            assert.match(source, /Multi-vendor/i);
+          });
+          TEST
+
+          cat > scripts/audit-build.mjs <<'AUDIT'
+          import assert from "node:assert/strict";
+          import { existsSync } from "node:fs";
+          import { readFile } from "node:fs/promises";
+          import { join, resolve } from "node:path";
+
+          const root = resolve(import.meta.dirname, "..");
+          const dist = join(root, "dist");
+          const source = await readFile(join(dist, "index.html"), "utf8");
+          const catalog = JSON.parse(await readFile(join(root, "src", "data", "catalog.json"), "utf8"));
+
+          assert.equal(catalog.length, 84, "expected pre-RR 84-product catalog");
+          assert.equal((source.match(/class="product-card"/g) || []).length, 84, "all products must render");
+          assert.match(source, /Stage &amp; Booth/);
+          assert.match(source, /Kelas Kenegaraan/);
+          assert.match(source, /6281387927481/);
+          assert.match(source, /Multi-vendor/i);
+          assert.doesNotMatch(source, /rr-production\.com/i);
+          assert.doesNotMatch(source, /Vendor Terpercaya/i);
+
+          for (const item of catalog) {
+            assert.equal(existsSync(join(dist, item.image.replace(/^\//, ""))), true, item.image);
+          }
+
+          console.log("396-design audit passed: 84 legacy products, multi-vendor positioning.");
+          AUDIT
+
+          rm -f .github/workflows/restore-396-design.yml
+
+      - name: Commit restored design
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "restore(ui): reinstate 396 luxury event design with legacy catalog"
+          git push origin HEAD:main
