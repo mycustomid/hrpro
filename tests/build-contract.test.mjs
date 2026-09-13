@@ -47,6 +47,15 @@ test("every route has one H1 and complete social metadata", async () => {
   }
 });
 
+test("floating WhatsApp CTA is present on every public route", async () => {
+  for (const [path, label] of routes) {
+    const source = await html(path);
+    assert.match(source, /data-floating-whatsapp/, `${label} missing floating WhatsApp CTA`);
+    assert.match(source, /https:\/\/wa\.me\/6281387927481\?text=/, `${label} floating WhatsApp has wrong number`);
+    assert.match(source, /Chat WhatsApp HR Production/i, `${label} floating WhatsApp needs an accessible label`);
+  }
+});
+
 test("homepage is positioned as a marketing and booking channel", async () => {
   const source = await html("index.html");
   assert.match(source, /Acara besar/);
