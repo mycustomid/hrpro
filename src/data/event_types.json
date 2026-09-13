@@ -5,33 +5,33 @@
     "description": "Paket formal untuk kunjungan pejabat negara, seremoni BUMN, atau acara protokoler yang membutuhkan tampilan elegan dan berwibawa.",
     "tags": ["VIP", "BUMN"],
     "recommended_items": [
-      "Sofa Oval Putih",
-      "Kursi Armchair Classic",
+      "Sofa Oval VIP",
+      "Kursi Armchair Jokowi",
       "Meja VIP jati",
-      "podium lambang garuda",
-      "Rope Stand GOLD VIP",
-      "KARPET PERMADANI",
-      "GONG"
+      "Podium lambang garuda",
+      "Rope Stand VIP Gold",
+      "Karpet Permadani",
+      "Gong"
     ],
     "estimated_pax": "20-50",
-    "notes": "Cocok untuk ruang tertutup dengan setting protokoler dan area kehormatan."
+    "notes": "Cocok untuk ruang tertutup (indoor) dengan setting protokoler dan area kehormatan."
   },
   {
     "id": "seminar-konferensi-100pax",
     "name": "Paket Seminar / Konferensi 100 Pax",
-    "description": "Paket untuk seminar, konferensi, rapat kerja, atau pelatihan berkapasitas menengah dengan kebutuhan kursi peserta dan perlengkapan panggung.",
+    "description": "Paket lengkap untuk seminar, konferensi, rapat kerja, atau pelatihan berkapasitas menengah dengan kebutuhan kursi peserta dan perlengkapan panggung.",
     "tags": ["Konferensi", "BUMN"],
     "recommended_items": [
       "Kursi Futura",
       "Kursi Kuliah",
       "Meja IBM cover",
-      "Podium Acara Resmi",
+      "Podium",
       "Tiang Signed",
-      "Rak brosur",
+      "Rak Brosur",
       "STANDING AC -5PK"
     ],
     "estimated_pax": "100",
-    "notes": "Jumlah dan kombinasi item dikonfirmasi kembali sesuai layout venue."
+    "notes": "Bisa disesuaikan dengan penambahan Kursi Direktur untuk jajaran pembicara/tamu VIP."
   },
   {
     "id": "booth-pameran-expo",
@@ -39,32 +39,32 @@
     "description": "Paket untuk kebutuhan booth pameran, expo, atau bazar dengan fokus pada area dealing dan display produk.",
     "tags": ["Konferensi", "Outdoor"],
     "recommended_items": [
-      "Meja dealing kaca",
+      "Meja dealing kaca cover",
       "Dealing chair",
       "kursi Dealing VIP",
-      "Rak brosur",
+      "Rak Brosur",
       "Tiang Signed",
       "Pembatas",
       "TRAFFIC CONE"
     ],
     "estimated_pax": "-",
-    "notes": "Bisa dikombinasikan dengan tenda dan perlengkapan outdoor sesuai lokasi."
+    "notes": "Cocok untuk booth indoor maupun outdoor, dapat ditambah Tenda Sarnafil bila di area terbuka."
   },
   {
     "id": "gala-dinner",
     "name": "Paket Gala Dinner",
-    "description": "Paket untuk acara makan malam formal, penghargaan, atau perayaan korporat dengan kebutuhan seating dan meja acara.",
+    "description": "Paket mewah untuk acara makan malam formal, penghargaan, atau perayaan korporat dengan suasana elegan.",
     "tags": ["Wedding", "VIP"],
     "recommended_items": [
       "Sofa Oval Putih",
       "Meja round table 160cm cover",
       "Kursi Tiffany gold",
-      "Kursi barstool sandar",
+      "Kursi barstool sandar vip",
       "Meja bar Round putih",
-      "KARPET PERMADANI",
-      "MISTY FAN"
+      "Karpet Permadani",
+      "Misty Fan"
     ],
     "estimated_pax": "50-200",
-    "notes": "Kombinasi final mengikuti jumlah tamu, layout, dan venue."
+    "notes": "Dapat dikombinasikan dengan Tenda Sarnafil dan Misty Fan bila acara dilaksanakan outdoor."
   }
 ]
